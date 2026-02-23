@@ -4,6 +4,8 @@ import { CoverVideo } from "@/components/CoverVideo";
 import { HeroVideoCarousel } from "@/components/HeroVideoCarousel";
 import { TEAM } from "@/lib/team";
 import { TeamMemberCard } from "@/components/TeamMemberCard";
+import { ContactForm } from "@/components/ContactForm";
+import { contact } from "@/lib/navigation";
 
 /** Vídeos de portada en public/images/portada/. Logo i text sota cada vídeo. */
 const CATEGORIES = [
@@ -85,7 +87,7 @@ export default function Home() {
               );
               const className =
                 "group block rounded-xl overflow-hidden transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2";
-              if (item.external) {
+              if ("external" in item && item.external) {
                 return (
                   <a
                     key={item.title}
@@ -149,6 +151,65 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contacte – tres columnes iguals: foto, dades, formulari */}
+      <section className="bg-slate-900 text-white">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:min-h-[480px] lg:grid-cols-3 lg:grid-rows-1">
+          <div className="relative min-h-[280px] overflow-hidden lg:min-h-0">
+            <Image
+              src="/images/categories/contacto.png"
+              alt="Control Play"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+              priority
+            />
+          </div>
+          <div className="flex min-h-[280px] flex-col justify-center px-6 py-10 lg:min-h-[420px] lg:px-10 lg:py-14">
+            <h2 className="text-2xl font-bold sm:text-3xl">Contacte</h2>
+            <p className="mt-2 text-slate-300">
+              Teniu preguntes? Estem aquí per ajudar-vos.
+            </p>
+            <dl className="mt-6 space-y-4">
+              <div>
+                <dt className="text-sm font-medium text-slate-400">Control Play</dt>
+                <dd className="mt-0.5 text-slate-200">{contact.address}</dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-slate-400">Telèfon oficina</dt>
+                <dd>
+                  <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="text-slate-200 hover:text-white">
+                    {contact.phone}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-slate-400">Email</dt>
+                <dd>
+                  <a href={`mailto:${contact.email}`} className="text-slate-200 hover:text-white">
+                    {contact.email}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-slate-400">Horari d&apos;oficina</dt>
+                <dd className="mt-1 space-y-0.5 text-sm text-slate-300">
+                  {contact.officeHours.map((line) => (
+                    <span key={line} className="block">{line}</span>
+                  ))}
+                </dd>
+              </div>
+            </dl>
+          </div>
+          <div className="flex min-h-[280px] flex-col justify-center px-6 py-10 lg:min-h-[420px] lg:px-10 lg:py-14">
+            <h2 className="text-lg font-bold uppercase tracking-wide text-white">
+              Envieu-nos el vostre missatge
+            </h2>
+            <div className="mt-6">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

@@ -95,4 +95,8 @@ export const contact = {
   phone: "622 61 33 93",
   email: "info@controlplaysports.com",
   address: "Carrer Sant Miquel 63, 08620 Sant Vicenç dels Horts, Barcelona.",
+  officeHours: [
+    "Dilluns - Dijous: 9:00 a 13:00 i 15:00 a 19:00",
+    "Divendres: 9:00 a 13:00 i 15:00 a 18:00",
+  ],
 };
