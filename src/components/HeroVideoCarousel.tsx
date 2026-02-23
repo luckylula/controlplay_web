@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 const HERO_VIDEOS = [
   "/images/portada/videoportada1.mp4",
@@ -8,7 +8,7 @@ const HERO_VIDEOS = [
   "/images/portada/videoportada3.mp4",
 ];
 
-const AUTOPLAY_INTERVAL_MS = 6000;
+const INTERVAL_MS = 6000;
 
 export function HeroVideoCarousel() {
   const [index, setIndex] = useState(0);
@@ -16,29 +16,30 @@ export function HeroVideoCarousel() {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % HERO_VIDEOS.length);
-    }, AUTOPLAY_INTERVAL_MS);
+    }, INTERVAL_MS);
     return () => clearInterval(id);
   }, []);
 
-  const currentSrc = HERO_VIDEOS[index];
-
   return (
-    <section className="relative min-h-[50vh] overflow-hidden bg-slate-900">
-      <div className="absolute inset-0">
-        <video
-          key={currentSrc}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="h-full w-full object-cover"
-          aria-hidden
+    <section className="relative w-full overflow-hidden bg-slate-900 aspect-[21/9] min-h-[200px] max-h-[320px]">
+      {HERO_VIDEOS.map((src, i) => (
+        <div
+          key={src}
+          className={`absolute inset-0 transition-opacity duration-700 ${
+            i === index ? "z-10 opacity-100" : "z-0 opacity-0"
+          }`}
         >
-          <source src={currentSrc} type="video/mp4" />
-        </video>
-      </div>
-      <div className="absolute inset-0 bg-black/40" />
-      <div className="relative flex min-h-[50vh] flex-col items-center justify-center px-4 py-24 sm:px-6 lg:px-8">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-cover"
+            src={src}
+          />
+        </div>
+      ))}
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/30">
         <div className="max-w-3xl text-center text-white">
           <h1 className="text-4xl font-bold tracking-tight drop-shadow-lg sm:text-5xl lg:text-6xl">
             Control Play
@@ -47,19 +48,19 @@ export function HeroVideoCarousel() {
             Al servei del món educatiu i esportiu!
           </p>
         </div>
-        <div className="mt-8 flex gap-2">
-          {HERO_VIDEOS.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              onClick={() => setIndex(i)}
-              className={`h-2 w-2 rounded-full transition-all sm:h-2.5 sm:w-2.5 ${
-                i === index ? "scale-125 bg-white" : "bg-white/50 hover:bg-white/70"
-              }`}
-              aria-label={`Vídeo ${i + 1}`}
-            />
-          ))}
-        </div>
+      </div>
+      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2">
+        {HERO_VIDEOS.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Vídeo ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={`h-2 w-2 rounded-full transition-colors sm:h-2.5 sm:w-2.5 ${
+              i === index ? "bg-white" : "bg-white/50 hover:bg-white/70"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );

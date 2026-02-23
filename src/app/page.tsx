@@ -151,10 +151,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contacte – tres columnes iguals: foto, dades, formulari */}
-      <section className="bg-slate-900 text-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:min-h-[480px] lg:grid-cols-3 lg:grid-rows-1">
-          <div className="relative min-h-[280px] overflow-hidden lg:min-h-0">
+      {/* Contacte – tres blocs: la meitat d'alçada, més amples */}
+      <section className="bg-slate-900 py-6 text-white lg:py-8">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:min-h-[220px] lg:grid-cols-3 lg:gap-6 lg:px-6">
+          <div className="relative min-h-[140px] overflow-hidden rounded-xl lg:min-h-0 lg:h-full">
             <Image
               src="/images/categories/contacto.png"
               alt="Control Play"
@@ -164,12 +164,12 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex min-h-[280px] flex-col justify-center px-6 py-10 lg:min-h-[420px] lg:px-10 lg:py-14">
-            <h2 className="text-2xl font-bold sm:text-3xl">Contacte</h2>
-            <p className="mt-2 text-slate-300">
+          <div className="flex flex-col justify-center rounded-xl bg-slate-800/50 px-5 py-4 lg:min-h-0 lg:h-full lg:px-6 lg:py-5">
+            <h2 className="text-xl font-bold sm:text-2xl">Contacte</h2>
+            <p className="mt-1 text-sm text-slate-300">
               Teniu preguntes? Estem aquí per ajudar-vos.
             </p>
-            <dl className="mt-6 space-y-4">
+            <dl className="mt-3 space-y-2 text-sm">
               <div>
                 <dt className="text-sm font-medium text-slate-400">Control Play</dt>
                 <dd className="mt-0.5 text-slate-200">{contact.address}</dd>
@@ -192,7 +192,7 @@ export default function Home() {
               </div>
               <div>
                 <dt className="text-sm font-medium text-slate-400">Horari d&apos;oficina</dt>
-                <dd className="mt-1 space-y-0.5 text-sm text-slate-300">
+                <dd className="mt-0.5 space-y-0.5 text-slate-300">
                   {contact.officeHours.map((line) => (
                     <span key={line} className="block">{line}</span>
                   ))}
@@ -200,11 +200,11 @@ export default function Home() {
               </div>
             </dl>
           </div>
-          <div className="flex min-h-[280px] flex-col justify-center px-6 py-10 lg:min-h-[420px] lg:px-10 lg:py-14">
-            <h2 className="text-lg font-bold uppercase tracking-wide text-white">
+          <div className="flex flex-col justify-center rounded-xl bg-slate-800/50 px-5 py-4 lg:min-h-0 lg:h-full lg:px-6 lg:py-5">
+            <h2 className="text-base font-bold uppercase tracking-wide text-white sm:text-lg">
               Envieu-nos el vostre missatge
             </h2>
-            <div className="mt-6">
+            <div className="mt-3">
               <ContactForm />
             </div>
           </div>
