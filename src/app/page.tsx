@@ -128,8 +128,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mx-auto mt-12 max-w-5xl px-4 sm:px-6 lg:px-8">
-          <h3 className="text-xl font-bold text-slate-900">L&apos;equip</h3>
-          <ul className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
             {TEAM.map((person) => (
               <TeamMemberCard
                 key={person.name}
