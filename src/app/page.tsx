@@ -151,10 +151,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contacte – tres blocs: la meitat d'alçada, més amples */}
+      {/* Contacte – tres blocs mateixa mida, compactes */}
       <section className="bg-slate-900 py-6 text-white lg:py-8">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:min-h-[220px] lg:grid-cols-3 lg:gap-6 lg:px-6">
-          <div className="relative min-h-[140px] overflow-hidden rounded-xl lg:min-h-0 lg:h-full">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:h-[300px] lg:grid-cols-3 lg:gap-6 lg:px-6">
+          <div className="relative min-h-[140px] overflow-hidden rounded-lg lg:min-h-0 lg:h-full">
             <Image
               src="/images/categories/contacto.png"
               alt="Control Play"
@@ -164,12 +164,12 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex flex-col justify-center rounded-xl bg-slate-800/50 px-5 py-4 lg:min-h-0 lg:h-full lg:px-6 lg:py-5">
-            <h2 className="text-xl font-bold sm:text-2xl">Contacte</h2>
-            <p className="mt-1 text-sm text-slate-300">
+          <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 px-4 py-3 lg:px-5 lg:py-4">
+            <h2 className="text-lg font-bold sm:text-xl">Contacte</h2>
+            <p className="mt-0.5 text-xs text-slate-300">
               Teniu preguntes? Estem aquí per ajudar-vos.
             </p>
-            <dl className="mt-3 space-y-2 text-sm">
+            <dl className="mt-2 space-y-1.5 text-xs">
               <div>
                 <dt className="text-sm font-medium text-slate-400">Control Play</dt>
                 <dd className="mt-0.5 text-slate-200">{contact.address}</dd>
@@ -200,11 +200,11 @@ export default function Home() {
               </div>
             </dl>
           </div>
-          <div className="flex flex-col justify-center rounded-xl bg-slate-800/50 px-5 py-4 lg:min-h-0 lg:h-full lg:px-6 lg:py-5">
-            <h2 className="text-base font-bold uppercase tracking-wide text-white sm:text-lg">
+          <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 px-4 py-3 lg:px-5 lg:py-4">
+            <h2 className="text-sm font-bold uppercase tracking-wide text-white sm:text-base">
               Envieu-nos el vostre missatge
             </h2>
-            <div className="mt-3">
+            <div className="mt-2 min-h-0 flex-1 overflow-y-auto">
               <ContactForm />
             </div>
           </div>
