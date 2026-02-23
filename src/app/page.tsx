@@ -1,9 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
-import { CoverVideo } from "@/components/CoverVideo";
 import { HeroVideoCarousel } from "@/components/HeroVideoCarousel";
-import { TEAM } from "@/lib/team";
-import { TeamMemberCard } from "@/components/TeamMemberCard";
+import { CategoriesWithMascot } from "@/components/CategoriesWithMascot";
 import { ContactForm } from "@/components/ContactForm";
 import { contact } from "@/lib/navigation";
 
@@ -24,8 +21,9 @@ const CATEGORIES = [
       "Dissenyem i organitzem un ampli ventall d'activitats extraescolars, tant esportives com formatives i lúdiques, fomentant el desenvolupament i els talents de cada infant perquè descobreixi, aprengui i gaudeixi al seu ritme.",
     href: "/activitats-extraescolars",
     video: "/images/portada/activitats%20extraescolars.mp4",
-    fallback: "/images/logos/CP%20EXTRAESCOLARS.png",
-    logo: "/images/logos/CP%20EXTRAESCOLARS.png",
+    fallback: "/images/logos/logo%20extraescolars%20circulo.png",
+    logo: "/images/logos/logo%20extraescolars%20circulo.png",
+    logoOnVideo: true, // logo a la cantonada superior dreta del vídeo (prova)
   },
   {
     title: "Casals",
@@ -55,66 +53,19 @@ export default function Home() {
       {/* Hero – carrusel de vídeos (videoportada1, 2, 3...) amb el text al damunt */}
       <HeroVideoCarousel />
 
-      {/* Categories – 4 blocks with video + text, like cpmaterialdeportivo.com */}
-      <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {CATEGORIES.map((item) => {
-              const content = (
-                <>
-                  <div className="flex justify-center rounded-t-xl border border-b-0 border-slate-200 bg-white py-4">
-                    <Image
-                      src={item.logo}
-                      alt=""
-                      width={140}
-                      height={44}
-                      className="h-10 w-auto object-contain"
-                    />
-                  </div>
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                    <CoverVideo
-                      src={item.video}
-                      fallbackSrc={item.fallback}
-                      className="object-cover object-center transition group-hover:scale-105"
-                      scale={"videoScale" in item ? item.videoScale : undefined}
-                    />
-                  </div>
-                  <div className="rounded-b-xl border border-t-0 border-slate-200 bg-white p-5 shadow-sm">
-                    <h3 className="font-semibold text-slate-900">{item.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
-                  </div>
-                </>
-              );
-              const className =
-                "group block rounded-xl overflow-hidden transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2";
-              if ("external" in item && item.external) {
-                return (
-                  <a
-                    key={item.title}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={className}
-                  >
-                    {content}
-                  </a>
-                );
-              }
-              return (
-                <Link key={item.title} href={item.href} className={className}>
-                  {content}
-                </Link>
-              );
-            })}
-          </div>
+      {/* Categories – 4 icons: ocupa tota l’amplada (escala amb la pantalla) */}
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
+          <CategoriesWithMascot categories={CATEGORIES} />
         </div>
       </section>
 
-      {/* Sobre nosaltres / Qui Som? – text sota els quatre icons */}
+      {/* Sobre nosaltres – només text (les fotos de l&apos;equip estan a /equip-cp) */}
       <section className="border-t border-slate-200 bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">Sobre nosaltres</h2>
-          <p className="mt-1 text-lg font-semibold text-slate-700">Qui Som?</p>
+          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            Sobre nosaltres – Equip Control Play
+          </h2>
           <div className="mt-8 space-y-6 text-slate-600">
             <p className="text-lg leading-relaxed">
               A Control Play Sports som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia per donar resposta a les necessitats de centres, famílies i entitats, amb proximitat, responsabilitat i passió pel que fem.
@@ -126,27 +77,6 @@ export default function Home() {
               Oferim els nostres serveis amb les màximes garanties de professionalitat, legalitat i rigor, perquè la confiança i la tranquil·litat de les famílies i dels centres són la nostra prioritat.
             </p>
           </div>
-        </div>
-        <div className="mx-auto mt-12 max-w-5xl px-4 sm:px-6 lg:px-8">
-          <ul className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-            {TEAM.map((person) => (
-              <TeamMemberCard
-                key={person.name}
-                name={person.name}
-                role={person.role}
-                text={person.text}
-                image={person.image}
-              />
-            ))}
-          </ul>
-          <p className="mt-10">
-            <Link
-              href="/equip-cp"
-              className="font-medium text-emerald-600 hover:text-emerald-700"
-            >
-              Coneix tot l&apos;equip →
-            </Link>
-          </p>
         </div>
       </section>
 
