@@ -12,6 +12,8 @@ type CategoryItem = {
   readonly fallback: string;
   readonly logo: string;
   readonly logoOnVideo?: boolean;
+  readonly logoBelowVideo?: boolean;
+  readonly logoAlsoAtBottom?: boolean;
   readonly external?: boolean;
   readonly videoScale?: number;
 };
@@ -25,9 +27,12 @@ export function CategoriesWithMascot({ categories }: Props) {
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {categories.map((item) => {
         const logoOnVideo = "logoOnVideo" in item && item.logoOnVideo;
+        const logoBelowVideo = "logoBelowVideo" in item && item.logoBelowVideo;
+        const logoAlsoAtBottom = "logoAlsoAtBottom" in item && item.logoAlsoAtBottom;
+        const showLogoOnTop = !logoOnVideo && !logoBelowVideo;
         const content = (
           <>
-            {!logoOnVideo && (
+            {showLogoOnTop && (
               <div className="flex justify-center rounded-t-xl border border-b-0 border-slate-200 bg-white py-4">
                 <Image
                   src={item.logo}
@@ -39,7 +44,7 @@ export function CategoriesWithMascot({ categories }: Props) {
               </div>
             )}
             <div
-              className={`relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ${logoOnVideo ? "rounded-t-xl" : ""}`}
+              className={`relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ${logoOnVideo || logoBelowVideo ? "rounded-t-xl" : ""}`}
             >
               <CoverVideo
                 src={item.video}
@@ -59,10 +64,37 @@ export function CategoriesWithMascot({ categories }: Props) {
                 </div>
               )}
             </div>
-            <div className="rounded-b-xl border border-t-0 border-slate-200 bg-white p-5 shadow-sm">
+            {logoBelowVideo && (
+              <div className="flex min-h-[80px] items-center justify-center overflow-hidden border border-t-0 border-slate-200 bg-white py-6 sm:py-8">
+                <Image
+                  src={item.logo}
+                  alt=""
+                  width={200}
+                  height={64}
+                  className="h-14 w-auto max-w-full object-contain sm:h-16"
+                  style={{ transform: "scale(1.35)" }}
+                />
+              </div>
+            )}
+            <div
+              className={`border border-t-0 border-slate-200 bg-white p-5 shadow-sm ${logoAlsoAtBottom ? "" : "rounded-b-xl"}`}
+            >
               <h3 className="font-semibold text-slate-900">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
             </div>
+            {logoAlsoAtBottom && (
+              <div className="flex min-h-[60px] items-center justify-center overflow-hidden rounded-b-xl border border-t-0 border-slate-200 bg-white py-4">
+                <div style={{ transform: "scale(2)" }} className="flex shrink-0 items-center justify-center">
+                  <Image
+                    src={item.logo}
+                    alt=""
+                    width={140}
+                    height={50}
+                    className="h-10 w-auto object-contain sm:h-12"
+                  />
+                </div>
+              </div>
+            )}
           </>
         );
         const className =

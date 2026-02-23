@@ -33,6 +33,7 @@ const CATEGORIES = [
     video: "/images/portada/casals.mp4",
     fallback: "/images/logos/CP%20CASALS.png",
     logo: "/images/logos/CP%20CASALS.png",
+    logoBelowVideo: true, // prova: logo sota el vídeo en lloc de damunt
   },
   {
     title: "Botiga On-line",
@@ -44,6 +45,7 @@ const CATEGORIES = [
     logo: "/images/logos/CP%20SERVEIS%20EDUCATIUS.png",
     external: true,
     videoScale: 1.35,
+    logoAlsoAtBottom: true, // prova: logo també sota el text
   },
 ] as const;
 

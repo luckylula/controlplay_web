@@ -76,7 +76,7 @@ export default function EquipCPPage() {
           <div className="relative aspect-[4/3] min-h-[280px] overflow-hidden rounded-xl bg-slate-200">
             <iframe
               title="Ubicació Control Play – Carrer Sant Miquel 63, Sant Vicenç dels Horts"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.894133731814!2d2.0066!3d41.3934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4be2e5d7b3b5f%3A0x0!2sCarrer%20Sant%20Miquel%2C%2063%2C%2008620%20Sant%20Vicen%C3%A7%20dels%20Horts%2C%20Barcelona!5e0!3m2!1sca!2ses!4v1"
+              src="https://maps.google.com/maps?q=Carrer+Sant+Miquel+63,+08620+Sant+Vicen%C3%A7+dels+Horts,+Barcelona&z=16&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
