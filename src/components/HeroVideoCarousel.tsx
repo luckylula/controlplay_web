@@ -2,40 +2,41 @@
 
 import { useEffect, useState } from "react";
 
-const AUTO_ADVANCE_MS = 6000;
+const HERO_VIDEOS = [
+  "/images/portada/videoportada1.mp4",
+  "/images/portada/videoportada2.mp4",
+  "/images/portada/videoportada3.mp4",
+];
 
-type Props = {
-  /** Rutes dels vídeos (ex: videoportada1.mp4, videoportada2.mp4, ...) */
-  videos: string[];
-};
+const AUTOPLAY_INTERVAL_MS = 6000;
 
-export function HeroVideoCarousel({ videos }: Props) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export function HeroVideoCarousel() {
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (videos.length <= 1) return;
     const id = setInterval(() => {
-      setCurrentIndex((i) => (i + 1) % videos.length);
-    }, AUTO_ADVANCE_MS);
+      setIndex((i) => (i + 1) % HERO_VIDEOS.length);
+    }, AUTOPLAY_INTERVAL_MS);
     return () => clearInterval(id);
-  }, [videos.length]);
+  }, []);
 
-  if (videos.length === 0) return null;
+  const currentSrc = HERO_VIDEOS[index];
 
   return (
     <section className="relative min-h-[50vh] overflow-hidden bg-slate-900">
-      <video
-        key={currentIndex}
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 h-full w-full object-cover"
-        aria-hidden
-        src={videos[currentIndex]}
-      >
-        <source src={videos[currentIndex]} type="video/mp4" />
-      </video>
+      <div className="absolute inset-0">
+        <video
+          key={currentSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+          aria-hidden
+        >
+          <source src={currentSrc} type="video/mp4" />
+        </video>
+      </div>
       <div className="absolute inset-0 bg-black/40" />
       <div className="relative flex min-h-[50vh] flex-col items-center justify-center px-4 py-24 sm:px-6 lg:px-8">
         <div className="max-w-3xl text-center text-white">
@@ -46,22 +47,19 @@ export function HeroVideoCarousel({ videos }: Props) {
             Al servei del món educatiu i esportiu!
           </p>
         </div>
-        {videos.length > 1 && (
-          <div className="mt-8 flex gap-2" aria-label="Vídeos del carrusel">
-            {videos.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setCurrentIndex(i)}
-                className={`h-2 rounded-full transition-all ${
-                  i === currentIndex ? "w-8 bg-white" : "w-2 bg-white/50 hover:bg-white/70"
-                }`}
-                aria-current={i === currentIndex ? "true" : undefined}
-                aria-label={`Vídeo ${i + 1}`}
-              />
-            ))}
-          </div>
-        )}
+        <div className="mt-8 flex gap-2">
+          {HERO_VIDEOS.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => setIndex(i)}
+              className={`h-2 w-2 rounded-full transition-all sm:h-2.5 sm:w-2.5 ${
+                i === index ? "scale-125 bg-white" : "bg-white/50 hover:bg-white/70"
+              }`}
+              aria-label={`Vídeo ${i + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
