@@ -83,7 +83,7 @@ export default function Home() {
       </section>
 
       {/* Contacte – tres blocs mateixa mida, compactes */}
-      <section className="bg-slate-900 py-6 text-white lg:py-8">
+      <section id="contacte" className="bg-slate-900 py-6 text-white lg:py-8">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:h-[300px] lg:grid-cols-3 lg:gap-6 lg:px-6">
           <div className="relative min-h-[140px] overflow-hidden rounded-lg lg:min-h-0 lg:h-full">
             <Image

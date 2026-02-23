@@ -29,7 +29,7 @@ export function CategoriesWithMascot({ categories }: Props) {
         const logoOnVideo = "logoOnVideo" in item && item.logoOnVideo;
         const logoBelowVideo = "logoBelowVideo" in item && item.logoBelowVideo;
         const logoAlsoAtBottom = "logoAlsoAtBottom" in item && item.logoAlsoAtBottom;
-        const showLogoOnTop = !logoOnVideo && !logoBelowVideo;
+        const showLogoOnTop = !logoOnVideo && !logoBelowVideo && !logoAlsoAtBottom;
         const content = (
           <>
             {showLogoOnTop && (
@@ -44,7 +44,7 @@ export function CategoriesWithMascot({ categories }: Props) {
               </div>
             )}
             <div
-              className={`relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ${logoOnVideo || logoBelowVideo ? "rounded-t-xl" : ""}`}
+              className={`relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ${logoOnVideo || logoBelowVideo || logoAlsoAtBottom ? "rounded-t-xl" : ""}`}
             >
               <CoverVideo
                 src={item.video}

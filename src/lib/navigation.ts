@@ -69,7 +69,7 @@ export const mainNav: NavItem[] = [
   { label: "Futsal Camps", href: "/futsal-camps" },
   { label: "Canal Etic", href: "/canal-etic" },
   { label: "Unete a l'Equip", href: "/unete-a-lequip" },
-  { label: "Contacte", href: "/contacte" },
+  { label: "Contacte", href: "/#contacte" },
   {
     label: "Botiga Online",
     href: "https://cpmaterialdeportivo.com/",
@@ -85,7 +85,7 @@ export const footerNav: NavLink[] = [
   { label: "Futsal Camps", href: "/futsal-camps" },
   { label: "Canal Etic", href: "/canal-etic" },
   { label: "Unete a l'Equip", href: "/unete-a-lequip" },
-  { label: "Contacte", href: "/contacte" },
+  { label: "Contacte", href: "/#contacte" },
   { label: "Avís Legal", href: "/avis-legal" },
   { label: "Política de Privacitat", href: "/politica-privacitat" },
   { label: "Política de Galetes", href: "/politica-galetes" },
