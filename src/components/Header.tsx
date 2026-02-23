@@ -1,21 +1,77 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
-import { mainNav, siteName } from "@/lib/navigation";
+import { mainNav, siteName, contact } from "@/lib/navigation";
+
+const LOGO_PATH = "/images/logos/logo_control_play.png";
+
+function PhoneIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="5" y="2" width="14" height="20" rx="2.5" />
+      <circle cx="12" cy="18" r="1.25" fill="currentColor" />
+    </svg>
+  );
+}
+
+function MailIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="2" y="4" width="20" height="16" rx="2.5" />
+      <path d="m2 7 9.5 6 9.5-6" />
+    </svg>
+  );
+}
 
 export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [logoError, setLogoError] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+      {/* Top bar: phone + email */}
+      <div className="border-b border-slate-200/60 bg-slate-50/90">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-start gap-x-6 gap-y-1 px-4 py-2 text-sm sm:px-6 lg:px-8">
+          <a
+            href={`tel:${contact.phone.replace(/\s/g, "")}`}
+            className="flex items-center gap-2 text-slate-600 transition hover:text-emerald-600"
+          >
+            <PhoneIcon className="h-4 w-4 shrink-0" />
+            <span>{contact.phone}</span>
+          </a>
+          <a
+            href={`mailto:${contact.email}`}
+            className="flex items-center gap-2 text-slate-600 transition hover:text-emerald-600"
+          >
+            <MailIcon className="h-4 w-4 shrink-0" />
+            <span>{contact.email}</span>
+          </a>
+        </div>
+      </div>
+      {/* Logo + nav */}
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight text-slate-900 hover:text-emerald-600 transition-colors"
+          className="flex items-center gap-2 text-slate-900 hover:opacity-90 transition-opacity"
         >
-          {siteName}
+          {!logoError ? (
+            <Image
+              src={LOGO_PATH}
+              alt={siteName}
+              width={160}
+              height={44}
+              className="h-10 w-auto object-contain object-left"
+              onError={() => setLogoError(true)}
+              priority
+            />
+          ) : (
+            <span className="text-xl font-bold tracking-tight text-slate-900">
+              {siteName}
+            </span>
+          )}
         </Link>
 
         {/* Desktop nav */}

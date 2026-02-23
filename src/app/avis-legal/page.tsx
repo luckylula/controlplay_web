@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Avís Legal",
-  description: "Avís legal – Control Play Sports.",
+  description: "Avís legal – Control Play.",
 };
 
 export default function AvisLegalPage() {

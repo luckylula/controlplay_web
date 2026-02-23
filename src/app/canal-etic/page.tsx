@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Canal Etic",
-  description: "Canal Etic – Control Play Sports.",
+  description: "Canal Etic – Control Play.",
 };
 
 export default function CanalEticPage() {

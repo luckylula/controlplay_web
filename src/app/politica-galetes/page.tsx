@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Política de Galetes",
-  description: "Política de galetes – Control Play Sports.",
+  description: "Política de galetes – Control Play.",
 };
 
 export default function PoliticaGaletesPage() {

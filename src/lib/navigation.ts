@@ -13,11 +13,11 @@ export type NavItem = NavLink & {
   children?: NavLink[];
 };
 
-export const siteName = "Control Play Sports";
+export const siteName = "Control Play";
 
 export const mainNav: NavItem[] = [
   { label: "Inici", href: "/" },
-  { label: "Qui Som?", href: "/qui-som" },
+  { label: "Equip CP", href: "/equip-cp" },
   { label: "Menjadors Escolars", href: "/menjadors-escolars" },
   {
     label: "Activitats Extraescolars",
@@ -68,6 +68,7 @@ export const mainNav: NavItem[] = [
   { label: "Casals", href: "/casals" },
   { label: "Futsal Camps", href: "/futsal-camps" },
   { label: "Canal Etic", href: "/canal-etic" },
+  { label: "Unete a l'Equip", href: "/unete-a-lequip" },
   { label: "Contacte", href: "/contacte" },
   {
     label: "Botiga Online",
@@ -77,12 +78,13 @@ export const mainNav: NavItem[] = [
 ];
 
 export const footerNav: NavLink[] = [
-  { label: "Qui Som?", href: "/qui-som" },
+  { label: "Equip CP", href: "/equip-cp" },
   { label: "Menjadors Escolars", href: "/menjadors-escolars" },
   { label: "Activitats Extraescolars", href: "/activitats-extraescolars" },
   { label: "Casals", href: "/casals" },
   { label: "Futsal Camps", href: "/futsal-camps" },
   { label: "Canal Etic", href: "/canal-etic" },
+  { label: "Unete a l'Equip", href: "/unete-a-lequip" },
   { label: "Contacte", href: "/contacte" },
   { label: "Avís Legal", href: "/avis-legal" },
   { label: "Política de Privacitat", href: "/politica-privacitat" },

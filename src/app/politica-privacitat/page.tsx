@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Política de Privacitat",
-  description: "Política de privacitat – Control Play Sports.",
+  description: "Política de privacitat – Control Play.",
 };
 
 export default function PoliticaPrivacitatPage() {

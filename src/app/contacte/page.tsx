@@ -3,7 +3,7 @@ import { contact } from "@/lib/navigation";
 
 export const metadata: Metadata = {
   title: "Contacte",
-  description: "Contacta amb Control Play Sports – Telèfon, email i adreça.",
+  description: "Contacta amb Control Play – Telèfon, email i adreça.",
 };
 
 export default function ContactePage() {

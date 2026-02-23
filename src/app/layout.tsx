@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteName}`,
   },
   description:
-    "Control Play Sports – Serveis per a centres educatius, esportius i lúdics. Menjadors escolars, activitats extraescolars, casals i més.",
+    "Control Play – Serveis per a centres educatius, esportius i lúdics. Menjadors escolars, activitats extraescolars, casals i més.",
 };
 
 export default function RootLayout({
