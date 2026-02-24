@@ -16,6 +16,8 @@ type CategoryItem = {
   readonly logoAlsoAtBottom?: boolean;
   readonly external?: boolean;
   readonly videoScale?: number;
+  /** Vídeo de la mascota Play per a aquesta categoria (carpeta /images/play/) */
+  readonly playVideo?: string;
 };
 
 type Props = {

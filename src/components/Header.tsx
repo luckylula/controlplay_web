@@ -31,9 +31,9 @@ export function Header() {
   const [logoError, setLogoError] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white">
       {/* Top bar: phone + email */}
-      <div className="border-b border-slate-200/60 bg-slate-50/90">
+      <div className="border-b border-slate-200/60 bg-white">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-start gap-x-6 gap-y-1 px-4 py-2 text-sm sm:px-6 lg:px-8">
           <a
             href={`tel:${contact.phone.replace(/\s/g, "")}`}

@@ -14,6 +14,7 @@ const CATEGORIES = [
     video: "/images/portada/menjadors%20escolars.mp4",
     fallback: "/images/logos/CP%20CUINA.png",
     logo: "/images/logos/CP%20CUINA.png",
+    playVideo: "/images/play/play%20video%20menjadors.mp4",
   },
   {
     title: "Activitats Extraescolars",
@@ -23,7 +24,8 @@ const CATEGORIES = [
     video: "/images/portada/activitats%20extraescolars.mp4",
     fallback: "/images/logos/logo%20extraescolars%20circulo.png",
     logo: "/images/logos/logo%20extraescolars%20circulo.png",
-    logoOnVideo: true, // logo a la cantonada superior dreta del vídeo (prova)
+    logoOnVideo: true,
+    playVideo: "/images/play/play%20video%20activitats%20extraescolars.mp4",
   },
   {
     title: "Casals",
@@ -33,7 +35,8 @@ const CATEGORIES = [
     video: "/images/portada/casals.mp4",
     fallback: "/images/logos/CP%20CASALS.png",
     logo: "/images/logos/CP%20CASALS.png",
-    logoBelowVideo: true, // prova: logo sota el vídeo en lloc de damunt
+    logoBelowVideo: true,
+    playVideo: "/images/play/play%20video%20casals.mp4",
   },
   {
     title: "Botiga On-line",
@@ -45,7 +48,8 @@ const CATEGORIES = [
     logo: "/images/logos/CP%20SERVEIS%20EDUCATIUS.png",
     external: true,
     videoScale: 1.35,
-    logoAlsoAtBottom: true, // prova: logo també sota el text
+    logoAlsoAtBottom: true,
+    playVideo: "/images/play/play%20video%20botiga.mp4",
   },
 ] as const;
 
@@ -55,8 +59,45 @@ export default function Home() {
       {/* Hero – carrusel de vídeos (videoportada1, 2, 3...) amb el text al damunt */}
       <HeroVideoCarousel />
 
-      {/* Categories – 4 icons: ocupa tota l’amplada (escala amb la pantalla) */}
-      <section className="pt-24 pb-16 sm:pt-32 sm:pb-24">
+      {/* Franja amb els 4 vídeos de Play (mascota), alineats sobre cada icona */}
+      <section className="bg-white py-4 sm:py-6">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-4 gap-4 sm:gap-6">
+            {CATEGORIES.map((item) => (
+              <div
+                key={item.title}
+                className="flex justify-center"
+              >
+                {"playVideo" in item && item.playVideo ? (
+                  <div
+                    className={`aspect-square overflow-hidden rounded-full bg-white ${
+                      item.title === "Casals"
+                        ? "w-28 sm:w-36 md:w-44 lg:w-56"
+                        : "w-24 sm:w-32 md:w-40 lg:w-48"
+                    }`}
+                  >
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className={`h-full w-full object-contain ${
+                        item.title === "Casals" ? "scale-150" : "scale-125"
+                      }`}
+                      src={item.playVideo}
+                    />
+                  </div>
+                ) : (
+                  <div className="aspect-square w-24 sm:w-32 md:w-40 lg:w-48" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Categories – 4 icons */}
+      <section className="pt-8 pb-16 sm:pt-12 sm:pb-24">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <CategoriesWithMascot categories={CATEGORIES} />
         </div>
