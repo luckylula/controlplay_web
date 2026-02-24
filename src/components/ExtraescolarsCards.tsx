@@ -56,7 +56,9 @@ export function ExtraescolarsCards({
   const canGoNext = currentIndex < activities.length - 1;
 
   // Mida del pas per al desplaçament (amplada targeta + gap)
-  const slideStep = 540; // 520px card + 20px gap (sm: 560+20)
+  const slideStep = 540;
+  const restActivities = activities.length > 1 ? activities.slice(1) : [];
+  const slideIndex = Math.min(currentIndex, Math.max(0, restActivities.length - 1));
 
   return (
     <section className="border-t border-slate-200 bg-white py-12 sm:py-16">
@@ -78,53 +80,80 @@ export function ExtraescolarsCards({
           </Link>
         </div>
 
-        {/* Carrusel: àrea de targetes a dalt */}
-        <div ref={scrollContainerRef} className="mt-8 overflow-x-hidden">
-          <ul
-            className="flex gap-4 sm:gap-5 transition-transform duration-300 ease-out"
-            style={{ transform: `translateX(-${currentIndex * slideStep}px)` }}
-          >
-            {activities.map((item, index) => (
-            <li
-              key={item.href}
-              ref={(el) => { cardRefs.current[index] = el; }}
-              className="shrink-0 w-[520px] sm:w-[560px]"
-            >
-                <Link
-                  href={item.href}
-                  className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-                >
-                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                    {item.image ? (
-                      <Image
-                        src={item.image}
-                        alt=""
-                        fill
-                        className="object-cover transition group-hover:scale-105"
-                        sizes="560px"
-                      />
-                    ) : (
-                      <div
-                        className={`h-full w-full bg-gradient-to-br ${CARD_COLORS[index % CARD_COLORS.length]} flex items-center justify-center`}
-                      >
-                        <span className="text-6xl font-bold text-white/90">
-                          {item.label.charAt(0)}
+        {/* Carrusel: primera targeta fixa (només vídeo) + la resta que es desplacen */}
+        <div ref={scrollContainerRef} className="mt-8 flex gap-4 sm:gap-5 overflow-hidden">
+          {/* Primera targeta fixa: només vídeo gran, sense text */}
+          {activities.length > 0 && (
+            <div className="shrink-0 w-[520px] sm:w-[560px]">
+              <Link
+                href={activities[0].href}
+                className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+              >
+                {/* Vídeo a tota la targeta (mateixa alçada total que la resta, sense franja blanca) */}
+                <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "520/490" }}>
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="h-full w-full object-cover transition group-hover:scale-105"
+                    src="/images/play/play%20multideportes.mp4"
+                  />
+                </div>
+              </Link>
+            </div>
+          )}
+
+          {/* Resta d’activitats: es desplacen amb les fletxes/punts */}
+          {restActivities.length > 0 && (
+            <div className="min-w-0 flex-1 overflow-x-hidden">
+              <ul
+                className="flex gap-4 sm:gap-5 transition-transform duration-300 ease-out"
+                style={{ transform: `translateX(-${slideIndex * slideStep}px)` }}
+              >
+                {restActivities.map((item, index) => (
+                  <li
+                    key={item.href}
+                    ref={(el) => { cardRefs.current[index + 1] = el; }}
+                    className="shrink-0 w-[520px] sm:w-[560px]"
+                  >
+                    <Link
+                      href={item.href}
+                      className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                    >
+                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                        {item.image ? (
+                          <Image
+                            src={item.image}
+                            alt=""
+                            fill
+                            className="object-cover transition group-hover:scale-105"
+                            sizes="560px"
+                          />
+                        ) : (
+                          <div
+                            className={`h-full w-full bg-gradient-to-br ${CARD_COLORS[(index + 1) % CARD_COLORS.length]} flex items-center justify-center`}
+                          >
+                            <span className="text-6xl font-bold text-white/90">
+                              {item.label.charAt(0)}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="p-5 sm:p-6">
+                        <h3 className="text-lg font-semibold text-slate-900 line-clamp-2 group-hover:text-emerald-700 sm:text-xl">
+                          {item.label}
+                        </h3>
+                        <span className="mt-3 inline-block text-base font-medium text-emerald-600">
+                          Saber més →
                         </span>
                       </div>
-                    )}
-                  </div>
-                  <div className="p-5 sm:p-6">
-                    <h3 className="text-lg font-semibold text-slate-900 line-clamp-2 group-hover:text-emerald-700 sm:text-xl">
-                      {item.label}
-                    </h3>
-                    <span className="mt-3 inline-block text-base font-medium text-emerald-600">
-                      Saber més →
-                    </span>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         {/* Navegació: fletxa – punts – fletxa (com a l’exemple) */}
