@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import { HeroVideoCarousel } from "@/components/HeroVideoCarousel";
 import { CategoriesWithMascot } from "@/components/CategoriesWithMascot";
 import { ContactForm } from "@/components/ContactForm";
-import { contact } from "@/lib/navigation";
+import { ExtraescolarsCards } from "@/components/ExtraescolarsCards";
+import { contact, mainNav } from "@/lib/navigation";
 
 /** Vídeos de portada en public/images/portada/. Logo i text sota cada vídeo. */
 const CATEGORIES = [
@@ -122,6 +124,44 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Franja Extraescolars – foto a tota la franja amb text al damunt */}
+      <section className="relative min-h-[280px] w-full overflow-hidden border-t border-slate-200 sm:min-h-[320px] lg:min-h-[360px]">
+        <Image
+          src="/images/portada/apuntat.jpg"
+          alt="Extraescolars"
+          fill
+          className="object-cover"
+          sizes="100vw"
+          priority={false}
+        />
+        <div className="absolute inset-0 bg-black/40" aria-hidden />
+        <div className="relative flex min-h-[280px] flex-col items-center justify-center px-4 py-12 text-center sm:min-h-[320px] sm:py-16 lg:min-h-[360px]">
+          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 sm:text-base">
+            Durant tot l&apos;any !
+          </p>
+          <h2 className="mt-1 text-2xl font-bold text-white drop-shadow-sm sm:text-3xl lg:text-4xl">
+            Extraescolars
+          </h2>
+          <p className="mt-2 text-lg text-white/95 drop-shadow-sm">Apuntat !</p>
+          <Link
+            href="/activitats-extraescolars"
+            className="mt-6 inline-flex items-center justify-center rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-transparent"
+          >
+            Descobreix les activitats
+          </Link>
+        </div>
+      </section>
+
+      {/* Activitats extraescolars – targetes desplaçables (estil Actualitat) */}
+      <ExtraescolarsCards
+        activities={
+          mainNav.find((n) => n.label === "Activitats Extraescolars")?.children ?? []
+        }
+        title="Descobreix les nostres activitats"
+        ctaHref="/activitats-extraescolars"
+        ctaLabel="Totes les activitats"
+      />
 
       {/* Contacte – tres blocs mateixa mida, compactes */}
       <section id="contacte" className="bg-slate-900 py-6 text-white lg:py-8">
