@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -42,6 +43,21 @@ export function ExtraescolarsCards({
   ctaHref = "/activitats-extraescolars",
   ctaLabel = "Totes les activitats",
 }: Props) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLLIElement | null)[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goTo = useCallback((index: number) => {
+    const i = Math.max(0, Math.min(index, activities.length - 1));
+    setCurrentIndex(i);
+  }, [activities.length]);
+
+  const canGoPrev = currentIndex > 0;
+  const canGoNext = currentIndex < activities.length - 1;
+
+  // Mida del pas per al desplaçament (amplada targeta + gap)
+  const slideStep = 540; // 520px card + 20px gap (sm: 560+20)
+
   return (
     <section className="border-t border-slate-200 bg-white py-12 sm:py-16">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
@@ -62,15 +78,18 @@ export function ExtraescolarsCards({
           </Link>
         </div>
 
-        {/* Horizontal scroll container – drag/scroll like Campos Estela */}
-        <div className="mt-8 overflow-x-auto overscroll-x-contain pb-2 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 scroll-smooth">
-          <ul className="flex gap-4 sm:gap-5" style={{ scrollSnapType: "x mandatory" }}>
+        {/* Carrusel: àrea de targetes a dalt */}
+        <div ref={scrollContainerRef} className="mt-8 overflow-x-hidden">
+          <ul
+            className="flex gap-4 sm:gap-5 transition-transform duration-300 ease-out"
+            style={{ transform: `translateX(-${currentIndex * slideStep}px)` }}
+          >
             {activities.map((item, index) => (
-              <li
-                key={item.href}
-                className="shrink-0 w-[520px] sm:w-[560px]"
-                style={{ scrollSnapAlign: "start" }}
-              >
+            <li
+              key={item.href}
+              ref={(el) => { cardRefs.current[index] = el; }}
+              className="shrink-0 w-[520px] sm:w-[560px]"
+            >
                 <Link
                   href={item.href}
                   className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
@@ -106,6 +125,51 @@ export function ExtraescolarsCards({
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Navegació: fletxa – punts – fletxa (com a l’exemple) */}
+        <div className="mt-6 flex items-center justify-center gap-4" role="tablist" aria-label="Navegació per activitats">
+          <button
+            type="button"
+            onClick={() => goTo(currentIndex - 1)}
+            disabled={!canGoPrev}
+            aria-label="Activitat anterior"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-400 bg-white text-slate-700 transition hover:bg-slate-50 disabled:opacity-40 disabled:pointer-events-none"
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {activities.map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => goTo(index)}
+                aria-label={`Anar a l'activitat ${index + 1}`}
+                aria-selected={index === currentIndex}
+                role="tab"
+                className={`h-2.5 w-2.5 shrink-0 rounded-full border-2 transition focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
+                  index === currentIndex
+                    ? "border-violet-700 bg-violet-700"
+                    : "border-slate-400 bg-white hover:border-slate-500"
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={() => goTo(currentIndex + 1)}
+            disabled={!canGoNext}
+            aria-label="Activitat següent"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-400 bg-white text-slate-700 transition hover:bg-slate-50 disabled:opacity-40 disabled:pointer-events-none"
+          >
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
