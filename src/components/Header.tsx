@@ -50,7 +50,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white">
       {/* Top bar: phone + email */}
       <div className="border-b border-slate-200/60 bg-white">
-        <div className="mx-auto flex w-full flex-wrap items-center justify-end gap-x-6 gap-y-1 px-4 py-3 text-sm sm:py-4 sm:px-6 sm:text-base lg:px-8">
+        <div className="mx-auto flex w-full flex-wrap items-center justify-end gap-x-6 gap-y-1 px-4 py-2 text-sm sm:py-2.5 sm:px-6 sm:text-base lg:px-8">
           <a
             href={`tel:${contact.phone.replace(/\s/g, "")}`}
             className="flex items-center gap-2 text-slate-600 transition hover:text-emerald-600"
@@ -68,7 +68,7 @@ export function Header() {
         </div>
       </div>
       {/* Logo + nav – mida responsiva: més petit en pantalles petites, més gran en pantalles grans */}
-      <div className="mx-auto flex h-24 w-full items-center justify-between px-4 sm:h-32 sm:px-6 md:h-40 lg:h-48 lg:px-8 xl:h-52">
+      <div className="mx-auto flex h-20 w-full items-center justify-between px-4 sm:h-24 sm:px-6 md:h-28 lg:h-32 lg:px-8 xl:h-36">
         <Link
           href="/"
           className="flex items-center gap-2 text-slate-900 hover:opacity-90 transition-opacity"
@@ -79,7 +79,7 @@ export function Header() {
               alt={siteName}
               width={640}
               height={176}
-              className="h-16 w-auto max-w-[45vw] scale-105 object-contain object-left origin-left sm:h-20 sm:scale-110 sm:max-w-none md:h-28 lg:h-40 xl:h-44 xl:scale-110"
+              className="h-12 w-auto max-w-[45vw] scale-105 object-contain object-left origin-left sm:h-14 sm:scale-110 sm:max-w-none md:h-20 lg:h-28 xl:h-32 xl:scale-110"
               onError={() => setLogoError(true)}
               priority
             />
