@@ -35,13 +35,15 @@ export function CategoriesWithMascot({ categories }: Props) {
         const content = (
           <>
             {showLogoOnTop && (
-              <div className="flex justify-center rounded-t-xl border border-b-0 border-slate-200 bg-white py-4">
+              <div className="flex min-h-[5rem] items-center justify-center overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white px-2 py-4">
                 <Image
                   src={item.logo}
                   alt=""
-                  width={140}
-                  height={44}
-                  className="h-10 w-auto object-contain"
+                  width={240}
+                  height={80}
+                  className={`h-16 w-full max-w-full object-contain ${
+                    item.title === "Activitats Extraescolars" ? "scale-[1.32]" : ""
+                  }`}
                 />
               </div>
             )}

@@ -5,7 +5,23 @@ import Image from "next/image";
 import { useState } from "react";
 import { mainNav, siteName, contact } from "@/lib/navigation";
 
-const LOGO_PATH = "/images/logos/logo_control_play.png";
+const LOGO_PATH = "/images/logos/logo%20SERVEIS%20EDUCATIUS.png";
+
+/** Enllaços amb dues paraules: primera línia a dalt, segona a sota */
+function NavLabel({ label }: { label: string }) {
+  const words = label.trim().split(/\s+/);
+  if (words.length >= 2) {
+    const line1 = words.slice(0, -1).join(" ");
+    const line2 = words[words.length - 1];
+    return (
+      <span className="inline-flex flex-col items-center leading-tight">
+        <span>{line1}</span>
+        <span>{line2}</span>
+      </span>
+    );
+  }
+  return <span>{label}</span>;
+}
 
 function PhoneIcon({ className }: { className?: string }) {
   return (
@@ -34,7 +50,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white">
       {/* Top bar: phone + email */}
       <div className="border-b border-slate-200/60 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-start gap-x-6 gap-y-1 px-4 py-2 text-sm sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full flex-wrap items-center justify-end gap-x-6 gap-y-1 px-4 py-3 text-sm sm:py-4 sm:px-6 sm:text-base lg:px-8">
           <a
             href={`tel:${contact.phone.replace(/\s/g, "")}`}
             className="flex items-center gap-2 text-slate-600 transition hover:text-emerald-600"
@@ -51,8 +67,8 @@ export function Header() {
           </a>
         </div>
       </div>
-      {/* Logo + nav */}
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      {/* Logo + nav – mida responsiva: més petit en pantalles petites, més gran en pantalles grans */}
+      <div className="mx-auto flex h-24 w-full items-center justify-between px-4 sm:h-32 sm:px-6 md:h-40 lg:h-48 lg:px-8 xl:h-52">
         <Link
           href="/"
           className="flex items-center gap-2 text-slate-900 hover:opacity-90 transition-opacity"
@@ -61,9 +77,9 @@ export function Header() {
             <Image
               src={LOGO_PATH}
               alt={siteName}
-              width={160}
-              height={44}
-              className="h-10 w-auto object-contain object-left"
+              width={640}
+              height={176}
+              className="h-16 w-auto max-w-[45vw] scale-105 object-contain object-left origin-left sm:h-20 sm:scale-110 sm:max-w-none md:h-28 lg:h-40 xl:h-44 xl:scale-110"
               onError={() => setLogoError(true)}
               priority
             />
@@ -74,8 +90,8 @@ export function Header() {
           )}
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        {/* Desktop nav – dues paraules en dues línies, menys espai entre categories */}
+        <nav className="hidden md:flex items-center gap-0.5">
           {mainNav.map((item) => {
             if (item.external) {
               return (
@@ -84,9 +100,9 @@ export function Header() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                  className="rounded-md px-2 py-1.5 text-center text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                 >
-                  {item.label}
+                  <NavLabel label={item.label} />
                 </a>
               );
             }
@@ -101,11 +117,11 @@ export function Header() {
                 >
                   <Link
                     href={item.href}
-                    className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                    className="flex items-center gap-0.5 rounded-md px-2 py-1.5 text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
                   >
-                    {item.label}
+                    <NavLabel label={item.label} />
                     <svg
-                      className="h-4 w-4"
+                      className="h-4 w-4 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -138,9 +154,9 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-              >
-                {item.label}
+                className="rounded-md px-2 py-1.5 text-center text-base font-medium text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                >
+                  <NavLabel label={item.label} />
               </Link>
             );
           })}
