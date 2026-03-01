@@ -3,8 +3,19 @@ import Link from "next/link";
 import { HeroVideoCarousel } from "@/components/HeroVideoCarousel";
 import { CategoriesWithMascot } from "@/components/CategoriesWithMascot";
 import { ContactForm } from "@/components/ContactForm";
+import type { ActivityCard } from "@/components/ExtraescolarsCards";
 import { ExtraescolarsCards } from "@/components/ExtraescolarsCards";
-import { contact, mainNav } from "@/lib/navigation";
+import { contact } from "@/lib/navigation";
+
+/** Activitats que es mostren a la portada a «Descobreix els nostres projectes». */
+const DISCOVER_ACTIVITIES: ActivityCard[] = [
+  { label: "Dinem en família", href: "/menjadors-escolars" },
+  { label: "Robòtica", href: "/activitats-extraescolars/robotica", image: "/images/extraescolars/robotica.png" },
+  { label: "Canteen Project", href: "/menjadors-escolars" },
+  { label: "Taller interactiu de Ciència", href: "/activitats-extraescolars/taller-ciencia", image: "/images/extraescolars/ciencia.png" },
+  { label: "De l'Hort al menjador", href: "/menjadors-escolars" },
+  { label: "Taller d'alimentació saludable", href: "/menjadors-escolars" },
+];
 
 /** Vídeos de portada en public/images/portada/. Logo i text sota cada vídeo. */
 const CATEGORIES = [
@@ -115,10 +126,8 @@ export default function Home() {
 
       {/* Activitats extraescolars – targetes desplaçables (estil Actualitat) */}
       <ExtraescolarsCards
-        activities={
-          mainNav.find((n) => n.label === "Activitats Extraescolars")?.children ?? []
-        }
-        title="Descobreix les nostres activitats"
+        activities={DISCOVER_ACTIVITIES}
+        title="Descobreix els nostres projectes"
         ctaHref="/activitats-extraescolars"
         ctaLabel="Totes les activitats"
       />

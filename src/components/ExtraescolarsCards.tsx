@@ -39,7 +39,7 @@ const CARD_COLORS = [
 
 export function ExtraescolarsCards({
   activities,
-  title = "Descobreix les nostres activitats",
+  title = "Descobreix els nostres projectes",
   ctaHref = "/activitats-extraescolars",
   ctaLabel = "Totes les activitats",
 }: Props) {
