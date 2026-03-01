@@ -35,6 +35,8 @@ export const mainNav: NavItem[] = [
         href: "/activitats-extraescolars/divertaller",
       },
       { label: "Contacontes", href: "/activitats-extraescolars/contacontes" },
+      { label: "Escacs", href: "/activitats-extraescolars/escacs" },
+      { label: "Teatre", href: "/activitats-extraescolars/teatre" },
       // Activitats Esportives
       { label: "Futbol Sala", href: "/activitats-extraescolars/futbol-sala" },
       {
@@ -48,6 +50,10 @@ export const mainNav: NavItem[] = [
       {
         label: "Bàsquet, Handbol i Voley",
         href: "/activitats-extraescolars/basquet-handbol-voley",
+      },
+      {
+        label: "Ballem al Ritme",
+        href: "/activitats-extraescolars/ballem-ritme",
       },
       {
         label: "Hip-Hop / Danses Modernes",
