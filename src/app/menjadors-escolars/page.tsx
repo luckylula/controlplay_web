@@ -140,31 +140,67 @@ export default function MenjadorsEscolarsPage() {
           </div>
         </section>
 
-        {/* Fila: Paràgraf esquerra | Vídeo | Paràgraf dreta */}
+        {/* Fila: dos textos a l’esquerra | vídeo Play a la dreta */}
         <section className="mt-16 border-t border-slate-200 pt-12">
-          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.9fr_2.2fr_0.9fr] lg:gap-6">
-            {/* Esquerra: només el paràgraf Educació també a taula */}
-            <div>
-              <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                Educació també a taula
-              </h2>
-              <p className="mt-3 text-slate-600">
-                El menjador és una aula més. Treballem:
-              </p>
-              <ul className="mt-3 list-inside list-disc space-y-1 text-slate-600">
-                <li>Hàbits saludables</li>
-                <li>Autonomia personal</li>
-                <li>Convivència i respecte</li>
-                <li>Responsabilitat</li>
-                <li>Educació emocional</li>
-              </ul>
-              <p className="mt-4 text-slate-600">
-                Perquè menjar bé també és educar bé.
-              </p>
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-10">
+            {/* Esquerra: els dos paràgrafs apilats */}
+            <div className="space-y-10">
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Educació també a taula
+                </h2>
+                <p className="mt-3 text-slate-600">
+                  El menjador és una aula més. Treballem:
+                </p>
+                <ul className="mt-3 list-inside list-disc space-y-1 text-slate-600">
+                  <li>Hàbits saludables</li>
+                  <li>Autonomia personal</li>
+                  <li>Convivència i respecte</li>
+                  <li>Responsabilitat</li>
+                  <li>Educació emocional</li>
+                </ul>
+                <p className="mt-4 text-slate-600">
+                  Perquè menjar bé també és educar bé.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Equip amb vocació
+                </h2>
+                <p className="mt-3 text-slate-600">
+                  Som mestres. Som professionals de la restauració. Som educadors.
+                </p>
+                <p className="mt-2 text-slate-600">
+                  I sobretot, som persones amb passió pel que fem.
+                </p>
+                <p className="mt-3 text-slate-600">
+                  Ens adaptem a cada escola. Ens integrem al seu projecte educatiu. Caminem al costat de la direcció i les famílies.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Projecte Educatiu Integrat
+                </h2>
+                <p className="mt-3 text-slate-600">
+                  Som mestres. Coneixem l&apos;escola.
+                </p>
+                <p className="mt-3 text-slate-600">
+                  El nostre servei:
+                </p>
+                <ul className="mt-2 list-inside list-disc space-y-1 text-slate-600">
+                  <li>S&apos;integra al Projecte Educatiu del Centre</li>
+                  <li>Dinamitza activitats abans i després de dinar</li>
+                  <li>Treballa hàbits, valors i convivència</li>
+                  <li>S&apos;adapta a cada realitat</li>
+                </ul>
+                <p className="mt-4 text-slate-600">
+                  Cada centre és únic. I el nostre servei també.
+                </p>
+              </div>
             </div>
 
-            {/* Centre: vídeo Play Menjadors – més alt, sense franges */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
+            {/* Dreta: vídeo Play Menjadors */}
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
               <video
                 autoPlay
                 muted
@@ -173,22 +209,6 @@ export default function MenjadorsEscolarsPage() {
                 className="h-full w-full object-cover"
                 src="/images/play/play%20video%20menjadors.mp4"
               />
-            </div>
-
-            {/* Dreta: paràgraf Equip amb vocació */}
-            <div>
-              <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                Equip amb vocació
-              </h2>
-              <p className="mt-3 text-slate-600">
-                Som mestres. Som professionals de la restauració. Som educadors.
-              </p>
-              <p className="mt-2 text-slate-600">
-                I sobretot, som persones amb passió pel que fem.
-              </p>
-              <p className="mt-3 text-slate-600">
-                Ens adaptem a cada escola. Ens integrem al seu projecte educatiu. Caminem al costat de la direcció i les famílies.
-              </p>
             </div>
           </div>
         </section>
