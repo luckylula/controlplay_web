@@ -81,15 +81,16 @@ export default function ActivitatsExtraescolarsPage() {
         />
       </section>
 
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      {/* Contenidor ample: pantalles grans (ex. 27") aprofiten tot l'ample; pantalles petites es redueixen */}
+      <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Activitats Extraescolars</h1>
         <p className="mt-4 text-lg text-slate-600">
           Dissenyem i portem a terme un gran ventall d&apos;activitats extraescolars. Tant
           esportives com formatives i lúdiques.
         </p>
 
-        {/* Targetes: foto/color, títol, text breu, Saber més */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* 4 activitats per fila a pantalla gran; finestres una mica més grans */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {children.map((item, index) => {
             const slug = getSlug(item.href);
             const introText = INTRO_TEXTS[slug];
@@ -99,20 +100,20 @@ export default function ActivitatsExtraescolarsPage() {
                 href={item.href}
                 className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
               >
-                {/* Foto o finestra de color (mateixa proporció 4/3) */}
+                {/* Finestra de color una mica més alta */}
                 <div
-                  className={`relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br ${CARD_COLORS[index % CARD_COLORS.length]} flex items-center justify-center`}
+                  className={`relative aspect-[4/3] w-full min-h-[180px] overflow-hidden bg-gradient-to-br sm:min-h-[200px] xl:min-h-[220px] ${CARD_COLORS[index % CARD_COLORS.length]} flex items-center justify-center`}
                 >
                   <span className="text-5xl font-bold text-white/90 sm:text-6xl" aria-hidden>
                     {item.label.charAt(0)}
                   </span>
                 </div>
-                <div className="border-t border-slate-200 p-5 sm:p-6">
+                <div className="border-t border-slate-200 p-5 sm:p-6 xl:p-6">
                   <h2 className="text-lg font-semibold text-slate-900 group-hover:text-emerald-700 sm:text-xl">
                     {item.label}
                   </h2>
                   {introText ? (
-                    <p className="mt-2 line-clamp-3 text-slate-600">{introText}</p>
+                    <p className="mt-2 line-clamp-4 text-slate-600 xl:line-clamp-5">{introText}</p>
                   ) : null}
                   <span className="mt-3 inline-block text-base font-medium text-emerald-600 group-hover:underline">
                     Saber més →
