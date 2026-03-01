@@ -1623,6 +1623,108 @@ function BallemRitmeContent() {
   );
 }
 
+/** Contingut específic per a Teatre */
+function TeatreContent() {
+  return (
+    <>
+      <section className="mt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
+        <p className="mt-3 text-slate-600">
+          El Taller de Teatre és un espai on els infants poden expressar-se lliurement, desenvolupar
+          la imaginació i guanyar confiança davant dels altres. A través de jocs dramàtics, petites
+          representacions i dinàmiques d&apos;expressió corporal i verbal, els nens i nenes descobreixen
+          el món de la interpretació d&apos;una manera divertida i adaptada a la seva edat.
+        </p>
+        <p className="mt-3 text-slate-600">
+          El teatre ajuda a millorar la comunicació, la memòria i la creativitat, alhora que reforça
+          l&apos;autoestima i la capacitat de treballar en equip. Mitjançant històries, personatges i
+          situacions quotidianes, els infants aprenen a gestionar emocions, posar-se en el lloc dels
+          altres i parlar en públic amb seguretat.
+        </p>
+        <p className="mt-4 text-slate-600">
+          Cada sessió es converteix en una experiència vivencial on aprendre jugant és el veritable
+          protagonista.
+        </p>
+      </section>
+
+      <section className="mt-10 border-t border-slate-200 pt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
+        <ul className="mt-3 space-y-2 text-slate-600">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Potenciar l&apos;expressió oral i corporal.
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Desenvolupar la imaginació i la creativitat.
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Millorar la confiança i la seguretat en un mateix.
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Fomentar el treball en equip i el respecte pels companys.
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Aprendre a gestionar emocions a través de la interpretació.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-10 border-t border-slate-200 pt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Destinataris</h2>
+        <ul className="mt-3 space-y-2 text-slate-600">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Educació Infantil
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Educació Primària
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-10 border-t border-slate-200 pt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lacions</h2>
+        <ul className="mt-3 space-y-2 text-slate-600">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Aula polivalent o espai ampli que permeti el moviment i la representació.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-10 border-t border-slate-200 pt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
+        <ul className="mt-3 space-y-2 text-slate-600">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Material d&apos;expressió (robes, complements simbòlics, elements escènics senzills).
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Equip de música per a dinàmiques i ambientació.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-10 border-t border-slate-200 pt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
+        <ul className="mt-3 space-y-2 text-slate-600">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Monitor/a amb formació en teatre o expressió corporal i experiència en dinamització de
+            grups infantils.
+          </li>
+        </ul>
+      </section>
+    </>
+  );
+}
+
 export default async function ActivitatPage({ params }: Props) {
   const { slug } = await params;
   const item = slugToItem[slug];
@@ -1661,6 +1763,8 @@ export default async function ActivitatPage({ params }: Props) {
       <EscacsContent />
     ) : slug === "ballem-ritme" ? (
       <BallemRitmeContent />
+    ) : slug === "teatre" ? (
+      <TeatreContent />
     ) : null;
 
   return (
