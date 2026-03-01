@@ -27,11 +27,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description:
       slug === "taekwondo-judo"
         ? "Taekwondo i Judo a l'escola. Arts marcials com a escola de vida: respecte, disciplina, concentració i creixement personal."
-        : slug === "hip-hop-danses"
+          : slug === "hip-hop-danses"
           ? "Hip-Hop i danses modernes a l'escola. Coreografies, ritme, coordinació i expressió corporal per a Infantil i Primària."
-          : slug === "circ-malabars"
-            ? "Circ i Malabars a l'escola. Malabars, equilibris, coordinació, creativitat i superació personal per a Infantil i Primària."
-            : slug === "multiesport"
+          : slug === "multiesport"
               ? "Multiesport a l'escola. Desenvolupament global mitjançant moviment, joc i iniciació esportiva per a Infantil i Primària."
               : slug === "hockey-mini-tennis-beisbol"
                 ? "Hockey, Mini-Tennis i Beisbol a l'escola. Iniciació amb implement: coordinació, precisió i treball en equip per a Primària."
@@ -41,9 +39,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
                     ? "Patins a l'escola. Iniciació al patinatge de manera progressiva i segura: equilibri, coordinació i autonomia per a Infantil i Primària."
                     : slug === "futbol-sala"
                       ? "Escola de Futbol Sala Jordi Torras. Formació esportiva de qualitat, coordinació, treball en equip i valors. Modalitat formativa i competitiva."
-                      : slug === "divertaller"
-                        ? "Divertaller + Taller d'estudi. Creativitat, pintura, dibuix, modelatge i tècniques manuals vinculades a l'escola."
-                        : slug === "minichef"
+                      : slug === "art-attack"
+                        ? "Art Attack. Creativitat, pintura, dibuix, modelatge i tècniques manuals per a Infantil i Primària."
+                        : slug === "taller-estudi"
+                          ? "Taller d'estudi. Espai d'estudi i suport."
+                          : slug === "minichef"
                           ? "Minichef. Taller de cuina educativa amb aliments de temporada i proximitat, receptes adaptades i educació alimentària."
                           : slug === "contacontes"
                             ? "Contacontes. Espai de narració i històries per treballar emocions, valors, imaginació i llenguatge."
@@ -269,104 +269,6 @@ function HipHopDansesContent() {
             <span className="mt-0.5 text-black" aria-hidden>✔</span>
             Monitor/a amb domini de danses modernes i capacitat per crear coreografies motivadores,
             amb experiència en l&apos;àmbit educatiu.
-          </li>
-        </ul>
-      </section>
-    </>
-  );
-}
-
-/** Contingut específic per a Circ i Malabars */
-function CircMalabarsContent() {
-  return (
-    <>
-      <section className="mt-10">
-        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
-        <p className="mt-3 text-slate-600">
-          L&apos;activitat de Circ i Malabars convida els infants a endinsar-se en un univers
-          creatiu, dinàmic i ple de reptes emocionants. A través de tècniques bàsiques de malabars,
-          equilibris, manipulació d&apos;objectes i expressió corporal, els nens i nenes desenvolupen
-          la coordinació, la concentració i el domini del cos.
-        </p>
-        <p className="mt-3 text-slate-600">
-          El circ és un entorn altament motivador que fomenta la superació personal i la constància.
-          Cada infant avança al seu ritme, descobrint noves habilitats i guanyant confiança en les
-          seves capacitats. Les sessions combinen aprenentatge tècnic amb dinàmiques lúdiques,
-          assegurant que aprenguin mentre gaudeixen.
-        </p>
-        <p className="mt-4 text-slate-600">
-          És una activitat que potencia la creativitat, l&apos;agilitat i l&apos;autoestima en un
-          ambient cooperatiu i respectuós.
-        </p>
-      </section>
-
-      <section className="mt-10 border-t border-slate-200 pt-10">
-        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Destinataris</h2>
-        <ul className="mt-3 space-y-2 text-slate-600">
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
-            Educació Infantil
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
-            Educació Primària
-          </li>
-        </ul>
-      </section>
-
-      <section className="mt-10 border-t border-slate-200 pt-10">
-        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
-        <ul className="mt-3 space-y-2 text-slate-600">
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
-            Desenvolupar la coordinació i el control corporal.
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
-            Millorar la concentració i la constància davant nous reptes.
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
-            Potenciar la creativitat i l&apos;expressió corporal.
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
-            Afavorir la confiança i la superació personal.
-          </li>
-        </ul>
-      </section>
-
-      <section className="mt-10 border-t border-slate-200 pt-10">
-        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lacions</h2>
-        <ul className="mt-3 space-y-2 text-slate-600">
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
-            Gimnàs o sala polivalent àmplia i segura.
-          </li>
-        </ul>
-      </section>
-
-      <section className="mt-10 border-t border-slate-200 pt-10">
-        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
-        <ul className="mt-3 space-y-2 text-slate-600">
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
-            Material específic de malabars (pilotes, plats xinesos, diàbolos, etc.).
-          </li>
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
-            Material bàsic d&apos;educació física per a escalfaments i jocs inicials.
-          </li>
-        </ul>
-      </section>
-
-      <section className="mt-10 border-t border-slate-200 pt-10">
-        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
-        <ul className="mt-3 space-y-2 text-slate-600">
-          <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
-            Monitor/a amb formació en activitats de circ i malabars, amb experiència en dinamització
-            de grups infantils i enfocament educatiu.
           </li>
         </ul>
       </section>
@@ -884,14 +786,14 @@ function FutbolSalaContent() {
   );
 }
 
-/** Contingut específic per a Divertaller + Taller d'estudi */
-function DivertallerContent() {
+/** Contingut específic per a Art Attack (taller artístic per a Infantil i Primària) */
+function ArtAttackContent() {
   return (
     <>
       <section className="mt-10">
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
         <p className="mt-3 text-slate-600">
-          El Divertaller és un espai pensat perquè els infants desenvolupin la seva creativitat
+          L&apos;Art Attack és un espai pensat perquè els infants desenvolupin la seva creativitat
           d&apos;una manera lliure, guiada i estimulant. A partir de materials propers i quotidians,
           els nens i nenes experimenten amb la pintura, el dibuix, el modelatge i diferents tècniques
           manuals, transformant una idea inicial en una creació pròpia.
@@ -902,7 +804,7 @@ function DivertallerContent() {
           vessant artística i manipulativa.
         </p>
         <p className="mt-4 text-slate-600">
-          A més de potenciar la imaginació, el Divertaller ajuda a millorar la motricitat fina, la
+          A més de potenciar la imaginació, l&apos;Art Attack ajuda a millorar la motricitat fina, la
           concentració i la capacitat de planificació, sempre en un ambient relaxat, motivador i ple
           d&apos;expressió.
         </p>
@@ -926,6 +828,20 @@ function DivertallerContent() {
           <li className="flex items-start gap-2">
             <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
             Fomentar la concentració i l&apos;autonomia en el procés creatiu.
+          </li>
+        </ul>
+      </section>
+
+      <section className="mt-10 border-t border-slate-200 pt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Destinataris</h2>
+        <ul className="mt-3 space-y-2 text-slate-600">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Educació Infantil
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            Educació Primària
           </li>
         </ul>
       </section>
@@ -1735,8 +1651,6 @@ export default async function ActivitatPage({ params }: Props) {
       <TaekwondoJudoContent />
     ) : slug === "hip-hop-danses" ? (
       <HipHopDansesContent />
-    ) : slug === "circ-malabars" ? (
-      <CircMalabarsContent />
     ) : slug === "multiesport" ? (
       <MultiesportContent />
     ) : slug === "hockey-mini-tennis-beisbol" ? (
@@ -1747,8 +1661,8 @@ export default async function ActivitatPage({ params }: Props) {
       <PatinsContent />
     ) : slug === "futbol-sala" ? (
       <FutbolSalaContent />
-    ) : slug === "divertaller" ? (
-      <DivertallerContent />
+    ) : slug === "art-attack" ? (
+      <ArtAttackContent />
     ) : slug === "minichef" ? (
       <MinichefContent />
     ) : slug === "contacontes" ? (

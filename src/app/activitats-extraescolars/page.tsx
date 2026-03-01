@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { mainNav } from "@/lib/navigation";
+import { ActivitatsExtraescolarsGrid } from "./ActivitatsExtraescolarsGrid";
 
 const extraescolarsItem = mainNav.find((n) => n.label === "Activitats Extraescolars");
 const children = extraescolarsItem?.children ?? [];
@@ -26,7 +27,7 @@ const CARD_COLORS = [
 
 export const metadata: Metadata = {
   title: "Activitats Extraescolars",
-  description: "Activitats extraescolars esportives, formatives i lúdiques. English Time, Robòtica, Futbol Sala, Circ i Malabars i més.",
+  description: "Activitats extraescolars esportives, formatives i lúdiques. English Time, Robòtica, Futbol Sala i més.",
 };
 
 const EXTRAESCOLARS_VIDEO = "/images/extraescolars/video%20futbol%20sala.mp4";
@@ -37,8 +38,6 @@ const INTRO_TEXTS: Record<string, string> = {
     "Disciplina, respecte i confiança en un mateix. En aquesta activitat els alumnes s'inicien en el Taekwondo o el Judo mentre desenvolupen la concentració, l'autocontrol i la coordinació. A través d'una metodologia adaptada a cada edat, el sensei fomenta valors com el respecte, el companyerisme i la superació personal. Una activitat perfecta per guanyar seguretat i créixer tant dins com fora del tatami.",
   "hip-hop-danses":
     "Moviment, ritme i molta energia! Una activitat pensada perquè els més petits descobreixin el món de la dansa d'una manera divertida i motivadora. A través de coreografies actuals i danses dinàmiques, treballem el sentit del ritme, la coordinació i l'expressió corporal. Ballem amb músiques variades, des de les més populars fins a les novetats del moment, perquè cada infant pugui expressar-se, guanyar confiança i gaudir compartint amb el grup. Una activitat per créixer, moure's i brillar amb llum pròpia.",
-  "circ-malabars":
-    "Imaginació, moviment i creativitat en acció. Una activitat pensada perquè els infants descobreixin el món del circ mentre desenvolupen el domini del cos i la coordinació amb diferents objectes. A través dels malabars, els equilibris i altres tècniques bàsiques, potenciem la concentració, l'agilitat i la confiança. El circ és un univers màgic i molt motivador que els permet expressar-se, superar reptes i gaudir aprenent en un ambient lúdic i estimulant.",
   multiesport:
     "Moure's, descobrir i aprendre jugant. L'activitat de Multiesport està pensada perquè els més petits desenvolupin les seves habilitats motrius i cognitives d'una manera divertida i natural. A través de jocs, circuits i activitats amb diferents tipus de pilota adaptades a la seva edat, treballem la coordinació, la percepció espacial i les destreses bàsiques. Una proposta variada i dinàmica que afavoreix el desenvolupament integral dels infants, tot assegurant que s'ho passin d'allò més bé mentre aprenen.",
   "hockey-mini-tennis-beisbol":
@@ -49,8 +48,9 @@ const INTRO_TEXTS: Record<string, string> = {
     "Equilibri, autonomia i confiança sobre rodes. L'activitat de patinatge ajuda els infants a desenvolupar l'equilibri, la coordinació i el control del cos d'una manera divertida i segura. A través de jocs i exercicis adaptats a cada nivell, els nens i nenes guanyen confiança i superen nous reptes progressivament. Més enllà de la tècnica, el patinatge fomenta la constància, l'esforç i el respecte pel grup, convertint cada sessió en una oportunitat per créixer, divertir-se i sentir-se capaços.",
   "futbol-sala":
     "Passió, equip i aprenentatge en cada entrenament. El Futbol Sala és un esport col·lectiu dinàmic i apassionant, ideal per desenvolupar la coordinació, l'agilitat i la presa de decisions. A través d'una metodologia formativa i adaptada a cada edat, els infants aprenen els fonaments tècnics i tàctics mentre gaudeixen del joc en equip. El projecte compta amb la coordinació de Jordi Torras, referent del Futbol Sala, que supervisa el procés formatiu perquè cada jugador i jugadora creixi tant esportivament com personalment. Una activitat per viure l'esport amb il·lusió, compromís i esperit d'equip.",
-  divertaller:
-    "Creativitat i aprenentatge que sumen. El Divertaller és un espai on els infants deixen volar la imaginació a través de la pintura, el dibuix, el modelatge i activitats manuals amb materials propers i quotidians. Treballem la creativitat, la motricitat fina i la capacitat de transformar una idea en una creació pròpia. El Taller d'estudi complementa l'activitat oferint un espai tranquil i guiat per reforçar hàbits de treball, autonomia i organització. Una proposta completa per créixer, crear i avançar amb confiança.",
+  "art-attack":
+    "Creativitat i aprenentatge que sumen. Art attack és un espai on els infants deixen volar la imaginació a través de la pintura, el dibuix, el modelatge i activitats manuals amb materials propers i quotidians. Treballem la creativitat, la motricitat fina i la capacitat de transformar una idea en una creació pròpia.",
+  "taller-estudi": "",
   minichef:
     "Descobrim la cuina jugant i experimentant. Al taller de Minichef, els infants s'endinsen en el món de la cuina a través de receptes senzilles i divertides. Experimentem amb aliments de temporada, descobrim d'on venen i aprenem la importància d'una alimentació sana i equilibrada. Mentre cuinen, desenvolupen autonomia, creativitat i hàbits saludables, tot compartint una experiència enriquidora i deliciosa amb el grup.",
   contacontes:
@@ -61,9 +61,46 @@ const INTRO_TEXTS: Record<string, string> = {
     "Aprenem anglès de manera natural i divertida. English Time és una activitat pensada perquè els infants d'Infantil es familiaritzin amb l'anglès a través del joc, les cançons i les dinàmiques participatives. Per a molts és el primer contacte amb la llengua, i ho fem d'una manera propera i motivadora. A Primària, reforcem i ampliem els coneixements treballant vocabulari, expressió oral i comprensió, ajudant-los a guanyar seguretat i confiança en l'ús de l'anglès. Una manera dinàmica d'aprendre una llengua que els obre portes al futur.",
 };
 
-function getSlug(href: string): string {
-  return href.replace("/activitats-extraescolars/", "") || "";
-}
+/** Categories per activitat (algunes en tenen dues). Es mostren a la capçalera de la targeta. */
+const CARD_CATEGORIES: Record<string, ("Infantil" | "Primària" | "I5")[]> = {
+  "taekwondo-judo": ["Primària", "I5"],
+  "hip-hop-danses": ["Infantil"],
+  multiesport: ["Primària", "Infantil"],
+  "hockey-mini-tennis-beisbol": ["Primària"],
+  "basquet-handbol-voley": ["Primària"],
+  patins: ["Primària", "Infantil"],
+  "futbol-sala": ["Primària", "Infantil"],
+  "art-attack": ["Primària", "Infantil"],
+  "taller-estudi": ["Primària"],
+  "english-time": ["Primària"],
+  teatre: ["Primària", "Infantil"],
+  "ballem-ritme": ["Infantil"],
+  minichef: ["Infantil"],
+  contacontes: ["Infantil"],
+  robotica: ["Infantil"],
+  escacs: ["I5"],
+};
+
+/** Imatge de la capçalera de cada activitat (slug → path). Si no hi és, es mostra el gradient amb la lletra. */
+const CARD_IMAGES: Record<string, string> = {
+  "taekwondo-judo": "/images/extraescolars/taekwondo.png",
+  "hip-hop-danses": "/images/extraescolars/hip%20hop.png",
+  multiesport: "/images/extraescolars/multiesport.png",
+  "hockey-mini-tennis-beisbol": "/images/extraescolars/hockey.png",
+  "basquet-handbol-voley": "/images/extraescolars/basquet.png",
+  patins: "/images/extraescolars/patins.png",
+  "futbol-sala": "/images/extraescolars/futbol%20sala.png",
+  minichef: "/images/extraescolars/minichef.png",
+  contacontes: "/images/extraescolars/contacontes.png",
+  robotica: "/images/extraescolars/robotica.png",
+  "english-time": "/images/extraescolars/englishtime.png",
+  teatre: "/images/extraescolars/teatre.png",
+  "ballem-ritme": "/images/extraescolars/ballem.png",
+  "taller-ciencia": "/images/extraescolars/ciencia.png",
+  "art-attack": "/images/extraescolars/artattack.png",
+  "taller-estudi": "/images/extraescolars/tallerestudi.png",
+  escacs: "/images/extraescolars/esacs.png",
+};
 
 export default function ActivitatsExtraescolarsPage() {
   return (
@@ -84,45 +121,25 @@ export default function ActivitatsExtraescolarsPage() {
       {/* Contenidor ample: pantalles grans (ex. 27") aprofiten tot l'ample; pantalles petites es redueixen */}
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Activitats Extraescolars</h1>
+        <Image
+          src="/images/logos/CP%20EXTRAESCOLARS.png"
+          alt="Control Play Extraescolars"
+          width={400}
+          height={120}
+          className="mt-6 h-auto w-full max-w-md object-contain"
+        />
         <p className="mt-4 text-lg text-slate-600">
           Dissenyem i portem a terme un gran ventall d&apos;activitats extraescolars. Tant
           esportives com formatives i lúdiques.
         </p>
 
-        {/* 4 activitats per fila a pantalla gran; finestres una mica més grans */}
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {children.map((item, index) => {
-            const slug = getSlug(item.href);
-            const introText = INTRO_TEXTS[slug];
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
-              >
-                {/* Finestra de color una mica més alta */}
-                <div
-                  className={`relative aspect-[4/3] w-full min-h-[180px] overflow-hidden bg-gradient-to-br sm:min-h-[200px] xl:min-h-[220px] ${CARD_COLORS[index % CARD_COLORS.length]} flex items-center justify-center`}
-                >
-                  <span className="text-5xl font-bold text-white/90 sm:text-6xl" aria-hidden>
-                    {item.label.charAt(0)}
-                  </span>
-                </div>
-                <div className="border-t border-slate-200 p-5 sm:p-6 xl:p-6">
-                  <h2 className="text-lg font-semibold text-slate-900 group-hover:text-emerald-700 sm:text-xl">
-                    {item.label}
-                  </h2>
-                  {introText ? (
-                    <p className="mt-2 line-clamp-4 text-slate-600 xl:line-clamp-5">{introText}</p>
-                  ) : null}
-                  <span className="mt-3 inline-block text-base font-medium text-emerald-600 group-hover:underline">
-                    Saber més →
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+        <ActivitatsExtraescolarsGrid
+          items={children}
+          categories={CARD_CATEGORIES}
+          introTexts={INTRO_TEXTS}
+          cardColors={CARD_COLORS}
+          cardImages={CARD_IMAGES}
+        />
       </div>
     </>
   );

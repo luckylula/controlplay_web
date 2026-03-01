@@ -30,19 +30,13 @@ export const mainNav: NavItem[] = [
         href: "/activitats-extraescolars/taller-ciencia",
       },
       { label: "Minichef", href: "/activitats-extraescolars/minichef" },
-      {
-        label: "Divertaller + Taller d'estudi",
-        href: "/activitats-extraescolars/divertaller",
-      },
+      { label: "Art Attack", href: "/activitats-extraescolars/art-attack" },
+      { label: "Taller d'estudi", href: "/activitats-extraescolars/taller-estudi" },
       { label: "Contacontes", href: "/activitats-extraescolars/contacontes" },
       { label: "Escacs", href: "/activitats-extraescolars/escacs" },
       { label: "Teatre", href: "/activitats-extraescolars/teatre" },
       // Activitats Esportives
       { label: "Futbol Sala", href: "/activitats-extraescolars/futbol-sala" },
-      {
-        label: "Circ i Malabars",
-        href: "/activitats-extraescolars/circ-malabars",
-      },
       {
         label: "Patins a l'escola",
         href: "/activitats-extraescolars/patins",
