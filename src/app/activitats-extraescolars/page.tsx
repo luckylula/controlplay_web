@@ -78,7 +78,7 @@ const CARD_CATEGORIES: Record<string, ("Infantil" | "Primària" | "I5")[]> = {
   minichef: ["Infantil"],
   contacontes: ["Infantil"],
   robotica: ["Infantil"],
-  escacs: ["I5"],
+  escacs: ["Primària", "I5"],
 };
 
 /** Imatge de la capçalera de cada activitat (slug → path). Si no hi és, es mostra el gradient amb la lletra. */
@@ -124,9 +124,9 @@ export default function ActivitatsExtraescolarsPage() {
         <Image
           src="/images/logos/CP%20EXTRAESCOLARS.png"
           alt="Control Play Extraescolars"
-          width={400}
-          height={120}
-          className="mt-6 h-auto w-full max-w-md object-contain"
+          width={280}
+          height={80}
+          className="mt-3 h-20 w-auto scale-110 sm:h-24 sm:scale-110"
         />
         <p className="mt-4 text-lg text-slate-600">
           Dissenyem i portem a terme un gran ventall d&apos;activitats extraescolars. Tant

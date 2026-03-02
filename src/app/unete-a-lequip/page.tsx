@@ -2,112 +2,112 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Únete al Equipo",
+  title: "Uneix-te a l'Equip",
   description:
-    "Control Play – Donde la educación, el deporte y la diversión se convierten en oportunidades. Únete a nuestro equipo.",
+    "Control Play – On l'educació, l'esport i la diversió es converteixen en oportunitats. Uneix-te al nostre equip.",
 };
 
 export default function UneteALEquipPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-        Únete al Equipo Control Play
+        Uneix-te a l&apos;Equip Control Play
       </h1>
       <p className="mt-4 text-lg font-medium text-slate-700">
-        Donde la Educación, el Deporte y la Diversión se Convierten en Oportunidades
+        On l&apos;Educació, l&apos;Esport i la Diversió es converteixen en Oportunitats
       </p>
 
       <section className="mt-10">
         <p className="text-slate-600">
-          En Control Play trabajamos cada día para crear experiencias educativas, deportivas y
-          lúdicas que marcan la diferencia en escuelas, centros y comunidades. Nuestro objetivo es
-          acompañar a niños, jóvenes y familias a través de actividades extraescolares, deportivas,
-          talleres formativos y servicios integrales pensados para crecer, aprender y disfrutar.
+          A Control Play treballem cada dia per crear experiències educatives, esportives i lúdiques
+          que marquen la diferència en escoles, centres i comunitats. El nostre objectiu és acompanyar
+          infants, joves i famílies a través d&apos;activitats extraescolars, esportives, tallers
+          formatius i serveis integrals pensats per créixer, aprendre i gaudir.
         </p>
         <p className="mt-3 text-slate-600">
-          Sabemos que las personas son el corazón de nuestros proyectos. Por eso queremos rodearnos
-          de profesionales comprometidos, con espíritu colaborativo y con ganas de aportar ideas
-          innovadoras.
+          Sabem que les persones són el cor dels nostres projectes. Per això, volem envoltar-nos de
+          professionals compromesos, amb esperit col·laboratiu i amb ganes d&apos;aportar idees
+          innovadores.
         </p>
       </section>
 
       <section className="mt-10 border-t border-slate-200 pt-10">
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-          ¿Por qué trabajar con nosotros?
+          Per què treballar amb nosaltres?
         </h2>
         <p className="mt-3 text-slate-600">
-          En Control Play fomentamos un entorno de trabajo dinámico, humano y orientado a la
-          excelencia, donde cada profesional aporta su talento y construye su crecimiento
-          profesional. Aquí podrás:
+          A Control Play fomentem un entorn de treball dinàmic, humà i orientat a l&apos;excel·lència,
+          on cada professional aporta el seu talent i construeix el seu creixement professional.
+          Aquí podràs:
         </p>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Participar en proyectos formativos, deportivos y recreativos que impactan positivamente
-            en la comunidad.
+            Participar en projectes formatius, esportius i recreatius que impacten positivament en la
+            comunitat.
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Colaborar con un equipo diverso y motivado.
+            Col·laborar amb un equip divers i motivat.
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Desarrollar tu carrera con oportunidades de aprendizaje continuo.
+            Desenvolupar la teva carrera amb oportunitats d&apos;aprenentatge continu.
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Formar parte de una empresa con visión educativa, social y profesional.
+            Formar part d&apos;una empresa amb visió educativa, social i professional.
           </li>
         </ul>
       </section>
 
       <section className="mt-10 border-t border-slate-200 pt-10">
-        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">¿A quién buscamos?</h2>
-        <p className="mt-3 text-slate-600">Buscamos personas:</p>
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Qui busquem?</h2>
+        <p className="mt-3 text-slate-600">Busquem persones:</p>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Con pasión por la educación, el deporte y el entretenimiento.
+            Amb passió per l&apos;educació, l&apos;esport i l&apos;entreteniment.
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Profesionales responsables, proactivos y con capacidad para trabajar en equipo.
+            Professionals responsables, proactius i amb capacitat per treballar en equip.
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Con empatía, creatividad y ganas de aportar soluciones.
+            Amb empatia, creativitat i ganes d&apos;aportar solucions.
           </li>
           <li className="flex items-start gap-2">
             <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
-            Con disponibilidad para adaptarse a proyectos diversos y retadores.
+            Amb disponibilitat per adaptar-se a projectes diversos i desafiadors.
           </li>
         </ul>
         <p className="mt-6 text-slate-600">
-          Si te gusta hacer que cada día cuente, este es tu lugar.
+          Si t&apos;agrada fer que cada dia compti, aquest és el teu lloc.
         </p>
       </section>
 
       <section className="mt-10 border-t border-slate-200 pt-10">
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-          ¿Quieres ser parte de nuestro equipo?
+          Vols formar part del nostre equip?
         </h2>
         <p className="mt-3 text-slate-600">
-          Si te entusiasma trabajar en un entorno donde tu esfuerzo se traduce en experiencias
-          memorables para niños, jóvenes y centros educativos… ¡queremos conocerte!
+          Si t&apos;entusiasma treballar en un entorn on el teu esforç es tradueix en experiències
+          memorables per a infants, joves i centres educatius… volem conèixer-te!
         </p>
         <p className="mt-3 text-slate-600">
-          Envíanos tu CV junto con una carta donde nos cuentes qué te motiva de Control Play y cómo
-          puedes aportar valor a nuestro equipo.
+          Envia&apos;ns el teu CV juntament amb una carta on ens expliquis què et motiva de Control
+          Play i com pots aportar valor al nostre equip.
         </p>
         <p className="mt-6 text-slate-600">
-          Control Play es más que un empleo — es un proyecto donde tú también puedes crecer. ¡Anímate
-          a formar parte de nuestra familia!
+          Control Play és més que una feina — és un projecte on tu també pots créixer. Anima&apos;t a
+          formar part de la nostra família!
         </p>
         <Link
           href="/contacte"
           className="mt-8 inline-block rounded-lg bg-emerald-600 px-6 py-3 font-medium text-white transition hover:bg-emerald-700"
         >
-          Contacta con nosotros
+          Contacta amb nosaltres
         </Link>
       </section>
     </div>

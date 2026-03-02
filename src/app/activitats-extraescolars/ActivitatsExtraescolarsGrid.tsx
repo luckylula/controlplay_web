@@ -45,7 +45,11 @@ export function ActivitatsExtraescolarsGrid({
     : items.filter((item) => {
         const slug = getSlug(item.href);
         const cats = categories[slug];
-        return cats && cats.includes(filter);
+        if (!cats) return false;
+        if (filter === "I5") {
+          return cats.includes("I5") || cats.includes("Primària");
+        }
+        return cats.includes(filter);
       });
 
   return (
