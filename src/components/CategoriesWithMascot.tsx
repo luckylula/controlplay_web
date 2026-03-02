@@ -26,7 +26,7 @@ type Props = {
 
 export function CategoriesWithMascot({ categories }: Props) {
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch">
       {categories.map((item) => {
         const logoOnVideo = "logoOnVideo" in item && item.logoOnVideo;
         const logoBelowVideo = "logoBelowVideo" in item && item.logoBelowVideo;
@@ -35,20 +35,18 @@ export function CategoriesWithMascot({ categories }: Props) {
         const content = (
           <>
             {showLogoOnTop && (
-              <div className="flex min-h-[5rem] items-center justify-center overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white px-2 py-4">
+              <div className="flex h-20 shrink-0 items-center justify-center overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white px-2 py-4">
                 <Image
                   src={item.logo}
                   alt=""
                   width={240}
                   height={80}
-                  className={`h-16 w-full max-w-full object-contain ${
-                    item.title === "Activitats Extraescolars" ? "scale-[1.32]" : ""
-                  }`}
+                  className="h-16 w-full max-w-full object-contain"
                 />
               </div>
             )}
             <div
-              className={`relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ${logoOnVideo || logoBelowVideo || logoAlsoAtBottom ? "rounded-t-xl" : ""}`}
+              className={`relative aspect-[4/3] w-full shrink-0 overflow-hidden bg-slate-100 ${logoOnVideo || logoBelowVideo || logoAlsoAtBottom ? "rounded-t-xl" : ""}`}
             >
               <CoverVideo
                 src={item.video}
@@ -81,10 +79,10 @@ export function CategoriesWithMascot({ categories }: Props) {
               </div>
             )}
             <div
-              className={`border border-t-0 border-slate-200 bg-white p-5 shadow-sm ${logoAlsoAtBottom ? "" : "rounded-b-xl"}`}
+              className={`flex min-h-[7rem] flex-1 flex-col border border-t-0 border-slate-200 bg-white p-5 shadow-sm ${logoAlsoAtBottom ? "" : "rounded-b-xl"}`}
             >
               <h3 className="font-semibold text-slate-900">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">{item.description}</p>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{item.description}</p>
             </div>
             {logoAlsoAtBottom && (
               <div className="flex min-h-[60px] items-center justify-center overflow-hidden rounded-b-xl border border-t-0 border-slate-200 bg-white py-4">
@@ -102,7 +100,7 @@ export function CategoriesWithMascot({ categories }: Props) {
           </>
         );
         const className =
-          "group block rounded-xl overflow-hidden transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2";
+          "group flex h-full min-h-0 flex-col rounded-xl overflow-hidden transition hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2";
         if ("external" in item && item.external) {
           return (
             <a

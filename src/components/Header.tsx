@@ -67,11 +67,11 @@ export function Header() {
           </a>
         </div>
       </div>
-      {/* Logo + nav – mida responsiva: més petit en pantalles petites, més gran en pantalles grans */}
+      {/* Logo + nav – logo gran però dins la franja (sense que el blanc desbordi) */}
       <div className="mx-auto flex h-20 w-full items-center justify-between px-4 sm:h-24 sm:px-6 md:h-28 lg:h-32 lg:px-8 xl:h-36">
         <Link
           href="/"
-          className="flex items-center gap-2 text-slate-900 hover:opacity-90 transition-opacity"
+          className="flex h-full min-w-0 items-center text-slate-900 hover:opacity-90 transition-opacity"
         >
           {!logoError ? (
             <Image
@@ -79,7 +79,7 @@ export function Header() {
               alt={siteName}
               width={640}
               height={176}
-              className="h-12 w-auto max-w-[45vw] scale-105 object-contain object-left origin-left sm:h-14 sm:scale-110 sm:max-w-none md:h-20 lg:h-28 xl:h-32 xl:scale-110"
+              className="h-[92%] max-h-full w-auto max-w-[55vw] object-contain object-left sm:max-w-none md:h-[94%] lg:h-[96%]"
               onError={() => setLogoError(true)}
               priority
             />
@@ -90,8 +90,8 @@ export function Header() {
           )}
         </Link>
 
-        {/* Desktop nav – dues paraules en dues línies, menys espai entre categories */}
-        <nav className="hidden md:flex items-center gap-0.5">
+        {/* Desktop nav – dues paraules en dues línies, espai entre categories */}
+        <nav className="hidden md:flex items-center gap-3">
           {mainNav.map((item) => {
             if (item.external) {
               return (

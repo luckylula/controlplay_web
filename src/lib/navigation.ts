@@ -67,7 +67,7 @@ export const mainNav: NavItem[] = [
   { label: "Casals", href: "/casals" },
   { label: "Futsal Camps", href: "/futsal-camps" },
   { label: "Canal Etic", href: "/canal-etic" },
-  { label: "Unete a l'Equip", href: "/unete-a-lequip" },
+  { label: "Uneix-te a l'Equip", href: "/unete-a-lequip" },
   { label: "Contacte", href: "/#contacte" },
   {
     label: "Botiga Online",
@@ -83,7 +83,7 @@ export const footerNav: NavLink[] = [
   { label: "Casals", href: "/casals" },
   { label: "Futsal Camps", href: "/futsal-camps" },
   { label: "Canal Etic", href: "/canal-etic" },
-  { label: "Unete a l'Equip", href: "/unete-a-lequip" },
+  { label: "Uneix-te a l'Equip", href: "/unete-a-lequip" },
   { label: "Contacte", href: "/#contacte" },
   { label: "Avís Legal", href: "/avis-legal" },
   { label: "Política de Privacitat", href: "/politica-privacitat" },
