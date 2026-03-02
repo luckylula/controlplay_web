@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large assets (keep locally, do not push)
+public/images/casals/CASAL ESTIU 2026 AFAS ABAT OLIVA.pdf
