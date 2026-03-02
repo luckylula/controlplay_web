@@ -1807,10 +1807,10 @@ export default async function ActivitatPage({ params }: Props) {
       {customContent ? (
         customContent
       ) : (
-        <p className="mt-6 text-slate-600">
+      <p className="mt-6 text-slate-600">
           Pàgina de l&apos;activitat <strong>{item.label}</strong>. El contingut específic es pot
           afegir aquí progressivament.
-        </p>
+      </p>
       )}
     </div>
   );

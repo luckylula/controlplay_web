@@ -35,7 +35,7 @@ export default function UneteALEquipPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
       <section className="mt-0">
         <p className="text-slate-600">
           A Control Play treballem cada dia per crear experiències educatives, esportives i lúdiques
@@ -51,9 +51,9 @@ export default function UneteALEquipPage() {
       </section>
       </div>
 
-      {/* Valors de l'empresa – 4 targetes en grid 2x2 (blau, imatge flotant) */}
+      {/* Valors de l'empresa – 4 targetes en grid 2x2 (blau, imatge flotant) – ample complet fins a 1920px */}
       <section className="border-t border-slate-200 bg-slate-50 py-12">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[1920px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
             Els nostres valors
           </h2>

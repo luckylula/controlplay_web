@@ -51,7 +51,7 @@ const VALORS: ValorCard[] = [
 export function ValorsEmpresa({ valors = VALORS }: { valors?: ValorCard[] }) {
   return (
     <section
-      className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8"
+      className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12"
       aria-label="Valors de l'empresa"
     >
       <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.18fr_0.82fr] md:grid-rows-[1.12fr_0.88fr] md:gap-8">
