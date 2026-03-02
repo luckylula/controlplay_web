@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Canal Ètic – Control Play",
@@ -12,7 +13,7 @@ const FORMULARI_URL = "/canal-etic/formulari";
 
 export default function CanalEticPage() {
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
       <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
         CANAL ÈTIC
       </h1>
@@ -23,100 +24,141 @@ export default function CanalEticPage() {
         Sistema Intern d&apos;Informació conforme a la Llei 2/2023
       </p>
 
-      <p className="mt-8 text-slate-700 leading-relaxed">
-        Control Play Services S.L., en el marc del seu compromís amb la
-        legalitat, la transparència i la protecció dels drets fonamentals,
-        disposa d&apos;un Sistema Intern d&apos;Informació (Canal Ètic) en
-        compliment de la Llei 2/2023, de 20 de febrer, reguladora de la
-        protecció de les persones que informin sobre infraccions normatives i de
-        lluita contra la corrupció.
-      </p>
-      <p className="mt-4 text-slate-700 leading-relaxed">
-        Aquest sistema constitueix un mecanisme formal i estructurat per a la
-        comunicació d&apos;infraccions normatives o conductes contràries als
-        principis ètics de l&apos;organització.
-      </p>
+      {/* Bloc 1: Dos paràgrafs + punt 1 a l'esquerra | Imatge dreta (canal etic1) */}
+      <section className="mt-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="lg:pr-6">
+          <p className="text-slate-700 leading-relaxed">
+            Control Play Services S.L., en el marc del seu compromís amb la
+            legalitat, la transparència i la protecció dels drets fonamentals,
+            disposa d&apos;un Sistema Intern d&apos;Informació (Canal Ètic) en
+            compliment de la Llei 2/2023, de 20 de febrer, reguladora de la
+            protecció de les persones que informin sobre infraccions normatives i de
+            lluita contra la corrupció.
+          </p>
+          <p className="mt-4 text-slate-700 leading-relaxed">
+            Aquest sistema constitueix un mecanisme formal i estructurat per a la
+            comunicació d&apos;infraccions normatives o conductes contràries als
+            principis ètics de l&apos;organització.
+          </p>
+          <h2 className="mt-8 text-xl font-bold text-slate-900 sm:text-2xl">
+            1. Àmbit d&apos;aplicació
+          </h2>
+          <p className="mt-2 text-slate-700 leading-relaxed">
+            El Canal Ètic és accessible a:
+          </p>
+          <ul className="mt-3 list-disc space-y-1 pl-6 text-slate-700">
+            <li>Personal laboral i col·laboradors</li>
+            <li>Monitors/es i personal de cuina</li>
+            <li>Coordinadors/es</li>
+            <li>Proveïdors i subcontractistes</li>
+            <li>Famílies usuàries dels serveis</li>
+            <li>Ex-treballadors/es</li>
+            <li>Qualsevol persona relacionada amb l&apos;activitat de l&apos;empresa</li>
+          </ul>
+        </div>
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50/70 lg:rotate-2">
+          <Image
+            src="/images/canal-etic/canal%20etic1.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </div>
+      </section>
 
-      <h2 className="mt-10 text-xl font-bold text-slate-900 sm:text-2xl">
-        1. Àmbit d&apos;aplicació
-      </h2>
-      <p className="mt-2 text-slate-700 leading-relaxed">
-        El Canal Ètic és accessible a:
-      </p>
-      <ul className="mt-3 list-disc space-y-1 pl-6 text-slate-700">
-        <li>Personal laboral i col·laboradors</li>
-        <li>Monitors/es i personal de cuina</li>
-        <li>Coordinadors/es</li>
-        <li>Proveïdors i subcontractistes</li>
-        <li>Famílies usuàries dels serveis</li>
-        <li>Ex-treballadors/es</li>
-        <li>Qualsevol persona relacionada amb l&apos;activitat de l&apos;empresa</li>
-      </ul>
+      {/* Bloc 2: Imatge esquerra (canal etic2) | Text dreta (punt 2) */}
+      <section className="mt-16 grid grid-cols-1 items-center gap-8 border-t border-slate-200 pt-10 lg:grid-cols-2 lg:gap-12">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50/70 lg:-rotate-2 lg:mt-6">
+          <Image
+            src="/images/canal-etic/canal%20etic2.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </div>
+        <div className="lg:pl-6">
+          <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
+            2. Fets susceptibles de comunicació
+          </h2>
+          <p className="mt-2 text-slate-700 leading-relaxed">
+            Podran comunicar-se, entre altres, els següents fets:
+          </p>
+          <ul className="mt-3 list-disc space-y-1 pl-6 text-slate-700">
+            <li>Infraccions del dret de la Unió Europea o de l&apos;ordenament jurídic espanyol</li>
+            <li>Conductes constitutives d&apos;infracció penal o administrativa greu o molt greu</li>
+            <li>Incompliments del Codi Ètic o normativa interna</li>
+            <li>Assetjament laboral o sexual</li>
+            <li>Conductes inadequades o de risc envers menors</li>
+            <li>Incompliments en matèria de seguretat alimentària</li>
+            <li>Vulneracions en matèria de prevenció de riscos laborals</li>
+            <li>Irregularitats econòmiques o ús indegut de recursos públics</li>
+            <li>Vulneracions de la normativa de protecció de dades</li>
+            <li>Pràctiques anticompetitives</li>
+            <li>Conductes contràries als drets humans</li>
+          </ul>
+          <p className="mt-4 text-slate-700 leading-relaxed">
+            Queden excloses les queixes o suggeriments que no constitueixin
+            infracció normativa, que hauran de canalitzar-se a través dels canals
+            ordinaris de contacte.
+          </p>
+        </div>
+      </section>
 
-      <h2 className="mt-10 text-xl font-bold text-slate-900 sm:text-2xl">
-        2. Fets susceptibles de comunicació
-      </h2>
-      <p className="mt-2 text-slate-700 leading-relaxed">
-        Podran comunicar-se, entre altres, els següents fets:
-      </p>
-      <ul className="mt-3 list-disc space-y-1 pl-6 text-slate-700">
-        <li>Infraccions del dret de la Unió Europea o de l&apos;ordenament jurídic espanyol</li>
-        <li>Conductes constitutives d&apos;infracció penal o administrativa greu o molt greu</li>
-        <li>Incompliments del Codi Ètic o normativa interna</li>
-        <li>Assetjament laboral o sexual</li>
-        <li>Conductes inadequades o de risc envers menors</li>
-        <li>Incompliments en matèria de seguretat alimentària</li>
-        <li>Vulneracions en matèria de prevenció de riscos laborals</li>
-        <li>Irregularitats econòmiques o ús indegut de recursos públics</li>
-        <li>Vulneracions de la normativa de protecció de dades</li>
-        <li>Pràctiques anticompetitives</li>
-        <li>Conductes contràries als drets humans</li>
-      </ul>
-      <p className="mt-4 text-slate-700 leading-relaxed">
-        Queden excloses les queixes o suggeriments que no constitueixin
-        infracció normativa, que hauran de canalitzar-se a través dels canals
-        ordinaris de contacte.
-      </p>
+      {/* Bloc 3: Text esquerra (punt 3 - Garanties) | Imatge dreta (canal etic3) */}
+      <section className="mt-16 grid grid-cols-1 items-center gap-8 border-t border-slate-200 pt-10 lg:grid-cols-2 lg:gap-12">
+        <div className="lg:pr-6">
+          <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
+            3. Garanties del Sistema Intern d&apos;Informació
+          </h2>
+          <ul className="mt-3 space-y-4 text-slate-700">
+            <li>
+              <strong className="text-slate-900">Confidencialitat</strong>
+              <br />
+              La identitat de la persona informant serà tractada amb la màxima
+              reserva. S&apos;admeten comunicacions anònimes.
+            </li>
+            <li>
+              <strong className="text-slate-900">Independència</strong>
+              <br />
+              El sistema és gestionat per un Responsable del Sistema designat
+              formalment, amb autonomia i imparcialitat en l&apos;exercici de les
+              seves funcions.
+            </li>
+            <li>
+              <strong className="text-slate-900">Protecció contra represàlies</strong>
+              <br />
+              Es prohibeix qualsevol acte de represàlia contra les persones que
+              informin de bona fe. La vulneració d&apos;aquesta garantia podrà
+              comportar responsabilitats disciplinàries.
+            </li>
+            <li>
+              <strong className="text-slate-900">Dret de defensa</strong>
+              <br />
+              Es garantirà la presumpció d&apos;innocència i els drets de les
+              persones afectades durant el procediment.
+            </li>
+            <li>
+              <strong className="text-slate-900">Terminis</strong>
+              <br />
+              Acusament de recepció en 7 dies (si procedeix). Resolució en un
+              termini màxim de 3 mesos.
+            </li>
+          </ul>
+        </div>
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50/70 lg:rotate-2">
+          <Image
+            src="/images/canal-etic/canal%20etic3.png"
+            alt=""
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </div>
+      </section>
 
-      <h2 className="mt-10 text-xl font-bold text-slate-900 sm:text-2xl">
-        3. Garanties del Sistema Intern d&apos;Informació
-      </h2>
-      <ul className="mt-3 space-y-4 text-slate-700">
-        <li>
-          <strong className="text-slate-900">Confidencialitat</strong>
-          <br />
-          La identitat de la persona informant serà tractada amb la màxima
-          reserva. S&apos;admeten comunicacions anònimes.
-        </li>
-        <li>
-          <strong className="text-slate-900">Independència</strong>
-          <br />
-          El sistema és gestionat per un Responsable del Sistema designat
-          formalment, amb autonomia i imparcialitat en l&apos;exercici de les
-          seves funcions.
-        </li>
-        <li>
-          <strong className="text-slate-900">Protecció contra represàlies</strong>
-          <br />
-          Es prohibeix qualsevol acte de represàlia contra les persones que
-          informin de bona fe. La vulneració d&apos;aquesta garantia podrà
-          comportar responsabilitats disciplinàries.
-        </li>
-        <li>
-          <strong className="text-slate-900">Dret de defensa</strong>
-          <br />
-          Es garantirà la presumpció d&apos;innocència i els drets de les
-          persones afectades durant el procediment.
-        </li>
-        <li>
-          <strong className="text-slate-900">Terminis</strong>
-          <br />
-          Acusament de recepció en 7 dies (si procedeix). Resolució en un
-          termini màxim de 3 mesos.
-        </li>
-      </ul>
-
-      <h2 className="mt-10 text-xl font-bold text-slate-900 sm:text-2xl">
+      <h2 className="mt-16 text-xl font-bold text-slate-900 sm:text-2xl border-t border-slate-200 pt-10">
         4. Procediment
       </h2>
       <ol className="mt-3 list-decimal space-y-1 pl-6 text-slate-700">

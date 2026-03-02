@@ -1795,7 +1795,7 @@ export default async function ActivitatPage({ params }: Props) {
     ) : null;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
+    <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
       <Link
         href="/activitats-extraescolars"
         className="text-sm font-medium text-emerald-600 hover:underline"
