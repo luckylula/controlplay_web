@@ -13,6 +13,8 @@ export type ValorCard = {
   imagePosition?: "left" | "right";
   /** Si és true, el quadrat de la imatge és més ample (format rectangle) */
   imageWide?: boolean;
+  /** Si és true, la targeta ocupa 2 columnes al grid i té més padding inferior */
+  cardWide?: boolean;
   ctaHref?: string;
   ctaLabel?: string;
 };
@@ -36,6 +38,7 @@ const VALORS: ValorCard[] = [
       "Si t'entusiasma treballar en un entorn on el teu esforç es tradueix en experiències memorables per a infants, joves i centres educatius… volem conèixer-te!\n\nEnvia'ns el teu CV juntament amb una carta on ens expliquis què et motiva de Control Play i com pots aportar valor al nostre equip.",
     image: "/images/unete-a-lequip/unete3.png",
     imageWide: true,
+    cardWide: true,
   },
   {
     title: "Contacte",
