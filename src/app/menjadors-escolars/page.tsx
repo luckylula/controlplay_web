@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { MenjadorsVideoCarousel } from "@/components/MenjadorsVideoCarousel";
 
 export const metadata: Metadata = {
   title: "Menjadors Escolars",
@@ -7,22 +8,11 @@ export const metadata: Metadata = {
     "Control Play Cuina – Gestió de menjadors escolars. Continuïtat educativa, alimentació saludable i menús de qualitat. Transparència amb famílies i escola.",
 };
 
-const MENJADOR_VIDEO = "/images/menjadors/menjador%20video.mp4";
-
 export default function MenjadorsEscolarsPage() {
   return (
     <>
-      {/* Vídeo a dalt – mateixa mida que la franja de vídeo de la portada */}
-      <section className="relative w-full overflow-hidden bg-black aspect-[21/9] min-h-[260px] max-h-[420px] sm:min-h-[300px] lg:max-h-[520px]">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="h-full w-full object-cover object-bottom"
-          src={MENJADOR_VIDEO}
-        />
-      </section>
+      {/* Carrusel de vídeos a dalt (menjador video1, 2, 3) */}
+      <MenjadorsVideoCarousel />
 
       <div className="mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">

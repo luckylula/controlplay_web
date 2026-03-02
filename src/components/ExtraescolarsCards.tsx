@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -46,19 +46,59 @@ export function ExtraescolarsCards({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLLIElement | null)[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const restActivities = activities.length > 1 ? activities.slice(1) : [];
+  const restLength = restActivities.length;
+  const middleStart = restLength;
+  const slideStep = 332;
+
+  const [slideOffset, setSlideOffset] = useState(() =>
+    restLength > 0 ? middleStart + 0 : 0
+  );
+  const [disableTransition, setDisableTransition] = useState(false);
+
+  useEffect(() => {
+    if (restLength === 0) return;
+    setSlideOffset(middleStart + (currentIndex === 0 ? 0 : currentIndex - 1));
+  }, [restLength, middleStart]); // only on mount / when rest changes
+
+  const handleTransitionEnd = useCallback(() => {
+    if (restLength === 0) return;
+    setDisableTransition(true);
+    if (slideOffset >= middleStart + restLength) {
+      setCurrentIndex(0);
+      setSlideOffset(middleStart);
+    } else if (slideOffset === middleStart - 1) {
+      setCurrentIndex(activities.length - 1);
+      setSlideOffset(middleStart + restLength - 1);
+    }
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => setDisableTransition(false));
+    });
+  }, [restLength, middleStart, slideOffset, activities.length]);
 
   const goTo = useCallback((index: number) => {
-    const i = Math.max(0, Math.min(index, activities.length - 1));
+    if (activities.length === 0) return;
+    const i = ((index % activities.length) + activities.length) % activities.length;
+    if (restLength === 0) {
+      setCurrentIndex(i);
+      return;
+    }
+    if (i === 0 && currentIndex === activities.length - 1) {
+      setSlideOffset(middleStart + restLength);
+      return;
+    }
+    if (i === activities.length - 1 && currentIndex === 0) {
+      setSlideOffset(middleStart - 1);
+      return;
+    }
     setCurrentIndex(i);
-  }, [activities.length]);
+    setSlideOffset(middleStart + (i === 0 ? 0 : i - 1));
+  }, [activities.length, restLength, middleStart, currentIndex]);
 
-  const canGoPrev = currentIndex > 0;
-  const canGoNext = currentIndex < activities.length - 1;
+  const canGoPrev = activities.length > 0;
+  const canGoNext = activities.length > 0;
 
-  // Mida del pas per al desplaçament (amplada targeta + gap)
-  const slideStep = 332;
-  const restActivities = activities.length > 1 ? activities.slice(1) : [];
-  const slideIndex = Math.min(currentIndex, Math.max(0, restActivities.length - 1));
+  const restTriple = restLength > 0 ? [...restActivities, ...restActivities, ...restActivities] : [];
 
   return (
     <section className="flex h-[440px] flex-col justify-center overflow-hidden border-t border-slate-200 bg-white py-8 sm:h-[500px] sm:py-10 lg:h-[560px]">
@@ -107,49 +147,53 @@ export function ExtraescolarsCards({
           {restActivities.length > 0 && (
             <div className="min-w-0 flex-1 overflow-x-hidden">
               <ul
-                className="flex gap-3 sm:gap-4 transition-transform duration-300 ease-out"
-                style={{ transform: `translateX(-${slideIndex * slideStep}px)` }}
+                className={`flex gap-3 sm:gap-4 ${disableTransition ? "" : "transition-transform duration-300 ease-out"}`}
+                style={{ transform: `translateX(-${slideOffset * slideStep}px)` }}
+                onTransitionEnd={handleTransitionEnd}
               >
-                {restActivities.map((item, index) => (
-                  <li
-                    key={item.href}
-                    ref={(el) => { cardRefs.current[index + 1] = el; }}
-                    className="shrink-0 w-[280px] sm:w-[320px]"
-                  >
-                    <Link
-                      href={item.href}
-                      className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                {restTriple.map((item, index) => {
+                  const originalIndex = index % restLength;
+                  return (
+                    <li
+                      key={`${item.href}-${index}`}
+                      ref={index < restLength ? (el) => { cardRefs.current[originalIndex + 1] = el; } : undefined}
+                      className="shrink-0 w-[280px] sm:w-[320px]"
                     >
-                      <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                        {item.image ? (
-                          <Image
-                            src={item.image}
-                            alt=""
-                            fill
-                            className="object-cover transition group-hover:scale-105"
-                            sizes="320px"
-                          />
-                        ) : (
-                          <div
-                            className={`h-full w-full bg-gradient-to-br ${CARD_COLORS[(index + 1) % CARD_COLORS.length]} flex items-center justify-center`}
-                          >
-                            <span className="text-4xl font-bold text-white/90">
-                              {item.label.charAt(0)}
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                      <div className="p-3 sm:p-4">
-                        <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 group-hover:text-emerald-700 sm:text-base">
-                          {item.label}
-                        </h3>
-                        <span className="mt-1.5 inline-block text-xs font-medium text-emerald-600 sm:text-sm">
-                          Saber més →
-                        </span>
-                      </div>
-                    </Link>
-                  </li>
-                ))}
+                      <Link
+                        href={item.href}
+                        className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                      >
+                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                          {item.image ? (
+                            <Image
+                              src={item.image}
+                              alt=""
+                              fill
+                              className="object-cover transition group-hover:scale-105"
+                              sizes="320px"
+                            />
+                          ) : (
+                            <div
+                              className={`h-full w-full bg-gradient-to-br ${CARD_COLORS[(originalIndex + 1) % CARD_COLORS.length]} flex items-center justify-center`}
+                            >
+                              <span className="text-4xl font-bold text-white/90">
+                                {item.label.charAt(0)}
+                              </span>
+                            </div>
+                          )}
+                        </div>
+                        <div className="p-3 sm:p-4">
+                          <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 group-hover:text-emerald-700 sm:text-base">
+                            {item.label}
+                          </h3>
+                          <span className="mt-1.5 inline-block text-xs font-medium text-emerald-600 sm:text-sm">
+                            Saber més →
+                          </span>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           )}

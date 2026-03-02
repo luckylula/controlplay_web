@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { mainNav } from "@/lib/navigation";
 import { ActivitatsExtraescolarsGrid } from "./ActivitatsExtraescolarsGrid";
+import { ExtraescolarsVideoCarousel } from "@/components/ExtraescolarsVideoCarousel";
 
 const extraescolarsItem = mainNav.find((n) => n.label === "Activitats Extraescolars");
 const children = extraescolarsItem?.children ?? [];
@@ -29,8 +30,6 @@ export const metadata: Metadata = {
   title: "Activitats Extraescolars",
   description: "Activitats extraescolars esportives, formatives i lúdiques. English Time, Robòtica, Futbol Sala i més.",
 };
-
-const EXTRAESCOLARS_VIDEO = "/images/extraescolars/video%20futbol%20sala.mp4";
 
 /** Text breu sota el títol de cada activitat a la llista (slug → text). Es mostra sobre «Saber més». */
 const INTRO_TEXTS: Record<string, string> = {
@@ -105,18 +104,8 @@ const CARD_IMAGES: Record<string, string> = {
 export default function ActivitatsExtraescolarsPage() {
   return (
     <>
-      {/* Franja de vídeo a dalt – mateixa mida que la portada i Menjadors */}
-      <section className="relative w-full overflow-hidden bg-black aspect-[21/9] min-h-[260px] max-h-[420px] sm:min-h-[300px] lg:max-h-[520px]">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="h-full w-full object-cover"
-          style={{ objectPosition: "center 65%" }}
-          src={EXTRAESCOLARS_VIDEO}
-        />
-      </section>
+      {/* Carrusel de vídeos a dalt – tres vídeos extraescolars que es van alternant */}
+      <ExtraescolarsVideoCarousel />
 
       {/* Contenidor ample: pantalles grans (ex. 27") aprofiten tot l'ample; pantalles petites es redueixen */}
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
