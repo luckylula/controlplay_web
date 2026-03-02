@@ -6,6 +6,9 @@ const HERO_VIDEOS = [
   "/images/portada/videoportada1.mp4",
   "/images/portada/videoportada2.mp4",
   "/images/portada/videoportada3.mp4",
+  "/images/portada/videoportada4.mp4",
+  "/images/portada/videoportada5.mp4",
+  "/images/portada/videoportada6.mp4",
 ];
 
 const INTERVAL_MS = 6000;
