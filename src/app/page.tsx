@@ -7,7 +7,7 @@ import type { ActivityCard } from "@/components/ExtraescolarsCards";
 import { ExtraescolarsCards } from "@/components/ExtraescolarsCards";
 import { contact } from "@/lib/navigation";
 
-/** Activitats que es mostren a la portada a «Descobreix els nostres projectes». */
+/** Activitats que es mostren a la portada a «Descobreix les nostres notícies». */
 const DISCOVER_ACTIVITIES: ActivityCard[] = [
   { label: "Dinem en família", href: "/menjadors-escolars" },
   { label: "Robòtica", href: "/activitats-extraescolars/robotica", image: "/images/extraescolars/robotica.png" },
@@ -69,35 +69,46 @@ export default function Home() {
       {/* Hero – carrusel de vídeos (videoportada1, 2, 3...) amb el text al damunt */}
       <HeroVideoCarousel />
 
-      {/* Categories – 4 icons */}
-      <section className="pt-8 pb-16 sm:pt-12 sm:pb-24">
+      {/* Categories – 4 icons – mateix alt que la resta de franjes */}
+      <section className="flex h-[440px] items-center sm:h-[500px] lg:h-[560px]">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
           <CategoriesWithMascot categories={CATEGORIES} />
         </div>
       </section>
 
-      {/* Sobre nosaltres – només text (les fotos de l&apos;equip estan a /equip-cp) */}
-      <section className="border-t border-slate-200 bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      {/* Equip Control Play – mateix alt que la resta de franjes */}
+      <section className="flex h-[440px] items-center overflow-hidden border-t border-slate-200 bg-white sm:h-[500px] lg:h-[560px]">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-            Sobre nosaltres – Equip Control Play
+            Equip Control Play
           </h2>
-          <div className="mt-8 space-y-6 text-slate-600">
-            <p className="text-lg leading-relaxed">
-              A Control Play Sports som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia per donar resposta a les necessitats de centres, famílies i entitats, amb proximitat, responsabilitat i passió pel que fem.
-            </p>
-            <p className="leading-relaxed">
-              Comptem amb un equip multidisciplinari de professionals amb més de 20 anys d&apos;experiència, que aporta coneixement, vocació i responsabilitat en cada projecte.
-            </p>
-            <p className="leading-relaxed">
-              Oferim els nostres serveis amb les màximes garanties de professionalitat, legalitat i rigor, perquè la confiança i la tranquil·litat de les famílies i dels centres són la nostra prioritat.
-            </p>
+          <div className="mt-8 grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_1.2fr]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100 lg:aspect-[3/2]">
+              <Image
+                src="/images/portada/staff.png"
+                alt="Equip Control Play"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1023px) 100vw, 40vw"
+              />
+            </div>
+            <div className="space-y-6 text-slate-600">
+              <p className="text-lg leading-relaxed">
+                A Control Play Sports som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia per donar resposta a les necessitats de centres, famílies i entitats, amb proximitat, responsabilitat i passió pel que fem.
+              </p>
+              <p className="leading-relaxed">
+                Comptem amb un equip multidisciplinari de professionals amb més de 20 anys d&apos;experiència, que aporta coneixement, vocació i responsabilitat en cada projecte.
+              </p>
+              <p className="leading-relaxed">
+                Oferim els nostres serveis amb les màximes garanties de professionalitat, legalitat i rigor, perquè la confiança i la tranquil·litat de les famílies i dels centres són la nostra prioritat.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Franja Extraescolars – foto a tota la franja amb text al damunt */}
-      <section className="relative min-h-[280px] w-full overflow-hidden border-t border-slate-200 sm:min-h-[320px] lg:min-h-[360px]">
+      {/* Franja Extraescolars – mateix alt que la resta de franjes */}
+      <section className="relative h-[440px] w-full overflow-hidden border-t border-slate-200 sm:h-[500px] lg:h-[560px]">
         <Image
           src="/images/portada/apuntat.jpg"
           alt="Extraescolars"
@@ -107,7 +118,7 @@ export default function Home() {
           priority={false}
         />
         <div className="absolute inset-0 bg-black/40" aria-hidden />
-        <div className="relative flex min-h-[280px] flex-col items-center justify-center px-4 py-12 text-center sm:min-h-[320px] sm:py-16 lg:min-h-[360px]">
+        <div className="relative flex h-full flex-col items-center justify-center px-4 py-12 text-center sm:py-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 sm:text-base">
             Durant tot l&apos;any !
           </p>
@@ -127,14 +138,14 @@ export default function Home() {
       {/* Activitats extraescolars – targetes desplaçables (estil Actualitat) */}
       <ExtraescolarsCards
         activities={DISCOVER_ACTIVITIES}
-        title="Descobreix els nostres projectes"
+        title="Descobreix les nostres notícies"
         ctaHref="/activitats-extraescolars"
         ctaLabel="Totes les activitats"
       />
 
-      {/* Contacte – tres blocs mateixa mida, compactes */}
-      <section id="contacte" className="bg-slate-900 py-6 text-white lg:py-8">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:h-[300px] lg:grid-cols-3 lg:gap-6 lg:px-6">
+      {/* Contacte – mateix alt que la resta de franjes */}
+      <section id="contacte" className="flex h-[440px] items-center bg-slate-900 text-white sm:h-[500px] lg:h-[560px]">
+        <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:grid-cols-3 lg:gap-6 lg:px-8">
           <div className="relative min-h-[140px] overflow-hidden rounded-lg lg:min-h-0 lg:h-full">
             <Image
               src="/images/categories/contacto.png"
@@ -146,13 +157,13 @@ export default function Home() {
             />
           </div>
           <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 px-4 py-3 lg:px-5 lg:py-4">
-            <h2 className="text-lg font-bold sm:text-xl">Contacte</h2>
-            <p className="mt-0.5 text-xs text-slate-300">
+            <h2 className="text-center text-xl font-bold sm:text-2xl">Contacte</h2>
+            <p className="mt-0.5 text-base font-semibold text-white sm:text-lg">
               Teniu preguntes? Estem aquí per ajudar-vos.
             </p>
-            <dl className="mt-2 space-y-1.5 text-xs">
+            <dl className="mt-2 space-y-1.5 text-sm">
               <div>
-                <dt className="text-sm font-medium text-slate-400">Control Play</dt>
+                <dt className="font-medium text-slate-400">Control Play</dt>
                 <dd className="mt-0.5 text-slate-200">{contact.address}</dd>
               </div>
               <div>
@@ -182,7 +193,7 @@ export default function Home() {
             </dl>
           </div>
           <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 px-4 py-3 lg:px-5 lg:py-4">
-            <h2 className="text-sm font-bold uppercase tracking-wide text-white sm:text-base">
+            <h2 className="text-base font-bold uppercase tracking-wide text-white sm:text-lg">
               Envieu-nos el vostre missatge
             </h2>
             <div className="mt-2 min-h-0 flex-1 overflow-y-auto">

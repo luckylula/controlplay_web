@@ -39,7 +39,7 @@ const CARD_COLORS = [
 
 export function ExtraescolarsCards({
   activities,
-  title = "Descobreix els nostres projectes",
+  title = "Descobreix les nostres notícies",
   ctaHref = "/activitats-extraescolars",
   ctaLabel = "Totes les activitats",
 }: Props) {
@@ -56,12 +56,12 @@ export function ExtraescolarsCards({
   const canGoNext = currentIndex < activities.length - 1;
 
   // Mida del pas per al desplaçament (amplada targeta + gap)
-  const slideStep = 540;
+  const slideStep = 332;
   const restActivities = activities.length > 1 ? activities.slice(1) : [];
   const slideIndex = Math.min(currentIndex, Math.max(0, restActivities.length - 1));
 
   return (
-    <section className="border-t border-slate-200 bg-white py-12 sm:py-16">
+    <section className="flex h-[440px] flex-col justify-center overflow-hidden border-t border-slate-200 bg-white py-8 sm:h-[500px] sm:py-10 lg:h-[560px]">
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end sm:gap-6">
           <div>
@@ -81,16 +81,15 @@ export function ExtraescolarsCards({
         </div>
 
         {/* Carrusel: primera targeta fixa (només vídeo) + la resta que es desplacen */}
-        <div ref={scrollContainerRef} className="mt-8 flex gap-4 sm:gap-5 overflow-hidden">
-          {/* Primera targeta fixa: només vídeo gran, sense text */}
+        <div ref={scrollContainerRef} className="mt-4 flex gap-3 sm:gap-4 overflow-hidden">
+          {/* Primera targeta fixa: només vídeo */}
           {activities.length > 0 && (
-            <div className="shrink-0 w-[520px] sm:w-[560px]">
+            <div className="shrink-0 w-[280px] sm:w-[320px]">
               <Link
                 href={activities[0].href}
-                className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
               >
-                {/* Vídeo a tota la targeta (mateixa alçada total que la resta, sense franja blanca) */}
-                <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "520/490" }}>
+                <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "320/300" }}>
                   <video
                     autoPlay
                     muted
@@ -108,18 +107,18 @@ export function ExtraescolarsCards({
           {restActivities.length > 0 && (
             <div className="min-w-0 flex-1 overflow-x-hidden">
               <ul
-                className="flex gap-4 sm:gap-5 transition-transform duration-300 ease-out"
+                className="flex gap-3 sm:gap-4 transition-transform duration-300 ease-out"
                 style={{ transform: `translateX(-${slideIndex * slideStep}px)` }}
               >
                 {restActivities.map((item, index) => (
                   <li
                     key={item.href}
                     ref={(el) => { cardRefs.current[index + 1] = el; }}
-                    className="shrink-0 w-[520px] sm:w-[560px]"
+                    className="shrink-0 w-[280px] sm:w-[320px]"
                   >
                     <Link
                       href={item.href}
-                      className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                      className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                     >
                       <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                         {item.image ? (
@@ -128,23 +127,23 @@ export function ExtraescolarsCards({
                             alt=""
                             fill
                             className="object-cover transition group-hover:scale-105"
-                            sizes="560px"
+                            sizes="320px"
                           />
                         ) : (
                           <div
                             className={`h-full w-full bg-gradient-to-br ${CARD_COLORS[(index + 1) % CARD_COLORS.length]} flex items-center justify-center`}
                           >
-                            <span className="text-6xl font-bold text-white/90">
+                            <span className="text-4xl font-bold text-white/90">
                               {item.label.charAt(0)}
                             </span>
                           </div>
                         )}
                       </div>
-                      <div className="p-5 sm:p-6">
-                        <h3 className="text-lg font-semibold text-slate-900 line-clamp-2 group-hover:text-emerald-700 sm:text-xl">
+                      <div className="p-3 sm:p-4">
+                        <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 group-hover:text-emerald-700 sm:text-base">
                           {item.label}
                         </h3>
-                        <span className="mt-3 inline-block text-base font-medium text-emerald-600">
+                        <span className="mt-1.5 inline-block text-xs font-medium text-emerald-600 sm:text-sm">
                           Saber més →
                         </span>
                       </div>
@@ -157,7 +156,7 @@ export function ExtraescolarsCards({
         </div>
 
         {/* Navegació: fletxa – punts – fletxa (com a l’exemple) */}
-        <div className="mt-6 flex items-center justify-center gap-4" role="tablist" aria-label="Navegació per activitats">
+        <div className="mt-3 flex items-center justify-center gap-3 sm:mt-4" role="tablist" aria-label="Navegació per activitats">
           <button
             type="button"
             onClick={() => goTo(currentIndex - 1)}

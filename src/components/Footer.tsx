@@ -8,12 +8,12 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* Informació legal */}
-        <div>
+        {/* Informació legal – alineada a la dreta */}
+        <div className="text-right">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
             Informació legal
           </p>
-          <ul className="mt-3 flex flex-wrap gap-x-6 gap-y-1 text-sm text-slate-600">
+          <ul className="mt-3 flex flex-wrap justify-end gap-x-6 gap-y-1 text-sm text-slate-600">
             {legalLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="hover:text-slate-900">
