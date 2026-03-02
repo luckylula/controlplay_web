@@ -9,6 +9,10 @@ export type ValorCard = {
   image?: string;
   /** Si és true, no es mostra el quadrat d'imatge/lletra a la part superior */
   hideImage?: boolean;
+  /** Posició de la imatge: esquerra (per defecte) o dreta */
+  imagePosition?: "left" | "right";
+  /** Si és true, el quadrat de la imatge és més ample (format rectangle) */
+  imageWide?: boolean;
   ctaHref?: string;
   ctaLabel?: string;
 };
@@ -24,19 +28,21 @@ const VALORS: ValorCard[] = [
     title: "Qui busquem?",
     description:
       "Busquem persones:\n\n✔ Amb passió per l'educació, l'esport i l'entreteniment.\n✔ Professionals responsables, proactius i amb capacitat per treballar en equip.\n✔ Amb empatia, creativitat i ganes d'aportar solucions.\n✔ Amb disponibilitat per adaptar-se a projectes diversos i desafiadors.\n\nSi t'agrada fer que cada dia compti, aquest és el teu lloc.",
-    image: "/images/unete-a-lequip/unete2.png",
+    hideImage: true,
   },
   {
     title: "Vols formar part del nostre equip?",
     description:
-      "Si t'entusiasma treballar en un entorn on el teu esforç es tradueix en experiències memorables per a infants, joves i centres educatius… volem conèixer-te!\n\nEnvia'ns el teu CV juntament amb una carta on ens expliquis què et motiva de Control Play i com pots aportar valor al nostre equip.\n\nControl Play és més que una feina — és un projecte on tu també pots créixer. Anima't a formar part de la nostra família!",
+      "Si t'entusiasma treballar en un entorn on el teu esforç es tradueix en experiències memorables per a infants, joves i centres educatius… volem conèixer-te!\n\nEnvia'ns el teu CV juntament amb una carta on ens expliquis què et motiva de Control Play i com pots aportar valor al nostre equip.",
     image: "/images/unete-a-lequip/unete3.png",
+    imageWide: true,
   },
   {
     title: "Contacte",
     description:
       "Teniu preguntes o voleu enviar-nos el vostre CV? Omple el formulari de contacte i et respondrem el més aviat possible. Estem aquí per ajudar-vos.",
-    image: "/images/unete-a-lequip/unete1.png",
+    image: "/images/unete-a-lequip/unete2.png",
+    imagePosition: "right",
     ctaHref: "/contacte",
     ctaLabel: "Anar al formulari de contacte",
   },
@@ -52,28 +58,48 @@ export function ValorsEmpresa({ valors = VALORS }: { valors?: ValorCard[] }) {
         {valors.map((valor) => (
           <article
             key={valor.title}
-            className={`relative flex min-h-0 flex-col overflow-visible rounded-3xl bg-blue-900 p-6 pb-8 shadow-xl sm:p-8 md:p-8 md:pb-10 lg:p-10 ${
-              valor.hideImage ? "pt-6 sm:pt-8 md:pt-8 lg:pt-10" : "pt-20 sm:pt-24 md:pt-24 lg:pt-28"
-            }`}
+            className={`relative flex min-h-0 flex-col overflow-visible rounded-3xl bg-blue-900 shadow-xl ${
+              valor.cardWide
+                ? "p-6 pb-20 sm:p-8 sm:pb-24 md:p-8 md:pb-28 lg:p-10 lg:pb-32"
+                : "p-6 pb-10 sm:p-8 sm:pb-12 md:p-8 md:pb-14 lg:p-10 lg:pb-[60px]"
+            } ${
+              valor.hideImage ? "pt-6 sm:pt-8 md:pt-8 lg:pt-10" : "pt-24 sm:pt-28 md:pt-28 lg:pt-32"
+            } ${valor.cardWide ? "md:col-span-2 md:min-h-[28rem] lg:min-h-[30rem]" : ""}`}
           >
             {!valor.hideImage && (
-              <div className="absolute left-6 top-0 z-10 -translate-y-1/2 sm:left-8">
+              <div
+                className={`absolute top-0 z-10 -translate-y-1/2 ${
+                  valor.imagePosition === "right"
+                    ? "right-6 sm:right-8"
+                    : "left-6 sm:left-8"
+                }`}
+              >
                 {valor.image ? (
-                  <div className="relative h-28 w-28 overflow-hidden rounded-2xl border-4 border-white shadow-lg sm:h-32 sm:w-32">
+                  <div
+                    className={`relative overflow-hidden rounded-2xl border-4 border-white shadow-lg ${
+                      valor.imageWide
+                        ? "h-36 w-52 sm:h-40 sm:w-60 lg:h-44 lg:w-72"
+                        : "h-36 w-36 sm:h-40 sm:w-40 lg:h-44 lg:w-44"
+                    }`}
+                  >
                     <Image
                       src={valor.image}
                       alt=""
                       fill
                       className="object-cover"
-                      sizes="128px"
+                      sizes={valor.imageWide ? "288px" : "176px"}
                     />
                   </div>
                 ) : (
                   <div
-                    className="flex h-28 w-28 items-center justify-center rounded-2xl border-4 border-white bg-blue-700 shadow-lg sm:h-32 sm:w-32"
+                    className={`flex items-center justify-center rounded-2xl border-4 border-white bg-blue-700 shadow-lg ${
+                      valor.imageWide
+                        ? "h-36 w-52 sm:h-40 sm:w-60 lg:h-44 lg:w-72"
+                        : "h-36 w-36 sm:h-40 sm:w-40 lg:h-44 lg:w-44"
+                    }`}
                     aria-hidden
                   >
-                    <span className="text-3xl font-bold text-white sm:text-4xl">
+                    <span className="text-4xl font-bold text-white sm:text-5xl">
                       {valor.title.charAt(0)}
                     </span>
                   </div>
