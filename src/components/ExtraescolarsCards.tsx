@@ -114,7 +114,7 @@ export function ExtraescolarsCards({
           </div>
           <Link
             href={ctaHref}
-            className="shrink-0 text-sm font-semibold text-emerald-600 hover:text-emerald-700"
+            className="shrink-0 text-sm font-semibold text-blue-600 hover:text-blue-700"
           >
             {ctaLabel} →
           </Link>
@@ -127,7 +127,7 @@ export function ExtraescolarsCards({
             <div className="shrink-0 w-[280px] sm:w-[320px]">
               <Link
                 href={activities[0].href}
-                className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "320/300" }}>
                   <video
@@ -161,7 +161,7 @@ export function ExtraescolarsCards({
                     >
                       <Link
                         href={item.href}
-                        className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                        className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                       >
                         <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
                           {item.image ? (
@@ -183,10 +183,10 @@ export function ExtraescolarsCards({
                           )}
                         </div>
                         <div className="p-3 sm:p-4">
-                          <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 group-hover:text-emerald-700 sm:text-base">
+                          <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-base">
                             {item.label}
                           </h3>
-                          <span className="mt-1.5 inline-block text-xs font-medium text-emerald-600 sm:text-sm">
+                          <span className="mt-1.5 inline-block text-xs font-medium text-blue-600 sm:text-sm">
                             Saber més →
                           </span>
                         </div>
@@ -222,7 +222,7 @@ export function ExtraescolarsCards({
                 aria-label={`Anar a l'activitat ${index + 1}`}
                 aria-selected={index === currentIndex}
                 role="tab"
-                className={`h-2.5 w-2.5 shrink-0 rounded-full border-2 transition focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
+                className={`h-2.5 w-2.5 shrink-0 rounded-full border-2 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
                   index === currentIndex
                     ? "border-violet-700 bg-violet-700"
                     : "border-slate-400 bg-white hover:border-slate-500"
