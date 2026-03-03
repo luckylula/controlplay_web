@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { FutsalVideoCarousel } from "@/components/FutsalVideoCarousel";
 
 export const metadata: Metadata = {
   title: "Futsal Camps",
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
 export default function FutsalCampsPage() {
   return (
     <>
+      <FutsalVideoCarousel />
+
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Futsal Camps</h1>
 
@@ -35,6 +38,15 @@ export default function FutsalCampsPage() {
               combinació ens permet dissenyar estades totalment personalitzades, adaptades a les
               necessitats tècniques i objectives de cada equip o grup.
             </p>
+            <a
+              href="https://www.barcelonafutsalcamps.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+            >
+              Descobreix la web de Barcelona Futsal Camps
+              <span className="text-white/80" aria-hidden>→</span>
+            </a>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50/70 lg:rotate-2">
             <Image
@@ -47,34 +59,6 @@ export default function FutsalCampsPage() {
           </div>
         </section>
       </div>
-
-      {/* Franja a ample complet entre els dos blocs: foto + Descobreix la web + Contacta amb nosaltres */}
-      <section className="relative h-[320px] w-full overflow-hidden border-t border-slate-200 sm:h-[380px] lg:h-[440px]">
-        <Image
-          src="/images/futsal/futsal1.png"
-          alt=""
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-          priority={false}
-        />
-        <div className="absolute inset-0 bg-black/45" aria-hidden />
-        <div className="relative flex h-full flex-col items-center justify-center gap-6 px-4 py-12 text-center sm:gap-8 sm:py-16">
-          <a
-            href="https://www.barcelonafutsalcamps.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-transparent"
-          >
-            Descobreix la web de Barcelona Futsal Camps
-            <span className="text-white/80" aria-hidden="true">→</span>
-          </a>
-          <p className="max-w-xl text-lg font-medium text-white/95 drop-shadow-sm">
-            Contacta amb nosaltres i et dissenyarem una estada única, professional i inoblidable a
-            Barcelona.
-          </p>
-        </div>
-      </section>
 
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         {/* Bloc 2: Foto esquerra | Objectius dreta */}

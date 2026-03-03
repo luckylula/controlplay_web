@@ -27,14 +27,14 @@ export default function MenjadorsEscolarsPage() {
         />
 
         {/* Bloc 1: Foto esquerra (lleu rotació) | Text dreta, desplaçat una mica */}
-        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:-rotate-2">
             <Image
               src="/images/menjadors/menjador1.png"
               alt="Menjador escolar"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
           <div className="lg:pl-6">
@@ -54,7 +54,7 @@ export default function MenjadorsEscolarsPage() {
         </section>
 
         {/* Bloc 2: Text esquerra, una mica més a la dreta | Foto dreta (rotació oposada) */}
-        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
           <div className="order-2 lg:order-1 lg:pr-4 lg:translate-x-2">
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
               Alimentem el seu futur
@@ -79,20 +79,20 @@ export default function MenjadorsEscolarsPage() {
               alt="Menjador i alimentació"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
         </section>
 
         {/* Bloc 3: Foto esquerra (desplaçada cap a l’esquerra) | Text dreta (més cap a la dreta) */}
-        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:-ml-4">
             <Image
               src="/images/menjadors/menjador3.png"
               alt="Menjador i famílies"
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
           <div className="lg:pl-10">

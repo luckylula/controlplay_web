@@ -14,7 +14,7 @@ export default function CasalsPage() {
       {/* Carrusel de vídeos de casals a dalt – mateixa mida que la resta de subcategories */}
       <CasalsVideoCarousel />
 
-      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Casals</h1>
         <Image
           src="/images/logos/CP%20CASALS.png"
@@ -29,10 +29,10 @@ export default function CasalsPage() {
           <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.25fr_1fr]">
             <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg bg-slate-100">
               <Image
-                src="/images/casals/casals%20logo%20ok.png"
-                alt="Casal Estiufest 2026 – Escola Abat Oliba"
+                src="/images/casals/casals%20foto.png"
+                alt="Casal Estiufest – Tour Estiufest"
                 fill
-                className="object-contain object-center"
+                className="object-cover object-center"
                 sizes="(max-width: 1023px) 100vw, 55vw"
                 priority
               />
