@@ -13,11 +13,11 @@ export default function FutsalCampsPage() {
     <>
       <FutsalVideoCarousel />
 
-      <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+      <div className="mx-auto w-full max-w-[1920px] px-4 pt-10 pb-16 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14 xl:px-10 2xl:px-12">
         <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Futsal Camps</h1>
 
-        {/* Bloc 1: Text esquerra | Foto dreta */}
-        <section className="mt-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12">
+        {/* Bloc 1: Text esquerra | Foto dreta – alineats al mateix nivell, foto una mica més petita */}
+        <section className="mt-6 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
           <div className="lg:pr-6">
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
               Què és Barcelona Futsal Camps?
@@ -54,22 +54,22 @@ export default function FutsalCampsPage() {
               alt=""
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
         </section>
       </div>
 
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
-        {/* Bloc 2: Foto esquerra | Objectius dreta */}
-        <section className="mt-0 grid grid-cols-1 items-center gap-8 border-t border-slate-200 pt-10 lg:grid-cols-2 lg:gap-12">
+        {/* Bloc 2: Foto esquerra | Objectius dreta – foto una mica més petita */}
+        <section className="mt-0 grid grid-cols-1 items-center gap-8 border-t border-slate-200 pt-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50/70 lg:-rotate-2 lg:mt-6">
             <Image
               src="/images/futsal/futsal1.png"
               alt=""
               fill
               className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
           <div className="lg:pl-6">
