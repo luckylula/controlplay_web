@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import { CanalEticVideoCarousel } from "@/components/CanalEticVideoCarousel";
 
 export const metadata: Metadata = {
   title: "Canal Ètic – Control Play",
@@ -15,16 +15,11 @@ const FORMULARI_URL =
 export default function CanalEticPage() {
   return (
     <>
-      {/* Franja imatge a dalt – mateixa mida que els carrusels de vídeo (Casals, Menjadors, Futsal) */}
+      {/* Franja vídeos a dalt – carrusel de 3 vídeos */}
       <section className="relative w-full overflow-hidden bg-slate-900 aspect-[21/9] min-h-[260px] max-h-[420px] sm:min-h-[300px] lg:max-h-[520px]">
-        <Image
-          src="/images/canal-etic/canal%20etic%20foto.jpg"
-          alt="Canal Ètic – Un canal segur, confidencial i independent"
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-          priority
-        />
+        <div className="absolute inset-0">
+          <CanalEticVideoCarousel />
+        </div>
       </section>
 
     <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">

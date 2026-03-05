@@ -12,22 +12,10 @@ export const metadata: Metadata = {
 export default function UneteALEquipPage() {
   return (
     <>
-      {/* Hero – carrusel de vídeos */}
+      {/* Hero – carrusel de vídeos (sense text a sobre) */}
       <section className="relative h-[360px] w-full overflow-hidden border-b border-slate-200 sm:h-[420px] lg:h-[480px]">
         <div className="absolute inset-0">
           <UneteVideoCarousel />
-        </div>
-        <div className="absolute inset-0 z-10 bg-black/40" aria-hidden />
-        <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 py-12 text-center sm:py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 sm:text-base">
-            Oportunitats professionals
-          </p>
-          <h1 className="mt-1 text-3xl font-bold text-white drop-shadow-sm sm:text-4xl lg:text-5xl">
-            Uneix-te a l&apos;Equip Control Play
-          </h1>
-          <p className="mt-2 text-lg text-white/95 drop-shadow-sm">
-            On l&apos;educació, l&apos;esport i la diversió es converteixen en oportunitats
-          </p>
         </div>
       </section>
 
@@ -61,8 +49,19 @@ export default function UneteALEquipPage() {
         </section>
       </div>
 
-      {/* Valors de l'empresa – 4 targetes */}
+      {/* Títol centrat sobre les 4 targetes */}
       <section className="border-t border-slate-200 bg-slate-50 py-12">
+        <div className="mx-auto max-w-[1920px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+          <p className="text-sm font-semibold uppercase tracking-wider text-black sm:text-base">
+            Oportunitats professionals
+          </p>
+          <h2 className="mt-1 text-3xl font-bold text-slate-900 sm:text-4xl lg:text-5xl">
+            Uneix-te a l&apos;Equip Control Play
+          </h2>
+          <p className="mt-2 text-lg text-slate-600">
+            On l&apos;educació, l&apos;esport i la diversió es converteixen en oportunitats
+          </p>
+        </div>
         <ValorsEmpresa />
       </section>
 

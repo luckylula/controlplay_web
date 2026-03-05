@@ -1,19 +1,40 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const CASALS_IMAGES = 11;
-const VISIBLE_LG = 4;
+const VISIBLE_LG = 3;
+const GAP_REM = 1.5;
 const MAX_PAGE = Math.max(0, CASALS_IMAGES - VISIBLE_LG);
 
 export function CasalsGallery() {
   const [page, setPage] = useState(0);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [offsetPx, setOffsetPx] = useState(0);
+  const [itemWidthPx, setItemWidthPx] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const goPrev = useCallback(() => setPage((p) => (p <= 0 ? MAX_PAGE : p - 1)), []);
   const goNext = useCallback(() => setPage((p) => (p >= MAX_PAGE ? 0 : p + 1)), []);
   const closeLightbox = useCallback(() => setOpenIndex(null), []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const update = () => {
+      const width = container.offsetWidth;
+      const gapPx = GAP_REM * 16;
+      const item = (width - (VISIBLE_LG - 1) * gapPx) / VISIBLE_LG;
+      setItemWidthPx(item);
+      const step = item + gapPx;
+      setOffsetPx(page * step);
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(container);
+    return () => ro.disconnect();
+  }, [page]);
 
   useEffect(() => {
     if (openIndex === null) return;
@@ -26,18 +47,16 @@ export function CasalsGallery() {
     return () => window.removeEventListener("keydown", onKey);
   }, [openIndex, closeLightbox]);
 
-  const itemPercent = 100 / CASALS_IMAGES;
-
   return (
     <>
       <section className="mt-14 border-t border-slate-200 pt-12">
-        <div className="relative mx-auto max-w-3xl">
+        <div className="relative w-full px-4 sm:px-6 lg:px-8">
           {/* Fletxes */}
           <button
             type="button"
             onClick={goPrev}
             aria-label="Imatges anteriors"
-            className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-1.5 shadow-md transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 -left-2 sm:-left-3"
+            className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/95 p-2 shadow-lg transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 sm:left-4"
           >
             <svg className="h-5 w-5 text-slate-700 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -47,40 +66,44 @@ export function CasalsGallery() {
             type="button"
             onClick={goNext}
             aria-label="Imatges següents"
-            className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-1.5 shadow-md transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 -right-2 sm:-right-3"
+            className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full bg-white/95 p-2 shadow-lg transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 sm:right-4"
           >
             <svg className="h-5 w-5 text-slate-700 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          {/* Carrusel: 4 visibles, cada imatge amb el seu espai (sense solapar) */}
-          <div className="overflow-hidden">
+          {/* Carrusel: ample de pantalla, cada foto separada amb gap, sense solapar */}
+          <div ref={containerRef} className="w-full overflow-hidden">
             <div
               className="flex transition-transform duration-300 ease-out"
               style={{
-                width: `${(CASALS_IMAGES / VISIBLE_LG) * 100}%`,
-                transform: `translateX(-${page * itemPercent}%)`,
+                gap: `${GAP_REM}rem`,
+                width: itemWidthPx > 0 ? `${CASALS_IMAGES * itemWidthPx + (CASALS_IMAGES - 1) * GAP_REM * 16}px` : "auto",
+                transform: `translateX(-${offsetPx}px)`,
               }}
             >
               {Array.from({ length: CASALS_IMAGES }, (_, n) => n + 1).map((n) => (
                 <div
                   key={n}
-                  className="flex flex-shrink-0 px-1"
-                  style={{ width: `${itemPercent}%` }}
+                  className="flex flex-shrink-0"
+                  style={{
+                    width: itemWidthPx > 0 ? `${itemWidthPx}px` : undefined,
+                    minWidth: itemWidthPx > 0 ? `${itemWidthPx}px` : undefined,
+                  }}
                 >
                   <button
                     type="button"
                     onClick={() => setOpenIndex(n - 1)}
-                    className="relative block aspect-square w-full overflow-hidden rounded-lg bg-slate-100 shadow transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                    className="relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-lg bg-slate-100 shadow-md transition hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                     aria-label={`Obrir imatge ${n}`}
                   >
                     <Image
                       src={`/images/casals/${n}.png`}
                       alt={`Casal Estiufest – imatge ${n}`}
                       fill
-                      className="object-cover object-center"
-                      sizes="(max-width: 768px) 50vw, 200px"
+                      className="object-contain object-center"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 40vw, 33vw"
                     />
                   </button>
                 </div>

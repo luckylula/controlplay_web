@@ -70,9 +70,10 @@ export default function CasalsPage() {
             l&apos;any.
           </p>
         </section>
-
-        <CasalsGallery />
       </div>
+
+      {/* Galeria a ample complet de pantalla */}
+      <CasalsGallery />
     </>
   );
 }
