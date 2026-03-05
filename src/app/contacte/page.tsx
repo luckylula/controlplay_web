@@ -17,8 +17,16 @@ export default function ContactePage() {
         <div>
           <dt className="text-sm font-medium text-slate-500">Telèfon oficina</dt>
           <dd>
-            <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="text-lg font-medium text-slate-900 hover:text-emerald-600">
-              {contact.phone}
+            <a href={`tel:${contact.officePhone.replace(/\s/g, "")}`} className="text-lg font-medium text-slate-900 hover:text-emerald-600">
+              {contact.officePhone}
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt className="text-sm font-medium text-slate-500">Telèfon mòbil</dt>
+          <dd>
+            <a href={`tel:+34${contact.phone.replace(/\s/g, "")}`} className="text-lg font-medium text-slate-900 hover:text-emerald-600">
+              +34 {contact.phone}
             </a>
           </dd>
         </div>

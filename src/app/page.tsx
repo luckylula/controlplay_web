@@ -79,12 +79,12 @@ export default function Home() {
 
       {/* Equip Control Play – mateix alt que la resta de franjes; s’expandeix en pantalles grans */}
       <section className={`flex flex-col ${COVER_STRIP_HEIGHT} overflow-hidden border-t border-slate-200 bg-white`}>
-        <div className="mx-auto flex w-full flex-1 flex-col justify-center px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl lg:text-4xl">
+        <div className="mx-auto flex min-h-0 w-full flex-1 flex-col justify-center overflow-hidden px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
+          <h2 className="shrink-0 text-2xl font-bold text-slate-900 sm:text-3xl lg:text-4xl">
             Equip Control Play
           </h2>
-          <div className="mt-6 grid flex-1 grid-cols-1 items-center gap-6 min-h-0 lg:mt-8 lg:grid-cols-[minmax(0,1fr)_1.2fr] lg:gap-8">
-            <div className="relative aspect-[4/3] w-full min-h-0 overflow-hidden rounded-xl border border-slate-200 bg-slate-100 lg:aspect-[3/2]">
+          <div className="mt-4 grid min-h-0 flex-1 grid-cols-1 items-stretch gap-4 sm:mt-6 sm:gap-6 lg:grid-cols-[minmax(0,1fr)_1.2fr] lg:gap-8">
+            <div className="relative min-h-0 min-w-0 flex-1 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
               <Image
                 src="/images/portada/staff.png"
                 alt="Equip Control Play"
@@ -93,14 +93,14 @@ export default function Home() {
                 sizes="(max-width: 1023px) 100vw, 40vw"
               />
             </div>
-            <div className="space-y-6 text-slate-600">
-              <p className="text-lg leading-relaxed">
+            <div className="min-h-0 min-w-0 space-y-3 overflow-y-auto text-slate-600 sm:space-y-4">
+              <p className="text-sm leading-relaxed lg:text-base">
                 A Control Play Sports som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia per donar resposta a les necessitats de centres, famílies i entitats, amb proximitat, responsabilitat i passió pel que fem.
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-sm leading-relaxed lg:text-base">
                 Comptem amb un equip multidisciplinari de professionals amb més de 20 anys d&apos;experiència, que aporta coneixement, vocació i responsabilitat en cada projecte.
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-sm leading-relaxed lg:text-base">
                 Oferim els nostres serveis amb les màximes garanties de professionalitat, legalitat i rigor, perquè la confiança i la tranquil·litat de les famílies i dels centres són la nostra prioritat.
               </p>
             </div>
@@ -170,8 +170,16 @@ export default function Home() {
               <div>
                 <dt className="text-sm font-medium text-slate-400">Telèfon oficina</dt>
                 <dd>
-                  <a href={`tel:${contact.phone.replace(/\s/g, "")}`} className="text-slate-200 hover:text-white">
-                    {contact.phone}
+                  <a href={`tel:${contact.officePhone.replace(/\s/g, "")}`} className="text-slate-200 hover:text-white">
+                    {contact.officePhone}
+                  </a>
+                </dd>
+              </div>
+              <div>
+                <dt className="text-sm font-medium text-slate-400">Telèfon mòbil</dt>
+                <dd>
+                  <a href={`tel:+34${contact.phone.replace(/\s/g, "")}`} className="text-slate-200 hover:text-white">
+                    +34 {contact.phone}
                   </a>
                 </dd>
               </div>
