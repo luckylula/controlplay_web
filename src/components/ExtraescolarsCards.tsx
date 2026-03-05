@@ -50,7 +50,7 @@ export function ExtraescolarsCards({
   const restActivities = activities.length > 1 ? activities.slice(1) : [];
   const restLength = restActivities.length;
   const middleStart = restLength;
-  const slideStep = 332;
+  const slideStep = 416;
 
   const [slideOffset, setSlideOffset] = useState(() =>
     restLength > 0 ? middleStart + 0 : 0
@@ -102,7 +102,7 @@ export function ExtraescolarsCards({
   const restTriple = restLength > 0 ? [...restActivities, ...restActivities, ...restActivities] : [];
 
   return (
-    <section className={`flex ${COVER_STRIP_HEIGHT} flex-col justify-center overflow-hidden border-t border-slate-200 bg-white py-8 sm:py-10`}>
+    <section className={`flex ${COVER_STRIP_HEIGHT} flex-col justify-center overflow-hidden border-t border-slate-200 bg-white py-4 sm:py-6`}>
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end sm:gap-6">
           <div>
@@ -125,12 +125,13 @@ export function ExtraescolarsCards({
         <div ref={scrollContainerRef} className="mt-4 flex gap-3 sm:gap-4 overflow-hidden">
           {/* Primera targeta fixa: només vídeo */}
           {activities.length > 0 && (
-            <div className="shrink-0 w-[280px] sm:w-[320px]">
+            <div className="shrink-0 w-[320px] sm:w-[400px]">
               <Link
                 href={activities[0].href}
                 className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
-                <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "320/300" }}>
+                {/* Vídeo ocupa tota l’alçada de la targeta (mateix total que imatge + text de la resta) */}
+                <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "400/462" }}>
                   <video
                     autoPlay
                     muted
@@ -158,36 +159,36 @@ export function ExtraescolarsCards({
                     <li
                       key={`${item.href}-${index}`}
                       ref={index < restLength ? (el) => { cardRefs.current[originalIndex + 1] = el; } : undefined}
-                      className="shrink-0 w-[280px] sm:w-[320px]"
+                      className="shrink-0 w-[320px] sm:w-[400px]"
                     >
                       <Link
                         href={item.href}
                         className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                       >
-                        <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
+                        <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "400/360" }}>
                           {item.image ? (
                             <Image
                               src={item.image}
                               alt=""
                               fill
                               className="object-cover transition group-hover:scale-105"
-                              sizes="320px"
+                              sizes="400px"
                             />
                           ) : (
                             <div
                               className={`h-full w-full bg-gradient-to-br ${CARD_COLORS[(originalIndex + 1) % CARD_COLORS.length]} flex items-center justify-center`}
                             >
-                              <span className="text-4xl font-bold text-white/90">
+                              <span className="text-5xl font-bold text-white/90">
                                 {item.label.charAt(0)}
                               </span>
                             </div>
                           )}
                         </div>
-                        <div className="p-3 sm:p-4">
-                          <h3 className="text-sm font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-base">
+                        <div className="p-4 sm:p-5">
+                          <h3 className="text-base font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-lg">
                             {item.label}
                           </h3>
-                          <span className="mt-1.5 inline-block text-xs font-medium text-blue-600 sm:text-sm">
+                          <span className="mt-2 inline-block text-sm font-medium text-blue-600 sm:text-base">
                             Saber més →
                           </span>
                         </div>

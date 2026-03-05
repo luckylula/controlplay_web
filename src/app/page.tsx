@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* Categories – 4 icons – d’costat a costat; arriben als vores de la pàgina */}
       <section className={`flex flex-col ${COVER_STRIP_HEIGHT} overflow-hidden`}>
-        <div className="mx-auto flex min-h-0 w-full flex-1 flex-col px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex min-h-0 w-full flex-1 flex-col pt-[2cm] px-4 sm:px-6 lg:px-8">
           <CategoriesWithMascot categories={CATEGORIES} />
         </div>
       </section>
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
           <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 pl-[1cm] pr-4 py-3 lg:pr-5 lg:py-4">
             <h2 className="text-center text-3xl font-bold sm:text-4xl lg:text-5xl">Contacte</h2>
-            <p className="mt-0 text-base font-semibold text-white sm:text-lg">
+            <p className="mt-0 text-[15px] font-semibold text-white sm:text-[17px]">
               Teniu preguntes? Estem aquí per ajudar-vos.
             </p>
             <dl className="mt-6 space-y-1.5 text-left text-sm">
