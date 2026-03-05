@@ -337,8 +337,8 @@ function HockeyMiniTennisBeisbolContent() {
   return (
     <>
       <ActivityImagesLayout
-        imageLeft="/images/extraescolars/hockey-mini-tennis-beisbol/hockey1.jpg"
-        imageRight="/images/extraescolars/hockey-mini-tennis-beisbol/hockey2.jpg"
+        imageLeft="/images/extraescolars/hockey-mini-tennis-beisbol/hockey1.png"
+        imageRight="/images/extraescolars/hockey-mini-tennis-beisbol/hockey2.png"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>

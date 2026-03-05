@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ValorsEmpresa } from "@/components/ValorsEmpresa";
 import { UneteVideoCarousel } from "@/components/UneteVideoCarousel";
 
@@ -30,30 +31,56 @@ export default function UneteALEquipPage() {
         </div>
       </section>
 
+      {/* Sota el vídeo: imatge a l'esquerra, text a la dreta */}
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
-      <section className="mt-0">
-        <p className="text-slate-600">
-          A Control Play treballem cada dia per crear experiències educatives, esportives i lúdiques
-          que marquen la diferència en escoles, centres i comunitats. El nostre objectiu és acompanyar
-          infants, joves i famílies a través d&apos;activitats extraescolars, esportives, tallers
-          formatius i serveis integrals pensats per créixer, aprendre i gaudir.
-        </p>
-        <p className="mt-3 text-slate-600">
-          Sabem que les persones són el cor dels nostres projectes. Per això, volem envoltar-nos de
-          professionals compromesos, amb esperit col·laboratiu i amb ganes d&apos;aportar idees
-          innovadores.
-        </p>
-      </section>
+        <section className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.55fr_1.45fr] lg:gap-12">
+          <div className="relative aspect-[4/3] max-w-md overflow-hidden rounded-2xl bg-slate-100 lg:max-w-full">
+            <Image
+              src="/images/unete-a-lequip/unete3.png"
+              alt="Equip Control Play amb monitors i infants en activitats a l'aire lliure i a l'aula"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 46vw"
+              priority
+            />
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="text-slate-600 leading-relaxed">
+              A Control Play treballem cada dia per crear experiències educatives, esportives i
+              lúdiques que marquen la diferència en escoles, centres i comunitats. El nostre
+              objectiu és acompanyar infants, joves i famílies a través d&apos;activitats
+              extraescolars, esportives, tallers formatius i serveis integrals pensats per créixer,
+              aprendre i gaudir.
+            </p>
+            <p className="mt-3 text-slate-600 leading-relaxed">
+              Sabem que les persones són el cor dels nostres projectes. Per això, volem
+              envoltar-nos de professionals compromesos, amb esperit col·laboratiu i amb ganes
+              d&apos;aportar idees innovadores.
+            </p>
+          </div>
+        </section>
       </div>
 
-      {/* Valors de l'empresa – 4 targetes en grid 2x2 (blau, imatge flotant) – ample complet fins a 1920px */}
+      {/* Valors de l'empresa – 4 targetes */}
       <section className="border-t border-slate-200 bg-slate-50 py-12">
-        <div className="mx-auto w-full max-w-[1920px] px-4 text-center sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
-          <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-            Els nostres valors
-          </h2>
-        </div>
         <ValorsEmpresa />
+      </section>
+
+      {/* Imatge de l'equip i activitats sota les quatre targetes */}
+      <section className="border-t border-slate-200 bg-slate-50 py-12">
+        <div className="mx-auto w-full max-w-[1920px] px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
+          <div className="relative overflow-hidden rounded-2xl shadow-lg">
+            <Image
+              src="/images/unete-a-lequip/unete2.png"
+              alt="Uneix-te a l'Equip Control Play – educació, esport i diversió en oportunitats"
+              width={1920}
+              height={1080}
+              className="h-auto w-full object-cover"
+              sizes="(max-width: 1920px) 100vw, 1920px"
+              priority={false}
+            />
+          </div>
+        </div>
       </section>
     </>
   );
