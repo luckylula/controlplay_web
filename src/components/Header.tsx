@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { mainNav, siteName, contact } from "@/lib/navigation";
 
-const LOGO_PATH = "/images/logos/logo%20SERVEIS%20EDUCATIUS.png";
+const LOGO_PATH = "/images/logos/CP%20SERVEIS%20EDUCATIUS%20transp.png";
 
 /** Enllaços amb dues paraules: primera línia a dalt, segona a sota */
 function NavLabel({ label }: { label: string }) {
@@ -67,11 +67,11 @@ export function Header() {
           </a>
         </div>
       </div>
-      {/* Logo + nav – logo una mica més gran */}
-      <div className="mx-auto flex h-28 w-full items-center justify-between px-4 sm:h-32 sm:px-6 md:h-36 lg:h-40 lg:px-8 xl:h-44">
+      {/* Logo + nav – strip més baix; logo mida fixa (h-28 / h-32) */}
+      <div className="mx-auto flex h-28 w-full items-center justify-between px-4 sm:h-32 sm:px-6 md:h-32 lg:h-32 lg:px-8 xl:h-32">
         <Link
           href="/"
-          className="flex h-full min-w-0 items-center text-slate-900 hover:opacity-90 transition-opacity"
+          className="flex min-h-0 min-w-0 items-center text-slate-900 hover:opacity-90 transition-opacity"
         >
           {!logoError ? (
             <Image
@@ -79,7 +79,7 @@ export function Header() {
               alt={siteName}
               width={640}
               height={176}
-              className="h-full w-auto max-w-[55vw] object-contain object-left sm:max-w-none"
+              className="h-24 w-auto max-w-[55vw] object-contain object-left sm:h-28 sm:max-w-none"
               onError={() => setLogoError(true)}
               priority
             />
