@@ -28,15 +28,17 @@ export default function CanalEticPage() {
       </section>
 
     <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
-      <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-        CANAL ÈTIC
-      </h1>
-      <p className="mt-2 text-lg font-medium text-slate-700">
-        CONTROL PLAY SERVICES S.L.
-      </p>
-      <p className="mt-1 text-base text-slate-600">
-        Sistema Intern d&apos;Informació conforme a la Llei 2/2023
-      </p>
+      <div className="text-center">
+        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+          Canal Ètic
+        </h1>
+        <p className="mt-2 text-lg font-medium text-slate-700">
+          CONTROL PLAY SERVICES S.L.
+        </p>
+        <p className="mt-1 text-base text-slate-600">
+          Sistema Intern d&apos;Informació conforme a la Llei 2/2023
+        </p>
+      </div>
 
       {/* Bloc 1: Text a l'esquerra */}
       <section className="mt-10">

@@ -14,7 +14,7 @@ export default function FutsalCampsPage() {
       <FutsalVideoCarousel />
 
       <div className="mx-auto w-full max-w-[1920px] px-4 pt-10 pb-16 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14 xl:px-10 2xl:px-12">
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Futsal Camps</h1>
+        <h1 className="text-center text-3xl font-bold text-slate-900 sm:text-4xl">Futsal Camps</h1>
 
         {/* Bloc 1: Text esquerra | Foto dreta – alineats al mateix nivell, foto una mica més petita */}
         <section className="mt-6 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">

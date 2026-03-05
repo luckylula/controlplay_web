@@ -420,8 +420,8 @@ function BasquetHandbolVoleyContent() {
   return (
     <>
       <ActivityImagesLayout
-        imageLeft="/images/extraescolars/basquet-handbol-voley/basquet1.jpg"
-        imageRight="/images/extraescolars/basquet-handbol-voley/basquet2.jpg"
+        imageLeft="/images/extraescolars/basquet-handbol-voley/basquet1.png"
+        imageRight="/images/extraescolars/basquet-handbol-voley/basquet2.png"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -1242,8 +1242,8 @@ function TallerEstudiContent() {
   return (
     <>
       <ActivityImagesLayout
-        imageLeft="/images/extraescolars/taller-estudi/tallerestudi1.jpg"
-        imageRight="/images/extraescolars/taller-estudi/tallerestudi2.jpg"
+        imageLeft="/images/extraescolars/taller-estudi/tallerestudi1.png"
+        imageRight="/images/extraescolars/taller-estudi/tallerestudi2.png"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>

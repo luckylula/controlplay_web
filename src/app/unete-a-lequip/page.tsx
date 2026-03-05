@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { ValorsEmpresa } from "@/components/ValorsEmpresa";
+import { UneteVideoCarousel } from "@/components/UneteVideoCarousel";
 
 export const metadata: Metadata = {
   title: "Uneix-te a l'Equip",
@@ -11,18 +11,13 @@ export const metadata: Metadata = {
 export default function UneteALEquipPage() {
   return (
     <>
-      {/* Hero – franja amb foto (com el vídeo a altres pàgines) */}
+      {/* Hero – carrusel de vídeos */}
       <section className="relative h-[360px] w-full overflow-hidden border-b border-slate-200 sm:h-[420px] lg:h-[480px]">
-        <Image
-          src="/images/unete-a-lequip/unete1.png"
-          alt="Uneix-te a l'equip Control Play"
-          fill
-          className="object-cover object-center"
-          sizes="100vw"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" aria-hidden />
-        <div className="relative flex h-full flex-col items-center justify-center px-4 py-12 text-center sm:py-16">
+        <div className="absolute inset-0">
+          <UneteVideoCarousel />
+        </div>
+        <div className="absolute inset-0 z-10 bg-black/40" aria-hidden />
+        <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 py-12 text-center sm:py-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-emerald-400 sm:text-base">
             Oportunitats professionals
           </p>
