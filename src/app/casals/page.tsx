@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { CasalsGallery } from "@/components/CasalsGallery";
 import { CasalsVideoCarousel } from "@/components/CasalsVideoCarousel";
 
 export const metadata: Metadata = {
@@ -69,6 +70,8 @@ export default function CasalsPage() {
             l&apos;any.
           </p>
         </section>
+
+        <CasalsGallery />
       </div>
     </>
   );
