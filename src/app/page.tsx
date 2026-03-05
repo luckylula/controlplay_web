@@ -157,12 +157,12 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 px-4 py-3 lg:px-5 lg:py-4">
+          <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 pl-[1cm] pr-4 py-3 lg:pr-5 lg:py-4">
             <h2 className="text-center text-3xl font-bold sm:text-4xl lg:text-5xl">Contacte</h2>
-            <p className="mt-10 text-base font-semibold text-white sm:text-lg">
+            <p className="mt-0 text-base font-semibold text-white sm:text-lg">
               Teniu preguntes? Estem aquí per ajudar-vos.
             </p>
-            <dl className="mt-2 space-y-1.5 text-sm">
+            <dl className="mt-6 space-y-1.5 text-left text-sm">
               <div>
                 <dt className="font-medium text-slate-400">Control Play</dt>
                 <dd className="mt-0.5 text-slate-200">{contact.address}</dd>
