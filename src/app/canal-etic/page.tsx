@@ -8,8 +8,9 @@ export const metadata: Metadata = {
     "Sistema Intern d'Informació de Control Play Services S.L. conforme a la Llei 2/2023. Canal Ètic per a la comunicació d'infraccions normatives.",
 };
 
-/** Enllaç al formulari de denúncia (podeu canviar la URL quan el tengueu) */
-const FORMULARI_URL = "/canal-etic/formulari";
+/** Enllaç al formulari de denúncia (Microsoft Forms) */
+const FORMULARI_URL =
+  "https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2Fpages%2Fresponsepage.aspx%3Fid%3D8-RLI9jiG0e8C_nPdBkFF19Rih_YYnRJh-jJFVFPGRpUNTVNWjFPQTNQVDJRUVlWMEFVTTZVSzkzTS4u%26route%3Dshorturl&data=05%7C02%7C%7C9559cfa56a914e2f108e08de7ab4d9f6%7C84df9e7fe9f640afb435aaaaaaaaaaaa%7C1%7C0%7C639083114351113880%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=WUYHftcGFRh%2BxKtF5zOCoor1XwiWh4ZP73gNK14zono%3D&reserved=0";
 
 export default function CanalEticPage() {
   return (
@@ -57,63 +58,33 @@ export default function CanalEticPage() {
       {/* Tres seccions en format targeta – fons blau, targetes blanques */}
       <section className="mt-14 rounded-2xl bg-blue-600 px-4 py-12 sm:px-6 sm:py-14 lg:px-10">
         <div className="grid gap-8 lg:grid-cols-3">
-          {/* Targeta 1: Àmbit d'aplicació – flip: només 01 + títol, en hover es gira i es veu tot */}
-          <article
-            className="group relative min-h-[280px] w-full sm:min-h-[300px]"
-            style={{ perspective: "1000px" }}
-          >
-            <div
-              className="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]"
-            >
-              {/* Cara frontal: només 01 i títol */}
-              <div
-                className="absolute inset-0 flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7 [backface-visibility:hidden]"
-                style={{ transform: "rotateY(0deg)" }}
-              >
-                <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
-                  Llei 2/2023
-                </p>
-                <div className="mt-4 flex flex-1 flex-col items-center justify-center gap-3 text-center">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-100 text-2xl font-bold text-black">
-                    01
-                  </div>
-                  <h2 className="text-lg font-bold text-black sm:text-xl">
-                    Àmbit d&apos;aplicació
-                  </h2>
-                </div>
+          {/* Targeta 1: Àmbit d'aplicació – mateix estil que 2 i 3, títol a dalt i fix */}
+          <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
+            <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
+              Llei 2/2023
+            </p>
+            <div className="mt-4 flex items-center gap-3">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
+                01
               </div>
-              {/* Cara del darrere: tot el contingut */}
-              <div
-                className="absolute inset-0 flex flex-col overflow-y-auto rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7 [backface-visibility:hidden]"
-                style={{ transform: "rotateY(180deg)" }}
-              >
-                <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
-                  Llei 2/2023
-                </p>
-                <div className="mt-4 flex items-center gap-3">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
-                    01
-                  </div>
-                  <h2 className="text-lg font-bold text-black sm:text-xl">
-                    Àmbit d&apos;aplicació
-                  </h2>
-                </div>
-                <p className="mt-2 text-sm text-slate-700">
-                  El Canal Ètic és accessible a totes les persones vinculades a l&apos;organització:
-                </p>
-                <ul className="mt-4 space-y-1.5 text-sm text-slate-600">
-                  {["Personal laboral i col·laboradors", "Monitors/es i personal de cuina", "Coordinadors/es", "Proveïdors i subcontractistes", "Famílies usuàries dels serveis", "Ex-treballadors/es", "Qualsevol persona relacionada amb l'activitat de l'empresa"].map((item) => (
-                    <li key={item} className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="mt-5 text-xs font-medium text-slate-500">
-                  Sistema d&apos;informació
-                </p>
-              </div>
+              <h2 className="text-lg font-bold text-black sm:text-xl">
+                Àmbit d&apos;aplicació
+              </h2>
             </div>
+            <p className="mt-2 text-sm text-slate-700">
+              El Canal Ètic és accessible a totes les persones vinculades a l&apos;organització:
+            </p>
+            <ul className="mt-4 space-y-1.5 text-sm text-slate-600">
+              {["Personal laboral i col·laboradors", "Monitors/es i personal de cuina", "Coordinadors/es", "Proveïdors i subcontractistes", "Famílies usuàries dels serveis", "Ex-treballadors/es", "Qualsevol persona relacionada amb l'activitat de l'empresa"].map((item) => (
+                <li key={item} className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-xs font-medium text-slate-500">
+              Sistema d&apos;informació
+            </p>
           </article>
 
           {/* Targeta 2: Fets susceptibles */}
@@ -251,6 +222,8 @@ export default function CanalEticPage() {
       <div className="mt-12 flex flex-wrap gap-4">
         <Link
           href={FORMULARI_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
         >
           Formulari de denúncia
