@@ -14,12 +14,12 @@ type Props = {
 export function ActivityImagesLayout({ imageLeft, imageRight, description, objectives }: Props) {
   return (
     <>
-      {/* Bloc 1: Text esquerra | Foto dreta (lleu rotació) – mateixa mida que Menjadors */}
-      <section className="mt-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
-        <div className="lg:pr-6">
+      {/* Bloc 1: Text esquerra | Foto dreta – sense espai respecte al títol de la pàgina, franja més compacta */}
+      <section className="mt-4 grid grid-cols-1 items-start gap-4 lg:grid-cols-[1.08fr_0.92fr] lg:gap-6">
+        <div className="lg:pr-4">
           {description}
         </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50/70 lg:rotate-2">
+        <div className="relative aspect-[4/3] max-h-[280px] w-full overflow-hidden rounded-xl bg-emerald-50/70 sm:max-h-[320px] lg:max-h-[360px] lg:rotate-2">
           <Image
             src={imageRight}
             alt=""
@@ -30,9 +30,9 @@ export function ActivityImagesLayout({ imageLeft, imageRight, description, objec
         </div>
       </section>
 
-      {/* Bloc 2: Foto esquerra (lleu rotació oposada) | Objectius dreta – mateixa mida que Menjadors */}
-      <section className="mt-16 grid grid-cols-1 items-center gap-8 border-t border-slate-200 pt-10 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-emerald-50/70 lg:-rotate-2 lg:mt-6">
+      {/* Bloc 2: Foto esquerra | Objectius dreta – franja compacta */}
+      <section className="mt-8 grid grid-cols-1 items-start gap-4 border-t border-slate-200 pt-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-6">
+        <div className="relative aspect-[4/3] max-h-[280px] w-full overflow-hidden rounded-xl bg-emerald-50/70 sm:max-h-[320px] lg:max-h-[360px] lg:-rotate-2">
           <Image
             src={imageLeft}
             alt=""
@@ -41,7 +41,7 @@ export function ActivityImagesLayout({ imageLeft, imageRight, description, objec
             sizes="(max-width: 1024px) 100vw, 46vw"
           />
         </div>
-        <div className="lg:pl-6">
+        <div className="lg:pl-4">
           {objectives}
         </div>
       </section>

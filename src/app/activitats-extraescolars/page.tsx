@@ -49,7 +49,10 @@ const INTRO_TEXTS: Record<string, string> = {
     "Passió, equip i aprenentatge en cada entrenament. El Futbol Sala és un esport col·lectiu dinàmic i apassionant, ideal per desenvolupar la coordinació, l'agilitat i la presa de decisions. A través d'una metodologia formativa i adaptada a cada edat, els infants aprenen els fonaments tècnics i tàctics mentre gaudeixen del joc en equip. El projecte compta amb la coordinació de Jordi Torras, referent del Futbol Sala, que supervisa el procés formatiu perquè cada jugador i jugadora creixi tant esportivament com personalment. Una activitat per viure l'esport amb il·lusió, compromís i esperit d'equip.",
   "art-attack":
     "Creativitat i aprenentatge que sumen. Art attack és un espai on els infants deixen volar la imaginació a través de la pintura, el dibuix, el modelatge i activitats manuals amb materials propers i quotidians. Treballem la creativitat, la motricitat fina i la capacitat de transformar una idea en una creació pròpia.",
-  "taller-estudi": "",
+  "taller-estudi":
+    "Organització, autonomia i confiança per aprendre millor. Un espai tranquil i guiat on els infants poden fer deures, reforçar continguts i adquirir hàbits d'estudi eficaços. A través d'estratègies adaptades a cada edat, treballem la planificació, la comprensió i la responsabilitat. Una activitat que ajuda a guanyar seguretat, constància i autonomia en el procés d'aprenentatge.",
+  "taller-ciencia":
+    "Experimentem, descobrim i entenem el món que ens envolta. Un espai on els infants aprenen a través de l'experimentació i la curiositat. Mitjançant activitats pràctiques i materials quotidians, formulen preguntes, fan hipòtesis i comproven resultats d'una manera divertida i participativa. Una activitat que desperta l'esperit científic, potencia el pensament crític i converteix cada sessió en una aventura plena de descobertes.",
   minichef:
     "Descobrim la cuina jugant i experimentant. Al taller de Minichef, els infants s'endinsen en el món de la cuina a través de receptes senzilles i divertides. Experimentem amb aliments de temporada, descobrim d'on venen i aprenem la importància d'una alimentació sana i equilibrada. Mentre cuinen, desenvolupen autonomia, creativitat i hàbits saludables, tot compartint una experiència enriquidora i deliciosa amb el grup.",
   contacontes:
@@ -58,6 +61,12 @@ const INTRO_TEXTS: Record<string, string> = {
     "Construïm, programem i donem vida a les idees. A l'activitat de Robòtica, els infants aprenen a construir i programar robots amb materials educatius com LEGO Mindstorms. A través de reptes progressius i adaptats a cada edat, desenvolupen el pensament lògic, la creativitat i la capacitat de resolució de problemes. Cada repte combina una part de construcció i una part de programació visual i senzilla, convertint l'aprenentatge en una experiència pràctica, motivadora i plena de descobertes.",
   "english-time":
     "Aprenem anglès de manera natural i divertida. English Time és una activitat pensada perquè els infants d'Infantil es familiaritzin amb l'anglès a través del joc, les cançons i les dinàmiques participatives. Per a molts és el primer contacte amb la llengua, i ho fem d'una manera propera i motivadora. A Primària, reforcem i ampliem els coneixements treballant vocabulari, expressió oral i comprensió, ajudant-los a guanyar seguretat i confiança en l'ús de l'anglès. Una manera dinàmica d'aprendre una llengua que els obre portes al futur.",
+  escacs:
+    "Estratègia, concentració i pensament intel·ligent. El Taller d'Escacs introdueix els infants en aquest joc mil·lenari d'una manera dinàmica i adaptada a la seva edat. A través de partides, reptes progressius i jocs d'estratègia, desenvolupen la concentració, la memòria i el pensament lògic. Una activitat que ajuda a planificar, anticipar moviments i prendre decisions, tot fomentant la paciència, el respecte i l'esperit esportiu en un ambient lúdic i motivador.",
+  "ballem-ritme":
+    "Música, moviment i alegria per expressar-se lliurement. Una activitat pensada perquè els infants descobreixin el plaer de ballar a través de coreografies senzilles, jocs musicals i dinàmiques rítmiques adaptades a la seva edat. Treballem la coordinació, el sentit del ritme i l'expressió corporal en un ambient ple d'energia. Una proposta divertida que reforça la confiança, la memòria i el treball en grup mentre gaudeixen de la música.",
+  teatre:
+    "Expressió, creativitat i confiança en escena. Un espai on els infants poden imaginar, interpretar i expressar-se lliurement a través de jocs dramàtics i petites representacions. Treballem l'expressió oral i corporal, la memòria i la gestió d'emocions en un ambient participatiu i motivador. Una activitat que reforça l'autoestima, la comunicació i el treball en equip mentre aprenen jugant.",
 };
 
 /** Categories per activitat (algunes en tenen dues). Es mostren a la capçalera de la targeta. */

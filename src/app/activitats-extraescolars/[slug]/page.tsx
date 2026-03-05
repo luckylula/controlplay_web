@@ -1237,6 +1237,110 @@ function TallerCienciaContent() {
   );
 }
 
+/** Contingut específic per a Taller d'Estudi */
+function TallerEstudiContent() {
+  return (
+    <>
+      <ActivityImagesLayout
+        imageLeft="/images/extraescolars/taller-estudi/tallerestudi1.jpg"
+        imageRight="/images/extraescolars/taller-estudi/tallerestudi2.jpg"
+        description={
+          <>
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
+            <p className="mt-3 text-slate-600">
+              El Taller d&apos;Estudi és un espai pensat per ajudar els infants a adquirir hàbits
+              d&apos;estudi eficaços i autonomia en el seu aprenentatge. L&apos;objectiu principal és
+              oferir un entorn tranquil, estructurat i de confiança on els alumnes puguin realitzar
+              les tasques escolars, reforçar continguts i preparar-se per a proves o exàmens amb el
+              suport d&apos;un monitor/a.
+            </p>
+            <p className="mt-3 text-slate-600">
+              Durant les sessions, es treballa l&apos;organització del temps, la planificació de les
+              feines i l&apos;ús d&apos;estratègies d&apos;estudi adaptades a cada edat (resums,
+              esquemes, lectura comprensiva, memorització activa, etc.). No es tracta només de
+              &quot;fer deures&quot;, sinó d&apos;aprendre a estudiar millor.
+            </p>
+            <p className="mt-4 text-slate-600">
+              El Taller d&apos;Estudi també fomenta la responsabilitat, la constància i la confiança
+              en les pròpies capacitats, ajudant els alumnes a guanyar seguretat i a desenvolupar una
+              actitud positiva envers l&apos;aprenentatge.
+            </p>
+          </>
+        }
+        objectives={
+          <>
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
+            <ul className="mt-3 space-y-2 text-slate-600">
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Adquirir hàbits d&apos;estudi i rutines de treball eficaces.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Aprendre a organitzar el temps i planificar les tasques escolars.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Millorar la comprensió lectora i les tècniques d&apos;estudi.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Reforçar continguts treballats a l&apos;aula.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Potenciar l&apos;autonomia, la responsabilitat i la constància.
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Afavorir un clima de treball tranquil i respectuós.
+              </li>
+            </ul>
+            <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lacions</h2>
+            <ul className="mt-3 space-y-2 text-slate-600">
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Aula ordinària que garanteixi un ambient tranquil i adequat per a la concentració.
+              </li>
+            </ul>
+            <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
+            <ul className="mt-3 space-y-2 text-slate-600">
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Material escolar propi de cada alumne (agenda, llibres, quaderns i estoig).
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                Material de suport: diccionaris, fitxes de reforç, esquemes i recursos didàctics
+                complementaris.
+              </li>
+            </ul>
+          </>
+        }
+      />
+
+      <section className="mt-10 border-t border-slate-200 pt-10">
+        <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
+        <ul className="mt-3 space-y-2 text-slate-600">
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Monitor/a amb formació en l&apos;àmbit educatiu (estudiant o graduat/da en Educació
+            Primària o Pedagogia).
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Experiència en suport escolar i tècniques d&apos;estudi.
+          </li>
+          <li className="flex items-start gap-2">
+            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            Capacitat per fomentar l&apos;autonomia, la motivació i els hàbits de treball en infants.
+          </li>
+        </ul>
+      </section>
+    </>
+  );
+}
+
 /** Contingut específic per a Escacs */
 function EscacsContent() {
   return (
@@ -1539,6 +1643,8 @@ export default async function ActivitatPage({ params }: Props) {
       <EnglishTimeContent />
     ) : slug === "taller-ciencia" ? (
       <TallerCienciaContent />
+    ) : slug === "taller-estudi" ? (
+      <TallerEstudiContent />
     ) : slug === "escacs" ? (
       <EscacsContent />
     ) : slug === "ballem-ritme" ? (
