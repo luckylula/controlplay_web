@@ -98,7 +98,7 @@ const CARD_IMAGES: Record<string, string> = {
   "taller-ciencia": "/images/extraescolars/taller-ciencia/ciencia.png",
   "art-attack": "/images/extraescolars/art-attack/artattack.png",
   "taller-estudi": "/images/extraescolars/taller-estudi/tallerestudi.png",
-  escacs: "/images/extraescolars/escacs/esacs.png",
+  escacs: "/images/extraescolars/escacs/escacs.png",
 };
 
 export default function ActivitatsExtraescolarsPage() {
@@ -109,14 +109,16 @@ export default function ActivitatsExtraescolarsPage() {
 
       {/* Contenidor ample: pantalles grans (ex. 27") aprofiten tot l'ample; pantalles petites es redueixen */}
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Activitats Extraescolars</h1>
-        <Image
-          src="/images/logos/CP%20EXTRAESCOLARS.png"
-          alt="Control Play Extraescolars"
-          width={280}
-          height={80}
-          className="mt-3 h-20 w-auto scale-110 sm:h-24 sm:scale-110"
-        />
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Activitats Extraescolars</h1>
+          <Image
+            src="/images/logos/CP%20EXTRAESCOLARS%20transp.png"
+            alt="Control Play Extraescolars"
+            width={280}
+            height={80}
+            className="mt-3 h-24 w-auto sm:h-28"
+          />
+        </div>
         <p className="mt-4 text-lg text-slate-600">
           Dissenyem i portem a terme un gran ventall d&apos;activitats extraescolars. Tant
           esportives com formatives i lúdiques.

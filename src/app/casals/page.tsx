@@ -15,14 +15,16 @@ export default function CasalsPage() {
       <CasalsVideoCarousel />
 
       <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Casals</h1>
-        <Image
-          src="/images/logos/CP%20CASALS.png"
-          alt="Control Play Casals"
-          width={280}
-          height={80}
-          className="mt-3 h-20 w-auto sm:h-24"
-        />
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">Casals</h1>
+          <Image
+            src="/images/logos/CP%20CASALS.png"
+            alt="Control Play Casals"
+            width={280}
+            height={80}
+            className="mt-3 h-20 w-auto sm:h-24"
+          />
+        </div>
 
         {/* Bloc superior: il·lustració esquerra + dos paràgrafs dreta (amb vora) */}
         <section className="mt-10 rounded-xl border border-slate-200 p-4 sm:p-6">

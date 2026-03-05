@@ -15,16 +15,18 @@ export default function MenjadorsEscolarsPage() {
       <MenjadorsVideoCarousel />
 
       <div className="mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
-          Servei de Menjador Escolar
-        </h1>
-        <Image
-          src="/images/logos/CP%20CUINA.png"
-          alt="Control Play Cuina"
-          width={280}
-          height={80}
-          className="mt-3 h-20 w-auto sm:h-24"
-        />
+        <div className="flex flex-col items-center justify-center text-center">
+          <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
+            Servei de Menjador Escolar
+          </h1>
+          <Image
+            src="/images/logos/CP%20CUINA.png"
+            alt="Control Play Cuina"
+            width={280}
+            height={80}
+            className="mt-3 h-16 w-auto sm:h-20"
+          />
+        </div>
 
         {/* Bloc 1: Foto esquerra (lleu rotació) | Text dreta, desplaçat una mica */}
         <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
