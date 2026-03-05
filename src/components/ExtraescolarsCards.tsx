@@ -3,6 +3,7 @@
 import { useRef, useState, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { COVER_STRIP_HEIGHT } from "@/lib/layout";
 
 export type ActivityCard = {
   label: string;
@@ -101,7 +102,7 @@ export function ExtraescolarsCards({
   const restTriple = restLength > 0 ? [...restActivities, ...restActivities, ...restActivities] : [];
 
   return (
-    <section className="flex h-[440px] flex-col justify-center overflow-hidden border-t border-slate-200 bg-white py-8 sm:h-[500px] sm:py-10 lg:h-[560px]">
+    <section className={`flex ${COVER_STRIP_HEIGHT} flex-col justify-center overflow-hidden border-t border-slate-200 bg-white py-8 sm:py-10`}>
       <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end sm:gap-6">
           <div>

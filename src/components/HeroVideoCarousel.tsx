@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { COVER_STRIP_HEIGHT } from "@/lib/layout";
 
 const HERO_VIDEOS = [
   "/images/portada/videoportada1.mp4",
@@ -24,7 +25,7 @@ export function HeroVideoCarousel() {
   }, []);
 
   return (
-    <section className="relative h-[440px] w-full overflow-hidden bg-slate-900 sm:h-[500px] lg:h-[560px]">
+    <section className={`relative ${COVER_STRIP_HEIGHT} w-full overflow-hidden bg-slate-900`}>
       {HERO_VIDEOS.map((src, i) => (
         <div
           key={src}
