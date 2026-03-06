@@ -11,10 +11,9 @@ export const metadata: Metadata = {
 export default function MenjadorsEscolarsPage() {
   return (
     <>
-      {/* Carrusel de vídeos a dalt (menjador video1, 2, 3) */}
       <MenjadorsVideoCarousel />
 
-      <div className="mx-auto w-full px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[1600px] px-4 py-16 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center text-center">
           <h1 className="text-3xl font-bold text-slate-900 sm:text-4xl">
             Servei de Menjador Escolar
@@ -28,8 +27,32 @@ export default function MenjadorsEscolarsPage() {
           />
         </div>
 
-        {/* Bloc 1: Foto esquerra (lleu rotació) | Text dreta, desplaçat una mica */}
-        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
+        {/* 1. Text (intro) | Photo */}
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.92fr] lg:gap-12">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+              Molt més que un menjador escolar
+            </h2>
+            <p className="text-slate-600">
+              Aquí no només es dina.<br />
+              Aquí s&apos;aprèn.<br />
+              Aquí es comparteix.<br />
+              Aquí es creix.
+            </p>
+            <p className="text-slate-600">
+              A Control Play Cuina entenem el temps de menjador com una part essencial del dia a dia a l&apos;escola. No és només un moment per alimentar-se, sinó també un espai educatiu on els infants continuen desenvolupant habilitats, valors i relacions.
+            </p>
+            <p className="text-slate-600">
+              Convertim el menjador en un entorn acollidor, educatiu i saludable, on cada infant se sent acompanyat i respectat. Un espai on es fomenten els bons hàbits, la convivència i el respecte pels altres.
+            </p>
+            <p className="text-slate-600">
+              Cada dia treballem perquè aquest moment sigui tranquil, organitzat i agradable, afavorint un ambient positiu on els nens i nenes puguin gaudir del menjar, compartir amb els seus companys i créixer com a persones.
+            </p>
+            <p className="text-slate-600">
+              Perquè el menjador escolar no és només un servei.<br />
+              És també un espai de vida dins l&apos;escola.
+            </p>
+          </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:-rotate-2">
             <Image
               src="/images/menjadors/menjador1.png"
@@ -39,43 +62,11 @@ export default function MenjadorsEscolarsPage() {
               sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
-          <div className="lg:pl-6">
-            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-              Molt més que un menjador escolar
-            </h2>
-            <p className="mt-4 space-y-1 text-slate-600">
-              Aquí no només es dina.<br />
-              Aquí s&apos;aprèn.<br />
-              Aquí es comparteix.<br />
-              Aquí es creix.
-            </p>
-            <p className="mt-4 text-slate-600">
-              Convertim el temps de menjador en un espai educatiu, saludable i ple de valors.
-            </p>
-          </div>
         </section>
 
-        {/* Bloc 2: Text esquerra, una mica més a la dreta | Foto dreta (rotació oposada) */}
-        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
-          <div className="order-2 lg:order-1 lg:pr-4 lg:translate-x-2">
-            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-              Alimentem el seu futur
-            </h2>
-            <p className="mt-3 text-slate-600">
-              Sabem que cada àpat compta. Per això oferim:
-            </p>
-            <ul className="mt-3 list-inside list-disc space-y-1 text-slate-600">
-              <li>Producte fresc i de temporada</li>
-              <li>Cuina amb oli d&apos;oliva</li>
-              <li>Carn fresca, sense congelats</li>
-              <li>Peix adequat a l&apos;etapa escolar</li>
-              <li>Productes Km0 i ecològics</li>
-            </ul>
-            <p className="mt-4 text-slate-600">
-              Qualitat real. Sense artificis. Sense improvisacions.
-            </p>
-          </div>
-          <div className="relative order-1 aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:order-2 lg:rotate-2 lg:mt-6">
+        {/* 2. Photo | Text (Alimentem el seu futur) */}
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1fr] lg:gap-12">
+          <div className="relative order-1 aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:order-1 lg:rotate-2">
             <Image
               src="/images/menjadors/menjador2.png"
               alt="Menjador i alimentació"
@@ -84,11 +75,91 @@ export default function MenjadorsEscolarsPage() {
               sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
+          <div className="order-2 space-y-4 lg:order-2 lg:pl-6">
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+              Alimentem el seu futur
+            </h2>
+            <p className="text-slate-600">
+              Sabem que cada àpat compta en el creixement i el desenvolupament dels infants. Per això posem una atenció especial en la qualitat dels aliments, en l&apos;equilibri nutricional i en la manera com es preparen els plats.
+            </p>
+            <p className="text-slate-600">
+              La nostra proposta gastronòmica es basa en una cuina saludable, equilibrada i adaptada a les necessitats de l&apos;etapa escolar, pensada per ajudar els infants a créixer forts, actius i amb bons hàbits alimentaris.
+            </p>
+            <p className="text-slate-600">Per això oferim:</p>
+            <ul className="space-y-1.5 text-slate-600">
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Producte fresc i de temporada, prioritzant ingredients naturals i de qualitat
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Cuina elaborada amb oli d&apos;oliva, base de la dieta mediterrània
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Carn fresca, evitant l&apos;ús de productes congelats innecessaris
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Peix adaptat a l&apos;etapa escolar, equilibrant nutrició i acceptació dels infants
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Productes Km0 i ecològics sempre que és possible, fomentant la sostenibilitat i el consum responsable
+              </li>
+            </ul>
+            <p className="text-slate-600">
+              Apostem per una cuina real, honesta i equilibrada, sense artificis ni improvisacions.
+            </p>
+            <p className="text-slate-600">
+              Perquè alimentar bé avui és invertir en la salut del demà.
+            </p>
+          </div>
         </section>
 
-        {/* Bloc 3: Foto esquerra (desplaçada cap a l’esquerra) | Text dreta (més cap a la dreta) */}
-        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-12">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:-ml-4">
+        {/* 3. Text (Tranquil·litat) | Photo */}
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.92fr] lg:gap-12">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+              Tranquil·litat per a les famílies
+            </h2>
+            <p className="text-slate-600">
+              Sabem que confiar en el servei de menjador d&apos;una escola és una decisió important per a les famílies. Per això a Control Play Cuina treballem cada dia perquè aquesta confiança es basi en fets reals, transparència i professionalitat.
+            </p>
+            <p className="text-slate-600">
+              La tranquil·litat de saber que els infants estan ben atesos, ben alimentats i en un entorn segur és una de les nostres prioritats.
+            </p>
+            <p className="text-slate-600">Per això garantim:</p>
+            <ul className="space-y-1.5 text-slate-600">
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Dietista-nutricionista col·legiada, responsable de l&apos;elaboració i revisió dels menús
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Compliment estricte de la normativa sanitària i alimentària vigent
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Controls de qualitat i auditories periòdiques del servei
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Personal format i qualificat, amb experiència en l&apos;àmbit educatiu i alimentari
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                Supervisió constant del funcionament del menjador
+              </li>
+            </ul>
+            <p className="text-slate-600">
+              Treballem amb rigor, responsabilitat i transparència, perquè les famílies puguin confiar plenament en el servei.
+            </p>
+            <p className="text-slate-600">
+              Seguretat, professionalitat i confiança en cada detall.
+            </p>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:-rotate-2">
             <Image
               src="/images/menjadors/menjador3.png"
               alt="Menjador i famílies"
@@ -97,132 +168,131 @@ export default function MenjadorsEscolarsPage() {
               sizes="(max-width: 1024px) 100vw, 46vw"
             />
           </div>
-          <div className="lg:pl-10">
+        </section>
+
+        {/* 4. Photo | Text (Educació a taula) */}
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1fr] lg:gap-12">
+          <div className="relative order-1 aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:order-1 lg:rotate-2">
+            <Image
+              src="/images/menjadors/menjador4.png"
+              alt="Educació a taula"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 46vw"
+            />
+          </div>
+          <div className="order-2 space-y-4 lg:order-2 lg:pl-6">
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-              Tranquil·litat per a les famílies
+              Educació també a taula
             </h2>
-            <p className="mt-3 text-slate-600">
-              La confiança no es promet. Es demostra.
+            <p className="text-slate-600">
+              El menjador escolar és també una aula més dins del centre educatiu. Un espai on els infants continuen aprenent, convivint i desenvolupant habilitats que formen part del seu creixement personal.
             </p>
-            <ul className="mt-3 space-y-2 text-slate-600">
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black" aria-hidden>✔</span>
-                Dietista-nutricionista col·legiada
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black" aria-hidden>✔</span>
-                Compliment estricte de normativa sanitària
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black" aria-hidden>✔</span>
-                Controls i auditories periòdiques
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black" aria-hidden>✔</span>
-                Personal format i qualificat
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black" aria-hidden>✔</span>
-                Supervisió constant del servei
-              </li>
+            <p className="text-slate-600">
+              Durant aquest temps, acompanyem els nens i nenes en l&apos;adquisició de bons hàbits i valors que els ajudaran al llarg de la seva vida.
+            </p>
+            <p className="text-slate-600">Treballem aspectes com:</p>
+            <ul className="list-inside list-disc space-y-1 text-slate-600">
+              <li>Hàbits alimentaris saludables</li>
+              <li>Autonomia personal en el moment de menjar</li>
+              <li>Convivència i respecte entre companys</li>
+              <li>Responsabilitat i cura dels espais comuns</li>
+              <li>Educació emocional i gestió de situacions quotidianes</li>
             </ul>
-            <p className="mt-4 text-slate-600">
-              Seguretat, rigor i transparència.
+            <p className="text-slate-600">
+              Els nostres monitors i monitores acompanyen aquest procés amb paciència, empatia i coherència educativa, adaptant-se a cada etapa i a cada infant.
+            </p>
+            <p className="text-slate-600">
+              Perquè menjar bé també és aprendre a conviure, respectar i créixer.
             </p>
           </div>
         </section>
 
-        {/* Fila: dos textos a l’esquerra | vídeo Play a la dreta */}
-        <section className="mt-16 border-t border-slate-200 pt-12">
-          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-10">
-            {/* Esquerra: els dos paràgrafs apilats */}
-            <div className="space-y-10">
-              <div>
-                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                  Educació també a taula
-                </h2>
-                <p className="mt-3 text-slate-600">
-                  El menjador és una aula més. Treballem:
-                </p>
-                <ul className="mt-3 list-inside list-disc space-y-1 text-slate-600">
-                  <li>Hàbits saludables</li>
-                  <li>Autonomia personal</li>
-                  <li>Convivència i respecte</li>
-                  <li>Responsabilitat</li>
-                  <li>Educació emocional</li>
-                </ul>
-                <p className="mt-4 text-slate-600">
-                  Perquè menjar bé també és educar bé.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                  Equip amb vocació
-                </h2>
-                <p className="mt-3 text-slate-600">
-                  Som mestres. Som professionals de la restauració. Som educadors.
-                </p>
-                <p className="mt-2 text-slate-600">
-                  I sobretot, som persones amb passió pel que fem.
-                </p>
-                <p className="mt-3 text-slate-600">
-                  Ens adaptem a cada escola. Ens integrem al seu projecte educatiu. Caminem al costat de la direcció i les famílies.
-                </p>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                  Projecte Educatiu Integrat
-                </h2>
-                <p className="mt-3 text-slate-600">
-                  Som mestres. Coneixem l&apos;escola.
-                </p>
-                <p className="mt-3 text-slate-600">
-                  El nostre servei:
-                </p>
-                <ul className="mt-2 list-inside list-disc space-y-1 text-slate-600">
-                  <li>S&apos;integra al Projecte Educatiu del Centre</li>
-                  <li>Dinamitza activitats abans i després de dinar</li>
-                  <li>Treballa hàbits, valors i convivència</li>
-                  <li>S&apos;adapta a cada realitat</li>
-                </ul>
-                <p className="mt-4 text-slate-600">
-                  Cada centre és únic. I el nostre servei també.
-                </p>
-              </div>
-            </div>
-
-            {/* Dreta: vídeo Play Menjadors */}
-            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="h-full w-full object-cover"
-                src="/images/play/play%20video%20menjadors.mp4"
-              />
-            </div>
+        {/* 5. Text (Equip amb vocació) | Photo */}
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_0.92fr] lg:gap-12">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+              Equip amb vocació
+            </h2>
+            <p className="text-slate-600">
+              Darrere de cada menjador escolar hi ha un equip humà compromès.
+            </p>
+            <p className="text-slate-600">
+              A Control Play Cuina comptem amb professionals que combinen experiència, vocació educativa i passió per la seva feina. Persones que entenen que treballar amb infants implica responsabilitat, sensibilitat i dedicació.
+            </p>
+            <p className="text-slate-600">
+              Som mestres.<br />
+              Som professionals de la restauració.<br />
+              Som educadors.<br />
+              I sobretot, som un equip que treballa amb il·lusió cada dia.
+            </p>
+            <p className="text-slate-600">
+              Ens adaptem a la realitat de cada centre i ens integrem en el seu projecte educatiu, treballant de manera coordinada amb l&apos;equip directiu i amb les famílies.
+            </p>
+            <p className="text-slate-600">
+              Creiem en el treball en equip, la comunicació i la proximitat, perquè només així es construeixen serveis de qualitat i confiança.
+            </p>
+            <p className="text-slate-600">
+              Caminem sempre al costat de l&apos;escola i de la seva comunitat educativa.
+            </p>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:-rotate-2">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+              src="/images/play/play%20video%20menjadors.mp4"
+            />
           </div>
         </section>
 
-        <section className="mt-10">
-          <h2 className="text-center text-xl font-semibold text-slate-900 sm:text-2xl">
-            Dinàmic. Organitzat. Viu.
-          </h2>
-          <p className="mt-4 text-slate-600">
-            Activitats setmanals. Projectes especials. Tallers d&apos;alimentació. Assemblees amb els infants. Festes escolars. Aprenentatge en anglès.
-          </p>
-          <p className="mt-4 text-slate-600">
-            Un menjador actiu, participatiu i amb sentit.
-          </p>
+        {/* 6. Photo | Text (Dinàmic. Organitzat. Viu.) */}
+        <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1fr] lg:gap-12">
+          <div className="relative order-1 aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:order-1 lg:rotate-2">
+            <Image
+              src="/images/menjadors/menjador1.png"
+              alt="Menjador dinàmic"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 46vw"
+            />
+          </div>
+          <div className="order-2 space-y-4 lg:order-2 lg:pl-6">
+            <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+              Dinàmic. Organitzat. Viu.
+            </h2>
+            <p className="text-slate-600">
+              El temps de menjador també pot ser un moment d&apos;experiència, participació i descobriment.
+            </p>
+            <p className="text-slate-600">
+              Per això dissenyem un programa d&apos;activitats que fa del menjador un espai actiu, dinàmic i educatiu, adaptat a les diferents edats dels infants.
+            </p>
+            <p className="text-slate-600">Organitzem:</p>
+            <ul className="list-inside list-disc space-y-1 text-slate-600">
+              <li>Activitats setmanals i jocs educatius</li>
+              <li>Projectes especials relacionats amb l&apos;alimentació i la salut</li>
+              <li>Tallers sobre hàbits alimentaris i sostenibilitat</li>
+              <li>Assemblees amb els infants per escoltar la seva veu</li>
+              <li>Celebracions i festes escolars</li>
+              <li>Activitats i dinàmiques en anglès</li>
+            </ul>
+            <p className="text-slate-600">
+              Aquestes propostes permeten que els nens i nenes visquin el menjador com un espai participatiu, divertit i ple de sentit educatiu.
+            </p>
+            <p className="text-slate-600">
+              Perquè el menjador també pot ser un espai per aprendre, expressar-se i compartir.
+            </p>
+          </div>
         </section>
 
-        {/* Franja amb foto (com a la portada) – text al damunt */}
       </div>
 
+      {/* Franja final amb imatge */}
       <section className="relative min-h-[280px] w-full overflow-hidden border-t border-slate-200 sm:min-h-[320px] lg:min-h-[360px]">
         <Image
-          src="/images/menjadors/menjador4.png"
+          src="/images/menjadors/menjador2.png"
           alt="Menjador escolar"
           fill
           className="object-cover"
