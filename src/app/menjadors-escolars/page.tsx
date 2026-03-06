@@ -88,23 +88,23 @@ export default function MenjadorsEscolarsPage() {
             <p className="text-slate-600">Per això oferim:</p>
             <ul className="space-y-1.5 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Producte fresc i de temporada, prioritzant ingredients naturals i de qualitat
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Cuina elaborada amb oli d&apos;oliva, base de la dieta mediterrània
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Carn fresca, evitant l&apos;ús de productes congelats innecessaris
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Peix adaptat a l&apos;etapa escolar, equilibrant nutrició i acceptació dels infants
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Productes Km0 i ecològics sempre que és possible, fomentant la sostenibilitat i el consum responsable
               </li>
             </ul>
@@ -132,23 +132,23 @@ export default function MenjadorsEscolarsPage() {
             <p className="text-slate-600">Per això garantim:</p>
             <ul className="space-y-1.5 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Dietista-nutricionista col·legiada, responsable de l&apos;elaboració i revisió dels menús
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Compliment estricte de la normativa sanitària i alimentària vigent
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Controls de qualitat i auditories periòdiques del servei
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Personal format i qualificat, amb experiència en l&apos;àmbit educatiu i alimentari
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
                 Supervisió constant del funcionament del menjador
               </li>
             </ul>

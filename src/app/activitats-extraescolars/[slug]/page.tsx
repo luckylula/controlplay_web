@@ -101,20 +101,20 @@ function TaekwondoJudoContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar la concentració i la disciplina, creant hàbits positius aplicables dins i fora
                 de l&apos;escola.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar el respecte i la comprensió cap als altres.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Reforçar l&apos;autoestima i la seguretat personal.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la forma física general, treballant força, flexibilitat, coordinació, reflexos i
                 control postural.
               </li>
@@ -122,18 +122,18 @@ function TaekwondoJudoContent() {
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Gimnàs del centre amb màrfegues convencionals d&apos;educació física.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 La iniciació es pot realitzar sense vestimenta específica.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Opcionalment, es pot proposar l&apos;ús d&apos;equipació adequada.
               </li>
             </ul>
@@ -145,7 +145,7 @@ function TaekwondoJudoContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a especialista en iniciació al Taekwondo o al Judo, amb experiència en l&apos;àmbit
             educatiu.
           </li>
@@ -188,33 +188,33 @@ function HipHopDansesContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Gaudir del moviment i la música a través de les danses modernes.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la coordinació general i el sentit del ritme.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Crear i interpretar coreografies adaptades a l&apos;edat dels participants.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar l&apos;expressió corporal i la confiança en un mateix.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Gimnàs o sala interior polivalent amb equip de música.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Material bàsic d&apos;educació física per a escalfaments i tornada a la calma.
               </li>
             </ul>
@@ -226,7 +226,7 @@ function HipHopDansesContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb domini de danses modernes i capacitat per crear coreografies motivadores,
             amb experiència en l&apos;àmbit educatiu.
           </li>
@@ -271,45 +271,45 @@ function MultiesportContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Descobrir i experimentar les possibilitats del propi cos.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Adquirir noves habilitats motrius de manera progressiva.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar les habilitats físiques bàsiques mitjançant el joc.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar el joc cooperatiu i el joc simbòlic.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la coordinació i el control corporal.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Identificar i prendre consciència de les parts del cos.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Gimnàs o espai interior ampli.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Pista exterior.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Pilotes de diferents mides i textures, aros, piques, cons, màrfegues, bancs i material
                 psicomotriu variat.
               </li>
@@ -322,7 +322,7 @@ function MultiesportContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb titulació en activitats fisicoesportives i experiència amb infants
             d&apos;Educació Infantil i Primària, amb enfocament educatiu i lúdic.
           </li>
@@ -361,38 +361,38 @@ function HockeyMiniTennisBeisbolContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar les habilitats motrius mitjançant l&apos;ús de diferents implements (stick
                 d&apos;hoquei, pales, raquetes, bat i guant de beisbol).
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Gaudir del moviment i del joc en el temps de lleure.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la coordinació i la precisió en la manipulació d&apos;implements esportius.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar el treball en equip i el respecte per les normes del joc.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Espais exteriors.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Miniporteries per al desenvolupament d&apos;activitats d&apos;hoquei.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Sticks, pilotes d&apos;hoquei, pales, raquetes, pilotes de tennis, bat i guant de
                 beisbol, cons, piques i petos.
               </li>
@@ -405,7 +405,7 @@ function HockeyMiniTennisBeisbolContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb titulació de Grau Mig en activitats fisicoesportives i experiència en
             iniciació esportiva en edat escolar.
           </li>
@@ -449,33 +449,33 @@ function BasquetHandbolVoleyContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Iniciar els alumnes en les habilitats tècniques del Bàsquet, Handbol i Vòlei.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar la percepció espacial i la comprensió del joc col·lectiu.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar la col·laboració i el treball en equip per assolir objectius comuns.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar la coordinació i la presa de decisions en situacions reals de joc.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Pista exterior amb cistelles, porteries i xarxa de vòlei.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Pilotes de Bàsquet, Handbol i Vòlei; cons, piques i petos.
               </li>
             </ul>
@@ -487,7 +487,7 @@ function BasquetHandbolVoleyContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb titulació específica en algun dels esports i experiència en formació
             esportiva amb alumnes de Primària.
           </li>
@@ -530,37 +530,37 @@ function PatinsContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Lliscar de manera autònoma i segura.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar habilitats pròpies del patinatge com la remada, el gir i la frenada.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar l&apos;equilibri i la coordinació general.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Participar en jocs i circuits adaptats mitjançant el patinatge.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Espais exteriors pavimentats i segurs.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Material individual dels alumnes: patins i proteccions.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Cons, piques, cordes, pilotes i petos.
               </li>
             </ul>
@@ -572,7 +572,7 @@ function PatinsContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb titulació de Grau Mig en Activitats Físico-Esportives i experiència en
             patinatge i treball amb infants.
           </li>
@@ -629,41 +629,41 @@ function FutbolSalaContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Iniciar els alumnes en la tècnica i la tàctica bàsica del Futbol Sala.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Conèixer i comprendre les normes del joc.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar el treball en equip i el respecte pels companys i rivals.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Participar en trobades esportives i competicions adaptades a l&apos;edat.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar l&apos;esforç, la constància i l&apos;esperit esportiu.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Pista de Futbol Sala adequada per a la pràctica esportiva.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Pilotes de Futbol Sala.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Petos, aros, cons i piques.
               </li>
             </ul>
@@ -675,7 +675,7 @@ function FutbolSalaContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb titulació oficial de Futbol Sala i experiència en formació esportiva en
             edat escolar, seguint la metodologia de l&apos;Escola Jordi Torras.
           </li>
@@ -718,33 +718,33 @@ function ArtAttackContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar la creativitat a través de tallers artístics variats.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar les habilitats manuals com retallar, enganxar i modelar.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Experimentar amb diferents tècniques de dibuix i expressió artística.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar la concentració i l&apos;autonomia en el procés creatiu.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula d&apos;estudi o aula ordinària adaptada per a activitats plàstiques.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Material escolar no fungible (tisores, pinzells, etc.) i materials diversos per a les
                 creacions.
               </li>
@@ -757,11 +757,11 @@ function ArtAttackContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a en formació en el Grau d&apos;Educació Primària.
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a de lleure amb experiència en dinamització de tallers creatius.
           </li>
         </ul>
@@ -802,37 +802,37 @@ function MinichefContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Conèixer la piràmide dels aliments i els principis d&apos;una dieta equilibrada.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aprendre a utilitzar correctament i amb seguretat els estris bàsics de cuina.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Elaborar receptes variades utilitzant diferents tipus d&apos;ingredients.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar hàbits d&apos;alimentació saludables des de petits.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula taller o menjador escolar adaptat per a l&apos;activitat.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Amb la matrícula, cada alumne rebrà el seu kit personal de «Minichef».
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Ingredients i material necessari per a l&apos;elaboració de les receptes.
               </li>
             </ul>
@@ -844,7 +844,7 @@ function MinichefContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a creatiu/va, amb experiència i coneixements en hostaleria i treball educatiu
             amb infants.
           </li>
@@ -887,37 +887,37 @@ function ContacontesContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Treballar els valors socials i emocionals a través de la narració de contes.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Conèixer diferents cultures i tradicions mitjançant històries del món.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Estimular la imaginació i la creativitat creant nous contes i il·lustracions.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Afavorir el desenvolupament del llenguatge i la comprensió lectora.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula amb projector d&apos;imatges o biblioteca escolar.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Catifa o espai còmode per seure i afavorir un ambient acollidor.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Contes, àlbums il·lustrats i material per a activitats creatives.
               </li>
             </ul>
@@ -929,7 +929,7 @@ function ContacontesContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a de lleure, preferiblement estudiant del Grau de Mestre de Primària o amb
             formació en educació i animació lectora.
           </li>
@@ -973,37 +973,37 @@ function RoboticaContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar el pensament lògic-matemàtic mitjançant reptes pràctics.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar el treball en equip i el respecte per les idees dels companys.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar la creativitat, l&apos;autonomia i la capacitat de resolució de problemes.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Promoure el respecte i la cura del material tecnològic.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula de ciències o aula adaptada amb ordinadors.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Kits de LEGO WeDo i LEGO Mindstorms.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fitxes de seguiment i material de suport per a les activitats.
               </li>
             </ul>
@@ -1017,24 +1017,24 @@ function RoboticaContent() {
         </h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Assemblea inicial per presentar el repte i connectar amb els coneixements previs.
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Assignació de rols i repartiment del material, fomentant la responsabilitat
             compartida.
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Desenvolupament del projecte (construcció i programació).
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Exposició i explicació de les solucions trobades.
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Recollida del material i plantejament de nous reptes.
           </li>
         </ul>
@@ -1044,7 +1044,7 @@ function RoboticaContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a dinàmic/a i didàctic/a, amb estudis superiors en àmbits científics (Ciències
             Ambientals, Biologia, Química o similars) i experiència en treball amb infants.
           </li>
@@ -1089,34 +1089,34 @@ function EnglishTimeContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Ampliar el vocabulari en diferents àmbits temàtics.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la pronunciació i la comprensió oral.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Relacionar paraules i conceptes de manera significativa.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aprendre expressions quotidianes i estructures bàsiques de comunicació.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Practicar els continguts mitjançant jocs, cançons i activitats dinàmiques.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar especialment l&apos;expressió oral i la confiança en parlar anglès.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula assignada dins de l&apos;escola per garantir continuïtat i comoditat durant tot el
                 curs.
               </li>
@@ -1124,11 +1124,11 @@ function EnglishTimeContent() {
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Flashcards, fitxes d&apos;activitats, material audiovisual i recursos interactius.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Elaboració d&apos;un àlbum-dossier trimestral amb les activitats realitzades.
               </li>
             </ul>
@@ -1140,11 +1140,11 @@ function EnglishTimeContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a dinàmic/a amb bon domini de la llengua anglesa.
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Mestre/a o estudiant del Grau d&apos;Educació Primària amb titulació mínima First
             Certificate o equivalent.
           </li>
@@ -1187,33 +1187,33 @@ function TallerCienciaContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Experimentar amb elements de l&apos;entorn per donar resposta a preguntes i inquietuds.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar la curiositat i l&apos;esperit crític.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar una connexió més conscient amb l&apos;entorn natural.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Utilitzar correctament els materials bàsics de l&apos;aula de ciències.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula de ciències adaptada per a la realització d&apos;experiments.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Material no fungible propi de l&apos;aula de ciències i materials quotidians per a
                 l&apos;experimentació.
               </li>
@@ -1226,7 +1226,7 @@ function TallerCienciaContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a dinàmic/a i didàctic/a, amb estudis superiors en Ciències Ambientals,
             Biologia, Química o àmbits científics similars i experiència en treball educatiu amb
             infants.
@@ -1272,45 +1272,45 @@ function TallerEstudiContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Adquirir hàbits d&apos;estudi i rutines de treball eficaces.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aprendre a organitzar el temps i planificar les tasques escolars.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la comprensió lectora i les tècniques d&apos;estudi.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Reforçar continguts treballats a l&apos;aula.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar l&apos;autonomia, la responsabilitat i la constància.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Afavorir un clima de treball tranquil i respectuós.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lacions</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula ordinària que garanteixi un ambient tranquil i adequat per a la concentració.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Material escolar propi de cada alumne (agenda, llibres, quaderns i estoig).
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Material de suport: diccionaris, fitxes de reforç, esquemes i recursos didàctics
                 complementaris.
               </li>
@@ -1323,16 +1323,16 @@ function TallerEstudiContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Monitor/a amb formació en l&apos;àmbit educatiu (estudiant o graduat/da en Educació
             Primària o Pedagogia).
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Experiència en suport escolar i tècniques d&apos;estudi.
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
             Capacitat per fomentar l&apos;autonomia, la motivació i els hàbits de treball en infants.
           </li>
         </ul>
@@ -1375,37 +1375,37 @@ function EscacsContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar la concentració i el pensament lògic.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aprendre les normes i moviments bàsics del joc.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar la capacitat d&apos;anticipació i resolució de problemes.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar la paciència, el respecte i l&apos;esportivitat.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula ordinària o espai tranquil adequat per al joc.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Taulers i peces d&apos;escacs.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Materials de suport visual i fitxes didàctiques adaptades a cada edat.
               </li>
             </ul>
@@ -1417,7 +1417,7 @@ function EscacsContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb coneixements d&apos;escacs i experiència en dinamització educativa amb
             infants.
           </li>
@@ -1459,33 +1459,33 @@ function BallemRitmeContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar el sentit del ritme i la coordinació corporal.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar l&apos;expressió corporal i la creativitat.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la memòria a través de coreografies adaptades.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar la confiança i el treball en equip.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Gimnàs o sala polivalent amb equip de música.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Equip de música i material bàsic d&apos;educació física per a dinàmiques i jocs
                 rítmics.
               </li>
@@ -1498,11 +1498,11 @@ function BallemRitmeContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Destinataris</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Educació Infantil
           </li>
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Cicle Inicial de Primària
           </li>
         </ul>
@@ -1512,7 +1512,7 @@ function BallemRitmeContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb experiència en dansa o expressió corporal i capacitat per dinamitzar grups
             infantils amb energia i sensibilitat educativa.
           </li>
@@ -1555,41 +1555,41 @@ function TeatreContent() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Objectius</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Potenciar l&apos;expressió oral i corporal.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Desenvolupar la imaginació i la creativitat.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Millorar la confiança i la seguretat en un mateix.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Fomentar el treball en equip i el respecte pels companys.
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aprendre a gestionar emocions a través de la interpretació.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Instal·lació</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Aula polivalent o espai ampli que permeti el moviment i la representació.
               </li>
             </ul>
             <h2 className="mt-8 text-xl font-semibold text-slate-900 sm:text-2xl">Material</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Material d&apos;expressió (robes, complements simbòlics, elements escènics senzills).
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 text-black shrink-0" aria-hidden>✔</span>
+                <span className="mt-0.5 text-blue-600 shrink-0" aria-hidden>✔</span>
                 Equip de música per a dinàmiques i ambientació.
               </li>
             </ul>
@@ -1601,7 +1601,7 @@ function TeatreContent() {
         <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Perfil del monitor</h2>
         <ul className="mt-3 space-y-2 text-slate-600">
           <li className="flex items-start gap-2">
-            <span className="mt-0.5 text-black" aria-hidden>✔</span>
+            <span className="mt-0.5 text-blue-600" aria-hidden>✔</span>
             Monitor/a amb formació en teatre o expressió corporal i experiència en dinamització de
             grups infantils.
           </li>
@@ -1657,7 +1657,7 @@ export default async function ActivitatPage({ params }: Props) {
     <div className="mx-auto w-full max-w-[1920px] px-4 py-16 sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
       <Link
         href="/activitats-extraescolars"
-        className="text-sm font-medium text-emerald-600 hover:underline"
+        className="text-sm font-medium text-blue-600 hover:underline"
       >
         ← Activitats extraescolars
       </Link>

@@ -63,19 +63,19 @@ export default function CasalsPage() {
           </p>
           <ul className="mt-3 space-y-2 text-slate-600">
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Retos y misiones semanales
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Manualidades creativas
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Gimcanas y juegos en equipo
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Preparación de actuaciones musicales
             </li>
           </ul>
@@ -94,15 +94,15 @@ export default function CasalsPage() {
           </p>
           <ul className="mt-3 space-y-2 text-slate-600">
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Piscina
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Salidas especiales
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Actividades deportivas adaptadas a cada edad
             </li>
           </ul>
@@ -119,15 +119,15 @@ export default function CasalsPage() {
           <p className="mt-3 text-slate-600">En nuestro casal fomentamos:</p>
           <ul className="mt-3 space-y-2 text-slate-600">
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Trabajo en equipo
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Expresión artística
             </li>
             <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-emerald-600" aria-hidden>✔</span>
+              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
               Imaginación y creatividad
             </li>
           </ul>

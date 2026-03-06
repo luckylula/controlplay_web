@@ -79,23 +79,23 @@ export default function FutsalCampsPage() {
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Què oferim?</h2>
             <ul className="mt-3 space-y-2 text-slate-600">
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden="true">✔</span>
                 Planificació d&apos;estades a mida
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden="true">✔</span>
                 Entrenaments específics adaptats al nivell i objectius del grup
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden="true">✔</span>
                 Staff tècnic qualificat i amb experiència
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden="true">✔</span>
                 Instal·lacions adequades i logística completa
               </li>
               <li className="flex items-start gap-2">
-                <span className="mt-0.5 shrink-0 text-black" aria-hidden="true">✔</span>
+                <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden="true">✔</span>
                 Programa d&apos;activitats d&apos;oci per complementar l&apos;experiència esportiva
               </li>
             </ul>

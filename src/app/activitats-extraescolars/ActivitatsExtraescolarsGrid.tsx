@@ -60,9 +60,9 @@ export function ActivitatsExtraescolarsGrid({
             key={opt.value}
             type="button"
             onClick={() => setFilter(opt.value)}
-            className={`rounded-lg border px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 ${
+            className={`rounded-lg border px-4 py-2 text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${
               filter === opt.value
-                ? "border-emerald-600 bg-emerald-600 text-white"
+                ? "border-blue-600 bg-blue-600 text-white"
                 : "border-slate-300 bg-white text-slate-700 hover:border-slate-400 hover:bg-slate-50"
             }`}
           >
@@ -81,7 +81,7 @@ export function ActivitatsExtraescolarsGrid({
             <Link
               key={item.href}
               href={item.href}
-              className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+              className="group block overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <div
                 className={`relative aspect-[4/3] w-full min-h-[180px] overflow-hidden sm:min-h-[200px] xl:min-h-[220px] ${
@@ -116,13 +116,13 @@ export function ActivitatsExtraescolarsGrid({
                 ) : null}
               </div>
               <div className="border-t border-slate-200 p-5 sm:p-6 xl:p-6">
-                <h2 className="text-lg font-semibold text-slate-900 group-hover:text-emerald-700 sm:text-xl">
+                <h2 className="text-lg font-semibold text-slate-900 group-hover:text-blue-700 sm:text-xl">
                   {item.label}
                 </h2>
                 {introText ? (
                   <p className="mt-2 line-clamp-4 text-slate-600 xl:line-clamp-5">{introText}</p>
                 ) : null}
-                <span className="mt-3 inline-block text-base font-medium text-emerald-600 group-hover:underline">
+                <span className="mt-3 inline-block text-base font-medium text-blue-600 group-hover:underline">
                   Saber més →
                 </span>
               </div>
