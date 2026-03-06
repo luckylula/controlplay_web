@@ -71,6 +71,7 @@ function TaekwondoJudoContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/taekwondo-judo/taekwondo1.png"
         imageRight="/images/extraescolars/taekwondo-judo/taekwondo2.png"
+        imageLeftClassName="object-top"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -162,6 +163,7 @@ function HipHopDansesContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/hip-hop-danses/hip hop1.png"
         imageRight="/images/extraescolars/hip-hop-danses/hip hop2.png"
+        imageLeftClassName="object-top"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -422,6 +424,7 @@ function BasquetHandbolVoleyContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/basquet-handbol-voley/basquet1.png"
         imageRight="/images/extraescolars/basquet-handbol-voley/basquet2.png"
+        imageRightClassName="object-[center_38%]"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -504,6 +507,7 @@ function PatinsContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/patins/patins1.png"
         imageRight="/images/extraescolars/patins/patins2.jpg"
+        imageLeftClassName="object-[center_38%]"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -861,6 +865,8 @@ function ContacontesContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/contacontes/contacontes1.png"
         imageRight="/images/extraescolars/contacontes/contacontes2.png"
+        imageLeftClassName="object-[center_28%]"
+        imageRightClassName="object-top"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -1061,6 +1067,7 @@ function EnglishTimeContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/english-time/englishtime1.png"
         imageRight="/images/extraescolars/english-time/englishtime2.png"
+        imageLeftClassName="object-[center_28%]"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -1436,6 +1443,8 @@ function BallemRitmeContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/ballem-ritme/ballem1.png"
         imageRight="/images/extraescolars/ballem-ritme/ballem2.png"
+        imageLeftClassName="object-top"
+        imageRightClassName="object-top"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -1531,6 +1540,8 @@ function TeatreContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/teatre/teatre1.png"
         imageRight="/images/extraescolars/teatre/teatre2.png"
+        imageLeftClassName="object-[center_38%]"
+        imageRightClassName="object-top"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>

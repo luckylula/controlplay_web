@@ -252,7 +252,7 @@ export default function MenjadorsEscolarsPage() {
         <section className="mt-16 grid grid-cols-1 items-center gap-8 lg:grid-cols-[0.92fr_1fr] lg:gap-12">
           <div className="relative order-1 aspect-[4/3] overflow-hidden rounded-2xl bg-amber-50/80 lg:order-1 lg:rotate-2">
             <Image
-              src="/images/menjadors/menjador1.png"
+              src="/images/menjadors/menjador5.png"
               alt="Menjador dinàmic"
               fill
               className="object-cover"
