@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { CasalsGallery } from "@/components/CasalsGallery";
+import { CasalsOldPhotosCarousel } from "@/components/CasalsOldPhotosCarousel";
 import { CasalsVideoCarousel } from "@/components/CasalsVideoCarousel";
 
 export const metadata: Metadata = {
@@ -183,10 +184,7 @@ export default function CasalsPage() {
         <section className="mt-14 rounded-2xl bg-blue-600 px-4 py-12 sm:px-6 sm:py-14 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-3">
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="mt-2 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
-                  01
-                </div>
+              <div className="text-center">
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Equip humà
                 </h2>
@@ -245,10 +243,7 @@ export default function CasalsPage() {
               </ul>
             </article>
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="mt-2 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
-                  02
-                </div>
+              <div className="text-center">
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Procediment d&apos;inscripcions
                 </h2>
@@ -281,10 +276,7 @@ export default function CasalsPage() {
               </ul>
             </article>
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="mt-2 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
-                  03
-                </div>
+              <div className="text-center">
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Material pels inscrits
                 </h2>
@@ -331,10 +323,7 @@ export default function CasalsPage() {
           </div>
           <div className="mt-8 grid gap-8 lg:grid-cols-3">
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="mt-2 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
-                  04
-                </div>
+              <div className="text-center">
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Concepte, horari i preu
                 </h2>
@@ -362,10 +351,7 @@ export default function CasalsPage() {
               </div>
             </article>
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="mt-2 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
-                  05
-                </div>
+              <div className="text-center">
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Què entra amb el preu
                 </h2>
@@ -394,10 +380,7 @@ export default function CasalsPage() {
               </ul>
             </article>
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="mt-2 flex items-center gap-3">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
-                  06
-                </div>
+              <div className="text-center">
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Activitats diàries
                 </h2>
@@ -433,6 +416,8 @@ export default function CasalsPage() {
             </article>
           </div>
         </section>
+
+        <CasalsOldPhotosCarousel />
       </div>
 
       <CasalsGallery />
