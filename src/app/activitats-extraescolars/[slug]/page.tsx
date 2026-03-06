@@ -1244,6 +1244,8 @@ function TallerEstudiContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/taller-estudi/tallerestudi1.png"
         imageRight="/images/extraescolars/taller-estudi/tallerestudi2.png"
+        imageLeftClassName="object-top"
+        imageRightClassName="object-[center_28%]"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>

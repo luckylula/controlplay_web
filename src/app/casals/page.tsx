@@ -255,25 +255,35 @@ export default function CasalsPage() {
                 </h2>
               </div>
               <div className="mt-4 overflow-x-auto">
-                <table className="w-full min-w-[280px] text-sm text-slate-600">
-                  <thead>
-                    <tr className="border-b border-slate-200">
-                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Concepte</th>
-                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Horari</th>
-                      <th className="pb-2 text-right font-semibold text-slate-800">Preu</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-slate-600">
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">79 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">120 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">360 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">560 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">9 / 13 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">45 / 65 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">Acollida Puntual</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">4 / 5 €</td></tr>
-                    <tr><td className="py-1.5 pr-2">Menjador Puntual + Casal Tarda</td><td className="py-1.5 pr-2">–</td><td className="py-1.5 text-right">9 €</td></tr>
-                  </tbody>
-                </table>
+                <div className="grid min-w-[280px] grid-cols-3 gap-px rounded-lg border border-slate-200 bg-slate-200 overflow-hidden">
+                  <div className="bg-white px-2 py-2 font-semibold text-slate-800 sm:px-3 sm:py-2.5">Concepte</div>
+                  <div className="bg-white px-2 py-2 font-semibold text-slate-800 sm:px-3 sm:py-2.5">Horari</div>
+                  <div className="bg-white px-2 py-2 text-right font-semibold text-slate-800 sm:px-3 sm:py-2.5">Preu</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">1 Setmana Matins</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">9 a 14 h</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">79 €</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">1 Setmana amb Menjador</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">9 a 16.30 h</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">120 €</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">6 Setmanes Matins</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">9 a 14 h</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">360 €</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">6 Setmanes amb Menjador</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">9 a 16.30 h</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">560 €</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">1 Setmana Acollida</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">8.30 a 9 h / 8 a 9 h</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">9 / 13 €</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">6 Setmanes Acollida</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">8.30 a 9 h / 8 a 9 h</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">45 / 65 €</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">Acollida Puntual</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">8.30 a 9 h / 8 a 9 h</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">4 / 5 €</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">Menjador Puntual + Casal Tarda</div>
+                  <div className="bg-white px-2 py-2 text-slate-600 sm:px-3 sm:py-2.5">–</div>
+                  <div className="bg-white px-2 py-2 text-right text-slate-600 sm:px-3 sm:py-2.5">9 €</div>
+                </div>
               </div>
             </article>
           </div>

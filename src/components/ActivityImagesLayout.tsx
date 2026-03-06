@@ -6,12 +6,22 @@ import type { ReactNode } from "react";
 type Props = {
   imageLeft: string;
   imageRight: string;
+  /** Optional: e.g. object-top or object-[center_28%] to show more top of image */
+  imageLeftClassName?: string;
+  imageRightClassName?: string;
   description: ReactNode;
   objectives: ReactNode;
 };
 
 /** Layout com a Menjadors: primera franja text esquerra + foto dreta, segona franja foto esquerra + text dreta. */
-export function ActivityImagesLayout({ imageLeft, imageRight, description, objectives }: Props) {
+export function ActivityImagesLayout({
+  imageLeft,
+  imageRight,
+  imageLeftClassName,
+  imageRightClassName,
+  description,
+  objectives,
+}: Props) {
   return (
     <>
       {/* Bloc 1: Text esquerra | Foto dreta – sense espai respecte al títol de la pàgina, franja més compacta */}
@@ -24,7 +34,7 @@ export function ActivityImagesLayout({ imageLeft, imageRight, description, objec
             src={imageRight}
             alt=""
             fill
-            className="object-cover"
+            className={`object-cover ${imageRightClassName ?? ""}`.trim()}
             sizes="(max-width: 1024px) 100vw, 46vw"
           />
         </div>
@@ -37,7 +47,7 @@ export function ActivityImagesLayout({ imageLeft, imageRight, description, objec
             src={imageLeft}
             alt=""
             fill
-            className="object-cover"
+            className={`object-cover ${imageLeftClassName ?? ""}`.trim()}
             sizes="(max-width: 1024px) 100vw, 46vw"
           />
         </div>
