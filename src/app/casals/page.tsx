@@ -43,10 +43,10 @@ export default function CasalsPage() {
               </div>
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
                 <Image
-                  src="/images/casals/casals%20foto%20piscina.jpg"
-                  alt="Nens i nenes a la piscina del casal"
+                  src="/images/casals/horarios%20casals.png"
+                  alt="Horari setmanal del casal"
                   fill
-                  className="object-cover object-left"
+                  className="object-contain"
                   sizes="(max-width: 1023px) 100vw, 42vw"
                 />
               </div>
@@ -179,11 +179,15 @@ export default function CasalsPage() {
           </div>
         </section>
 
-        {/* Franja de 6 targetes (estil Canal Ètic) */}
+        {/* 6 targetes: estructura bento (2 grans + 4 en fila) per diferenciar de Canal Ètic */}
         <section className="mt-14 rounded-2xl bg-blue-600 px-4 py-12 sm:px-6 sm:py-14 lg:px-10">
-          <div className="grid gap-8 lg:grid-cols-3">
+          {/* Fila 1: dues targetes grans */}
+          <div className="grid gap-8 md:grid-cols-2">
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="text-center">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+                  <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </div>
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Equip humà
                 </h2>
@@ -242,7 +246,44 @@ export default function CasalsPage() {
               </ul>
             </article>
             <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="text-center">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-violet-100 text-violet-600" aria-hidden>
+                  <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
+                <h2 className="text-lg font-bold text-black sm:text-xl">
+                  Concepte, horari i preu
+                </h2>
+              </div>
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full min-w-[280px] text-sm text-slate-600">
+                  <thead>
+                    <tr className="border-b border-slate-200">
+                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Concepte</th>
+                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Horari</th>
+                      <th className="pb-2 text-right font-semibold text-slate-800">Preu</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-slate-600">
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">79 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">120 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">360 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">560 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">9 / 13 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">45 / 65 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">Acollida Puntual</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">4 / 5 €</td></tr>
+                    <tr><td className="py-1.5 pr-2">Menjador Puntual + Casal Tarda</td><td className="py-1.5 pr-2">–</td><td className="py-1.5 text-right">9 €</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+          {/* Fila 2: quatre targetes en una fila */}
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left shadow-lg sm:p-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-sky-100 text-sky-600" aria-hidden>
+                  <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                </div>
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Procediment d&apos;inscripcions
                 </h2>
@@ -274,8 +315,11 @@ export default function CasalsPage() {
                 </li>
               </ul>
             </article>
-            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="text-center">
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left shadow-lg sm:p-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-emerald-100 text-emerald-600" aria-hidden>
+                  <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                </div>
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Material pels inscrits
                 </h2>
@@ -319,38 +363,11 @@ export default function CasalsPage() {
                 </li>
               </ul>
             </article>
-          </div>
-          <div className="mt-8 grid gap-8 lg:grid-cols-3">
-            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="text-center">
-                <h2 className="text-lg font-bold text-black sm:text-xl">
-                  Concepte, horari i preu
-                </h2>
-              </div>
-              <div className="mt-4 overflow-x-auto">
-                <table className="w-full min-w-[280px] text-sm text-slate-600">
-                  <thead>
-                    <tr className="border-b border-slate-200">
-                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Concepte</th>
-                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Horari</th>
-                      <th className="pb-2 text-right font-semibold text-slate-800">Preu</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-slate-600">
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">79 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">120 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">360 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">560 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">9 / 13 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">45 / 65 €</td></tr>
-                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">Acollida Puntual</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">4 / 5 €</td></tr>
-                    <tr><td className="py-1.5 pr-2">Menjador Puntual + Casal Tarda</td><td className="py-1.5 pr-2">–</td><td className="py-1.5 text-right">9 €</td></tr>
-                  </tbody>
-                </table>
-              </div>
-            </article>
-            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="text-center">
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left shadow-lg sm:p-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-rose-100 text-rose-600" aria-hidden>
+                  <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                </div>
                 <h2 className="text-lg font-bold text-black sm:text-xl">
                   Què entra amb el preu
                 </h2>
@@ -378,39 +395,36 @@ export default function CasalsPage() {
                 </li>
               </ul>
             </article>
-            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
-              <div className="text-center">
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-5 text-left shadow-lg sm:p-6">
+              <div className="flex flex-col items-center text-center">
+                <div className="mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-amber-100 text-amber-600" aria-hidden>
+                  <svg className="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                </div>
                 <h2 className="text-lg font-bold text-black sm:text-xl">
-                  Activitats diàries
+                  Què cal portar a la motxilla?
                 </h2>
               </div>
               <p className="mt-4 text-sm text-slate-600 leading-relaxed">
-                El dia es divideix en franjes horàries, prioritzant activitats relaxades en les hores de més calor.
+                Segons l&apos;activitat programada, no t&apos;oblidis de preparar el següent material:
               </p>
-              <p className="mt-3 text-sm font-semibold text-slate-800">
-                Exemple d&apos;horari setmanal:
-              </p>
-              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
-                  <strong>08:00 – 09:00:</strong> Acollida.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
-                  <strong>09:00:</strong> Recepció.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
-                  Activitats destacades: Piscina (dimarts), Sortida/Excursió (dijous), Gimcana d&apos;aigua (dilluns, dimecres i divendres).
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
-                  <strong>14:00 – 15:00:</strong> Dinar.
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
-                  <strong>15:00 – 16:30:</strong> Tallers de tarda (pel·lícula, manualitats, música, jocs de taula i relaxació).
-                </li>
+              <p className="mt-3 text-sm font-semibold text-slate-800">Dia de Piscina (Dimarts)</p>
+              <ul className="mt-1.5 space-y-1 text-sm text-slate-600">
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Samarreta del casal i esmorzar.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Aigua i gorra.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Tovallola, xancletes i banyador.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Crema solar i muda per canviar-se.</li>
+              </ul>
+              <p className="mt-3 text-sm font-semibold text-slate-800">Dia d&apos;Excursió (Dijous)</p>
+              <ul className="mt-1.5 space-y-1 text-sm text-slate-600">
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Samarreta del casal.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Esmorzar.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Aigua i gorra.</li>
+              </ul>
+              <p className="mt-3 text-sm font-semibold text-slate-800">Quan ens quedem a l&apos;escola</p>
+              <ul className="mt-1.5 space-y-1 text-sm text-slate-600">
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Esmorzar, aigua i gorra.</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Tovallola, xancletes i banyador (pels jocs d&apos;aigua).</li>
+                <li className="flex items-start gap-2"><span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />Crema solar i muda de recanvi.</li>
               </ul>
             </article>
           </div>
@@ -418,13 +432,16 @@ export default function CasalsPage() {
 
         <CasalsOldPhotosCarousel />
 
-        {/* Franja de 8 icones (estil com les 6 targetes de dalt) */}
-        <section className="mt-14 rounded-2xl bg-blue-600 px-4 py-12 sm:px-6 sm:py-14 lg:px-10">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Casals realitzats: targetes individuals, estètica diferenciada */}
+        <section className="mt-14 border-t border-slate-200 pt-12">
+          <h2 className="mb-8 text-center text-2xl font-semibold text-slate-800 sm:text-3xl">
+            Casals realitzats
+          </h2>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
               <article
                 key={n}
-                className="flex flex-col items-center rounded-xl border border-slate-200 bg-white p-6 text-center shadow-lg sm:p-7"
+                className="flex flex-col items-center rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-md transition-shadow hover:shadow-lg sm:p-7"
               >
                 {n === 1 ? (
                   <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">

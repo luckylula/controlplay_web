@@ -35,7 +35,7 @@ export function FutsalVideoCarousel() {
             loop
             playsInline
             className="h-full w-full object-cover"
-            style={{ objectPosition: "center center" }}
+            style={{ objectPosition: i === 2 ? "center 30%" : "center center" }}
             src={src}
           />
         </div>

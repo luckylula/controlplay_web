@@ -35,7 +35,7 @@ export function CasalsVideoCarousel() {
             loop
             playsInline
             className="h-full w-full object-cover"
-            style={{ objectPosition: "center 65%" }}
+            style={{ objectPosition: i === 1 ? "center 32%" : i === 2 ? "center 38%" : "center 65%" }}
             src={src}
           />
         </div>
