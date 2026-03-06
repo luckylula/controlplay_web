@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { CasalsGallery } from "@/components/CasalsGallery";
 import { CasalsOldPhotosCarousel } from "@/components/CasalsOldPhotosCarousel";
 import { CasalsVideoCarousel } from "@/components/CasalsVideoCarousel";
 
@@ -419,8 +418,6 @@ export default function CasalsPage() {
 
         <CasalsOldPhotosCarousel />
       </div>
-
-      <CasalsGallery />
     </>
   );
 }
