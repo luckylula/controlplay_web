@@ -79,7 +79,7 @@ export function Header() {
               alt={siteName}
               width={640}
               height={176}
-              className="h-20 w-auto max-w-[55vw] object-contain object-left sm:h-24 sm:max-w-none"
+              className="h-24 w-auto max-w-[55vw] object-contain object-left sm:h-28 sm:max-w-none"
               onError={() => setLogoError(true)}
               priority
             />

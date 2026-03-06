@@ -23,7 +23,7 @@ export default function MenjadorsEscolarsPage() {
             alt="Control Play Cuina"
             width={280}
             height={80}
-            className="mt-3 h-16 w-auto sm:h-20"
+            className="mt-6 h-16 w-auto sm:h-20"
           />
         </div>
 

@@ -4,6 +4,7 @@ import { HeroVideoCarousel } from "@/components/HeroVideoCarousel";
 import { CategoriesWithMascot } from "@/components/CategoriesWithMascot";
 import { ContactForm } from "@/components/ContactForm";
 import { ExtraescolarsCards } from "@/components/ExtraescolarsCards";
+import { ExtraescolarsPortadaCarousel } from "@/components/ExtraescolarsPortadaCarousel";
 import { contact } from "@/lib/navigation";
 import { COVER_STRIP_HEIGHT } from "@/lib/layout";
 import { NOTICIES } from "@/lib/noticies";
@@ -107,33 +108,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Franja Extraescolars – mateix alt que la resta de franjes */}
-      <section className={`relative ${COVER_STRIP_HEIGHT} w-full overflow-hidden border-t border-slate-200`}>
-        <Image
-          src="/images/portada/apuntat.jpg"
-          alt="Extraescolars"
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority={false}
-        />
-        <div className="absolute inset-0 bg-black/40" aria-hidden />
-        <div className="relative flex h-full flex-col items-center justify-center px-4 py-12 text-center sm:py-16">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-400 sm:text-base">
-            Durant tot l&apos;any !
-          </p>
-          <h2 className="mt-1 text-2xl font-bold text-white drop-shadow-sm sm:text-3xl lg:text-4xl">
-            Extraescolars
-          </h2>
-          <p className="mt-2 text-lg text-white/95 drop-shadow-sm">Apuntat !</p>
-          <Link
-            href="/activitats-extraescolars"
-            className="mt-6 inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent"
-          >
-            Descobreix les activitats
-          </Link>
-        </div>
-      </section>
+      {/* Franja Extraescolars – carrusel de 3 vídeos */}
+      <ExtraescolarsPortadaCarousel />
 
       {/* Notícies – targetes desplaçables; la fletxa enllaça a Totes les notícies */}
       <ExtraescolarsCards

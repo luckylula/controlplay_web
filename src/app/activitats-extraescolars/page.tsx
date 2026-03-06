@@ -123,9 +123,9 @@ export default function ActivitatsExtraescolarsPage() {
           <Image
             src="/images/logos/CP%20EXTRAESCOLARS%20transp.png"
             alt="Control Play Extraescolars"
-            width={280}
-            height={80}
-            className="mt-3 h-24 w-auto sm:h-28"
+            width={360}
+            height={108}
+            className="mt-0 h-32 w-auto sm:h-36"
           />
         </div>
         <p className="mt-4 text-lg text-slate-600">

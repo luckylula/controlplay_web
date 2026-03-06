@@ -41,21 +41,12 @@ export default function CasalsPage() {
                   priority
                 />
               </div>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-lg bg-slate-100 min-h-[280px] sm:min-h-[340px]">
                 <Image
-                  src="/images/casals/horarios%20casals.png"
-                  alt="Horari setmanal del casal"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 1023px) 100vw, 42vw"
-                />
-              </div>
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
-                <Image
-                  src="/images/casals/11.png"
+                  src="/images/casals/CALENDARIO%20SEMANAS_QUITAR%20LOGOS%20DE%20ABAJO%20DERECHA.png"
                   alt="Calendari activitats Casal Estiufest"
                   fill
-                  className="object-cover object-[20%_50%]"
+                  className="object-cover object-center"
                   sizes="(max-width: 1023px) 100vw, 42vw"
                 />
               </div>

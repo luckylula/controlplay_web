@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const EXTRAESCOLARS_VIDEOS = [
-  "/images/extraescolars/video%20extraescolar1.mp4",
+  "/images/extraescolars/videoextraescolar1.mp4",
   "/images/extraescolars/video%20extraescolar2.mp4",
   "/images/extraescolars/video%20extraescolar3.mp4",
 ];
@@ -35,7 +35,9 @@ export function ExtraescolarsVideoCarousel() {
             loop
             playsInline
             className="h-full w-full object-cover"
-            style={{ objectPosition: "center 65%" }}
+            style={{
+              objectPosition: i === 2 ? "center 65%" : "center 38%",
+            }}
             src={src}
           />
         </div>
