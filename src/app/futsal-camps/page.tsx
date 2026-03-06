@@ -16,8 +16,11 @@ export default function FutsalCampsPage() {
       <div className="mx-auto w-full max-w-[1920px] px-4 pt-10 pb-16 sm:px-6 sm:pt-12 lg:px-8 lg:pt-14 xl:px-10 2xl:px-12">
         <h1 className="text-center text-3xl font-bold text-slate-900 sm:text-4xl">Futsal Camps</h1>
 
+        {/* Espai en blanc entre el títol i el contingut (equivalent a l’espai entre vídeo i títol) */}
+        <div className="mt-14 sm:mt-16 lg:mt-24" aria-hidden />
+
         {/* Bloc 1: Text esquerra | Foto dreta – alineats al mateix nivell, foto una mica més petita */}
-        <section className="mt-6 grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
+        <section className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12">
           <div className="lg:pr-6">
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
               Què és Barcelona Futsal Camps?
@@ -42,7 +45,7 @@ export default function FutsalCampsPage() {
               href="https://www.barcelonafutsalcamps.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               Descobreix la web de Barcelona Futsal Camps
               <span className="text-white/80" aria-hidden>→</span>
