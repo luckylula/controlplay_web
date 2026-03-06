@@ -15,6 +15,8 @@ export type ActivityCard = {
 type Props = {
   activities: readonly ActivityCard[];
   title?: string;
+  /** Subtítol sota el títol (per defecte parla d'activitats). */
+  description?: string;
   ctaHref?: string;
   ctaLabel?: string;
 };
@@ -38,9 +40,12 @@ const CARD_COLORS = [
   "from-amber-600 to-yellow-600",
 ];
 
+const DEFAULT_DESCRIPTION = "Activitats lúdiques, esportives i formatives per a tot l'any.";
+
 export function ExtraescolarsCards({
   activities,
   title = "Descobreix les nostres notícies",
+  description = DEFAULT_DESCRIPTION,
   ctaHref = "/activitats-extraescolars",
   ctaLabel = "Totes les activitats",
 }: Props) {
@@ -110,7 +115,7 @@ export function ExtraescolarsCards({
               {title}
             </h2>
             <p className="mt-1 text-slate-600">
-              Activitats lúdiques, esportives i formatives per a tot l&apos;any.
+              {description}
             </p>
           </div>
           <Link

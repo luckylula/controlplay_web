@@ -54,8 +54,8 @@ export function ContactForm() {
           id="contact-message"
           name="message"
           required
-          rows={2}
-          className={`${inputClass} resize-none`}
+          rows={4}
+          className={`${inputClass} min-h-[5.5rem] resize-y`}
           placeholder="El vostre missatge"
         />
       </div>

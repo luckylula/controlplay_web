@@ -3,20 +3,10 @@ import Link from "next/link";
 import { HeroVideoCarousel } from "@/components/HeroVideoCarousel";
 import { CategoriesWithMascot } from "@/components/CategoriesWithMascot";
 import { ContactForm } from "@/components/ContactForm";
-import type { ActivityCard } from "@/components/ExtraescolarsCards";
 import { ExtraescolarsCards } from "@/components/ExtraescolarsCards";
 import { contact } from "@/lib/navigation";
 import { COVER_STRIP_HEIGHT } from "@/lib/layout";
-
-/** Activitats que es mostren a la portada a «Descobreix les nostres notícies». */
-const DISCOVER_ACTIVITIES: ActivityCard[] = [
-  { label: "Dinem en família", href: "/menjadors-escolars" },
-  { label: "Robòtica", href: "/activitats-extraescolars/robotica", image: "/images/extraescolars/robotica.png" },
-  { label: "Canteen Project", href: "/menjadors-escolars" },
-  { label: "Taller interactiu de Ciència", href: "/activitats-extraescolars/taller-ciencia", image: "/images/extraescolars/ciencia.png" },
-  { label: "De l'Hort al menjador", href: "/menjadors-escolars" },
-  { label: "Taller d'alimentació saludable", href: "/menjadors-escolars" },
-];
+import { NOTICIES } from "@/lib/noticies";
 
 /** Vídeos de portada en public/images/portada/. Logo i text sota cada vídeo. */
 const CATEGORIES = [
@@ -95,13 +85,22 @@ export default function Home() {
             </div>
             <div className="min-h-0 min-w-0 space-y-3 overflow-y-auto text-slate-600 sm:space-y-4">
               <p className="text-sm leading-relaxed lg:text-base">
-                A Control Play Sports som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia per donar resposta a les necessitats de centres, famílies i entitats, amb proximitat, responsabilitat i passió pel que fem.
+                A Control Play Sports som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia amb l&apos;objectiu de donar resposta a les necessitats dels centres educatius, de les famílies i de les entitats, sempre amb proximitat, responsabilitat i una gran passió per la nostra feina.
               </p>
               <p className="text-sm leading-relaxed lg:text-base">
-                Comptem amb un equip multidisciplinari de professionals amb més de 20 anys d&apos;experiència, que aporta coneixement, vocació i responsabilitat en cada projecte.
+                La nostra tasca es desenvolupa en el dia a dia dels centres escolars, formant part activa de la seva comunitat educativa. Col·laborem estretament amb les AFAs i amb els equips directius dels centres, treballant conjuntament per construir projectes educatius i activitats que aportin valor real als infants i a les seves famílies. Aquesta relació de confiança i cooperació ens permet adaptar-nos a cada realitat i garantir un servei coherent amb els valors i objectius de cada escola.
               </p>
               <p className="text-sm leading-relaxed lg:text-base">
-                Oferim els nostres serveis amb les màximes garanties de professionalitat, legalitat i rigor, perquè la confiança i la tranquil·litat de les famílies i dels centres són la nostra prioritat.
+                Comptem amb un equip multidisciplinari de professionals amb més de 20 anys d&apos;experiència, format per persones amb vocació educativa, coneixement pedagògic i una gran responsabilitat en la seva tasca. Creiem fermament que l&apos;educació, l&apos;esport i el joc són eines fonamentals per al desenvolupament integral dels infants, i per això treballem perquè cada activitat sigui una experiència enriquidora.
+              </p>
+              <p className="text-sm leading-relaxed lg:text-base">
+                A Control Play Sports posem especial ènfasi en la qualitat dels serveis, la seguretat i les garanties professionals. Tots els nostres projectes es desenvolupen amb rigor, complint amb la normativa vigent i assegurant entorns segurs i cuidats per als infants. La tranquil·litat de les famílies i dels centres és una prioritat per a nosaltres.
+              </p>
+              <p className="text-sm leading-relaxed lg:text-base">
+                Per sobre de tot, treballem amb una finalitat clara: contribuir a la felicitat, el benestar i el creixement dels nens i nenes. Volem que cada espai educatiu, esportiu o lúdic sigui un lloc on els infants se sentin segurs, valorats i motivats per aprendre, jugar i créixer.
+              </p>
+              <p className="text-sm leading-relaxed lg:text-base">
+                Aquesta manera de treballar, basada en la confiança, la proximitat i la professionalitat, és el que ens permet seguir construint cada dia projectes educatius de qualitat al costat de les escoles i les seves comunitats.
               </p>
             </div>
           </div>
@@ -136,12 +135,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Activitats extraescolars – targetes desplaçables (estil Actualitat) */}
+      {/* Notícies – targetes desplaçables; la fletxa enllaça a Totes les notícies */}
       <ExtraescolarsCards
-        activities={DISCOVER_ACTIVITIES}
+        activities={NOTICIES}
         title="Descobreix les nostres notícies"
-        ctaHref="/activitats-extraescolars"
-        ctaLabel="Totes les activitats"
+        description="Novetats i informació del nostre dia a dia."
+        ctaHref="/noticies"
+        ctaLabel="Totes les notícies"
       />
 
       {/* Contacte – mateix alt que la resta de franjes */}
