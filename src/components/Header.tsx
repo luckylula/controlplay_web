@@ -67,8 +67,8 @@ export function Header() {
           </a>
         </div>
       </div>
-      {/* Logo + nav – strip més baix; logo mida fixa (h-28 / h-32) */}
-      <div className="mx-auto flex h-28 w-full items-center justify-between px-4 sm:h-32 sm:px-6 md:h-32 lg:h-32 lg:px-8 xl:h-32">
+      {/* Logo + nav – strip més baix; logo una mica més petit */}
+      <div className="mx-auto flex h-24 w-full items-center justify-between px-4 sm:h-28 sm:px-6 md:h-28 lg:h-28 lg:px-8 xl:h-28">
         <Link
           href="/"
           className="flex min-h-0 min-w-0 items-center text-slate-900 hover:opacity-90 transition-opacity"
@@ -79,7 +79,7 @@ export function Header() {
               alt={siteName}
               width={640}
               height={176}
-              className="h-24 w-auto max-w-[55vw] object-contain object-left sm:h-28 sm:max-w-none"
+              className="h-20 w-auto max-w-[55vw] object-contain object-left sm:h-24 sm:max-w-none"
               onError={() => setLogoError(true)}
               priority
             />

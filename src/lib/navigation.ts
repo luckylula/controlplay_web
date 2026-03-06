@@ -16,6 +16,7 @@ export type NavItem = NavLink & {
 export const siteName = "Control Play";
 
 export const mainNav: NavItem[] = [
+  { label: "Inici", href: "/" },
   { label: "Equip CP", href: "/equip-cp" },
   { label: "Menjadors Escolars", href: "/menjadors-escolars" },
   {
