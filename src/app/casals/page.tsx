@@ -417,6 +417,128 @@ export default function CasalsPage() {
         </section>
 
         <CasalsOldPhotosCarousel />
+
+        {/* Franja de 8 icones (estil com les 6 targetes de dalt) */}
+        <section className="mt-14 rounded-2xl bg-blue-600 px-4 py-12 sm:px-6 sm:py-14 lg:px-10">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+              <article
+                key={n}
+                className="flex flex-col items-center rounded-xl border border-slate-200 bg-white p-6 text-center shadow-lg sm:p-7"
+              >
+                {n === 1 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%20illa.png"
+                      alt="L'Illa del Tresor"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : n === 2 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%20maquina.png"
+                      alt="La Màquina del Temps del Dr. Mc Filby"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : n === 3 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%204%20elem.png"
+                      alt="Els 4 Elements del Xaman"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : n === 4 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%2019.png"
+                      alt="World Tour / La Sherlick i en Watson"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : n === 5 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%20explo.png"
+                      alt="Escola d'Exploradors/es"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : n === 6 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%2023.png"
+                      alt="Super Emòtics"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : n === 7 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%2021.png"
+                      alt="Esperit Olímpic 2021"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : n === 8 ? (
+                  <div className="relative h-44 w-44 shrink-0 overflow-hidden rounded-lg sm:h-52 sm:w-52">
+                    <Image
+                      src="/images/casals/Casals%20realizats/casals%20festa.png"
+                      alt="Alegría, és Festa Major!"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 176px, 208px"
+                    />
+                  </div>
+                ) : (
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-400">
+                    <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </div>
+                )}
+                <h2 className="mt-4 text-base font-bold text-black sm:text-lg">
+                  {n === 1 ? "L'Illa del Tresor" : n === 2 ? "La Màquina del Temps del Dr. Mc Filby" : n === 3 ? "Els 4 Elements del Xaman" : n === 4 ? "World Tour / La Sherlick i en Watson" : n === 5 ? "Escola d'Exploradors/es" : n === 6 ? "Super Emòtics" : n === 7 ? "Esperit Olímpic 2021" : n === 8 ? "Alegría, és Festa Major!" : `Títol ${n}`}
+                </h2>
+                <p className="mt-2 text-sm text-slate-600">
+                  {n === 1
+                    ? "Una aventura pirata para conocer el fondo marino y encontrar un gran tesoro."
+                    : n === 2
+                    ? "Construcción de una máquina para viajar a momentos clave de la historia."
+                    : n === 3
+                    ? "Ayudaremos a un joven Chamán que domina el aire, fuego, tierra y agua a encontrar a su discípulo para que perdure su fuerza."
+                    : n === 4
+                    ? "Un viaje por ciudades del mundo junto a dos detectives que llegan de vacaciones a Barcelona."
+                    : n === 5
+                    ? "Creada para entender sucesos sorprendentes del mundo como volcanes que reviven, huracanes e inundaciones."
+                    : n === 6
+                    ? "Descubriremos de la mano de superhéroes y superheroínas que todos tenemos superpoderes que nos hacen únicos, aunque ellos tienen problemas para gestionar sus emociones."
+                    : n === 7
+                    ? "Un viaje por los valores del torneo más conocido del mundo (igualdad, superación, salud) acompañados cada semana por una mascota diferente."
+                    : n === 8
+                    ? "El gran reto de organizar nuestra propia \"Festa Major\". Desde el primer día, los participantes son los encargados de pensar y preparar la gran fiesta del casal."
+                    : "Text a omplir."}
+                </p>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
     </>
   );
