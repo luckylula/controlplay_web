@@ -6,7 +6,7 @@ import { CasalsVideoCarousel } from "@/components/CasalsVideoCarousel";
 export const metadata: Metadata = {
   title: "Casals",
   description:
-    "Casals de Control Play – Tour Estiufest. Este verano el casal se transforma en una gran aventura musical alrededor del mundo.",
+    "Casals de Control Play – Tour Estiufest. Aquest estiu el casal es transforma en una gran aventura musical al voltant del món.",
 };
 
 export default function CasalsPage() {
@@ -26,137 +26,157 @@ export default function CasalsPage() {
           />
         </div>
 
-        {/* Bloc intro: imatge + text Tour Estiufest */}
+        {/* Foto esquerra | Tot el text dreta */}
         <section className="mt-10 rounded-xl border border-slate-200 p-4 sm:p-6">
-          <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[1.25fr_1fr]">
-            <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg bg-slate-100">
-              <Image
-                src="/images/casals/casals%20foto.png"
-                alt="Casal Tour Estiufest"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1023px) 100vw, 55vw"
-                priority
-              />
+          <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
+            {/* Columna esquerra: tres imatges (mateix mida, sense sticky) */}
+            <div className="space-y-6">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
+                <Image
+                  src="/images/casals/casals%20foto.png"
+                  alt="Casal Tour Estiufest"
+                  fill
+                  className="object-cover object-left"
+                  sizes="(max-width: 1023px) 100vw, 42vw"
+                  priority
+                />
+              </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
+                <Image
+                  src="/images/casals/casals%20foto%20piscina.jpg"
+                  alt="Nens i nenes a la piscina del casal"
+                  fill
+                  className="object-cover object-left"
+                  sizes="(max-width: 1023px) 100vw, 42vw"
+                />
+              </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-slate-100">
+                <Image
+                  src="/images/casals/11.png"
+                  alt="Calendari activitats Casal Estiufest"
+                  fill
+                  className="object-cover object-[20%_50%]"
+                  sizes="(max-width: 1023px) 100vw, 42vw"
+                />
+              </div>
             </div>
-            <div className="space-y-4">
-              <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-                ¡Este verano llega el TOUR ESTIUFEST!
-              </h2>
-              <p className="text-slate-600">
-                El casal se transforma en una gran aventura musical alrededor del mundo. Niños y niñas viajarán por distintos países descubriendo ritmos, bailes y culturas mientras viven experiencias únicas.
-              </p>
-              <p className="text-slate-600">
-                Todo comienza con la historia de DJ Tempo, que les propondrá un reto lleno de música, creatividad y diversión.
-              </p>
+
+            {/* Columna dreta: tot el text */}
+            <div className="min-w-0 space-y-10 lg:pl-2">
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Aquest estiu arriba el TOUR ESTIUFEST!
+                </h2>
+                <p className="mt-3 text-slate-600">
+                  El casal es transforma en una gran aventura musical al voltant del món. Els nens i nenes viatjaran per diferents països descobrint ritmes, balls i cultures mentre viuen experiències úniques.
+                </p>
+                <p className="mt-3 text-slate-600">
+                  Tot comença amb la història de DJ Tempo, que els proposarà un repte ple de música, creativitat i diversió.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Cada setmana, una nova aventura
+                </h2>
+                <p className="mt-3 text-slate-600">
+                  Durant l&apos;estiu els nens i nenes viuran activitats emocionants:
+                </p>
+                <ul className="mt-3 space-y-2 text-slate-600">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Reptes i missions setmanals
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Manualitats creatives
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Gimcanes i jocs en equip
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Preparació d&apos;actuacions musicals
+                  </li>
+                </ul>
+                <p className="mt-4 text-slate-600 font-medium">
+                  Cada setmana serà diferent!
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Diversió assegurada
+                </h2>
+                <p className="mt-3 text-slate-600">
+                  A més de les activitats del Tour Estiufest, gaudiran de:
+                </p>
+                <ul className="mt-3 space-y-2 text-slate-600">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Piscina
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Sortides especials
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Activitats esportives adaptades a cada edat
+                  </li>
+                </ul>
+                <p className="mt-4 text-slate-600">
+                  Un equilibri perfecte entre aprendre, moure&apos;s i passar-ho en gran.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Aprendre també forma part de l&apos;aventura
+                </h2>
+                <p className="mt-3 text-slate-600">Al nostre casal fomentem:</p>
+                <ul className="mt-3 space-y-2 text-slate-600">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Treball en equip
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Expressió artística
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
+                    Imaginació i creativitat
+                  </li>
+                </ul>
+                <p className="mt-4 text-slate-600">
+                  També promovem valors com la sostenibilitat, utilitzant materials reciclats en moltes activitats.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Gran Festival Final: ESTIUFEST
+                </h2>
+                <p className="mt-3 text-slate-600">
+                  L&apos;estiu acabarà amb un festival espectacular creat pels propis nens i nenes.
+                </p>
+                <p className="mt-3 text-slate-600">
+                  Un moment únic on podran mostrar tot el que han après i viscut durant el casal.
+                </p>
+              </div>
+
+              <div className="border-t border-slate-200 pt-6">
+                <p className="text-lg font-medium text-slate-700">
+                  Un estiu ple de música, aventures i records inoblidables.
+                </p>
+                <p className="mt-3 text-xl font-semibold text-slate-900 sm:text-2xl">
+                  Apunta els teus fills i que comenci el Tour Estiufest!
+                </p>
+              </div>
             </div>
           </div>
-        </section>
-
-        {/* Cada semana, una nueva aventura */}
-        <section className="mt-12">
-          <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-            Cada semana, una nueva aventura
-          </h2>
-          <p className="mt-3 text-slate-600">
-            Durante el verano los niños vivirán actividades emocionantes:
-          </p>
-          <ul className="mt-3 space-y-2 text-slate-600">
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Retos y misiones semanales
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Manualidades creativas
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Gimcanas y juegos en equipo
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Preparación de actuaciones musicales
-            </li>
-          </ul>
-          <p className="mt-4 text-slate-600 font-medium">
-            ¡Cada semana será diferente!
-          </p>
-        </section>
-
-        {/* Diversión asegurada */}
-        <section className="mt-12 border-t border-slate-200 pt-10">
-          <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-            Diversión asegurada
-          </h2>
-          <p className="mt-3 text-slate-600">
-            Además de las actividades del Tour Estiufest, disfrutarán de:
-          </p>
-          <ul className="mt-3 space-y-2 text-slate-600">
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Piscina
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Salidas especiales
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Actividades deportivas adaptadas a cada edad
-            </li>
-          </ul>
-          <p className="mt-4 text-slate-600">
-            Un equilibrio perfecto entre aprender, moverse y pasarlo en grande.
-          </p>
-        </section>
-
-        {/* Aprender también forma parte de la aventura */}
-        <section className="mt-12 border-t border-slate-200 pt-10">
-          <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-            Aprender también forma parte de la aventura
-          </h2>
-          <p className="mt-3 text-slate-600">En nuestro casal fomentamos:</p>
-          <ul className="mt-3 space-y-2 text-slate-600">
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Trabajo en equipo
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Expresión artística
-            </li>
-            <li className="flex items-start gap-2">
-              <span className="mt-0.5 shrink-0 text-blue-600" aria-hidden>✔</span>
-              Imaginación y creatividad
-            </li>
-          </ul>
-          <p className="mt-4 text-slate-600">
-            También promovemos valores como la sostenibilidad, utilizando materiales reciclados en muchas actividades.
-          </p>
-        </section>
-
-        {/* Gran Festival Final: ESTIUFEST */}
-        <section className="mt-12 border-t border-slate-200 pt-10">
-          <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">
-            Gran Festival Final: ESTIUFEST
-          </h2>
-          <p className="mt-3 text-slate-600">
-            El verano terminará con un festival espectacular creado por los propios niños y niñas.
-          </p>
-          <p className="mt-3 text-slate-600">
-            Un momento único donde podrán mostrar todo lo que han aprendido y vivido durante el casal.
-          </p>
-        </section>
-
-        {/* Tancament i CTA */}
-        <section className="mt-12 border-t border-slate-200 pt-10 text-center">
-          <p className="text-lg font-medium text-slate-700">
-            Un verano lleno de música, aventuras y recuerdos inolvidables.
-          </p>
-          <p className="mt-3 text-xl font-semibold text-slate-900 sm:text-2xl">
-            ¡Apunta a tus hijos y que empiece el Tour Estiufest!
-          </p>
         </section>
       </div>
 
