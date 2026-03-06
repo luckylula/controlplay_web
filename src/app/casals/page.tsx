@@ -178,6 +178,261 @@ export default function CasalsPage() {
             </div>
           </div>
         </section>
+
+        {/* Franja de 6 targetes (estil Canal Ètic) */}
+        <section className="mt-14 rounded-2xl bg-blue-600 px-4 py-12 sm:px-6 sm:py-14 lg:px-10">
+          <div className="grid gap-8 lg:grid-cols-3">
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
+              <div className="mt-2 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
+                  01
+                </div>
+                <h2 className="text-lg font-bold text-black sm:text-xl">
+                  Equip humà
+                </h2>
+              </div>
+              <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+                Control Play té una dilatada experiència en l&apos;àmbit del lleure. És per això que l&apos;equip encarregat de la preparació, el disseny, la programació i la intervenció del casal d&apos;estiu està format per un conjunt de professionals experts en cada àmbit.
+              </p>
+              <p className="mt-4 text-sm font-semibold text-slate-800">Coordinador/a casal</p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Vetllar pel bon funcionament del casal.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Supervisar l&apos;equip de monitors i monitores i garantir unitat de criteris.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Mantenir reunions de seguiment setmanal amb l&apos;equip educatiu.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Vetllar pel seguiment correcte de la normativa sanitària.
+                </li>
+              </ul>
+              <p className="mt-4 text-sm font-semibold text-slate-800">Monitors/es</p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Vetllar per l&apos;assoliment dels objectius proposats.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Dinamitzar les activitats amb els infants.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Ser la persona de referència del grup i atendre les necessitats de l&apos;infant.
+                </li>
+              </ul>
+              <p className="mt-4 text-sm font-semibold text-slate-800">Monitors/es de suport</p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Donar suport als infants i joves a l&apos;hora de realitzar aquelles activitats quotidianes que no puguin fer per si mateixos.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Treballar perquè tots els infants puguin participar a totes les activitats.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Fomentar l&apos;autonomia dels infants amb NESE.
+                </li>
+              </ul>
+            </article>
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
+              <div className="mt-2 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
+                  02
+                </div>
+                <h2 className="text-lg font-bold text-black sm:text-xl">
+                  Procediment d&apos;inscripcions
+                </h2>
+              </div>
+              <p className="mt-4 text-sm font-semibold text-slate-800">Període d&apos;inscripcions</p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Del 20 al 27 de maig: Infants escola Abat Oliba.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  A partir del 28 de maig: Fins a exhaurir places.
+                </li>
+              </ul>
+              <p className="mt-4 text-sm font-semibold text-slate-800">Pagaments</p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  30% en el moment de formalitzar la inscripció.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Pagament de la resta del casal el 9 de juny.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Becats: Informar en el procés d&apos;inscripcions. Cal informar de la targeta bancària, però no es realitza cap cobrament.
+                </li>
+              </ul>
+            </article>
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
+              <div className="mt-2 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
+                  03
+                </div>
+                <h2 className="text-lg font-bold text-black sm:text-xl">
+                  Material pels inscrits
+                </h2>
+              </div>
+              <p className="mt-4 text-sm font-semibold text-slate-800">
+                Per a tots els inscrits a qualsevol opció del casal
+              </p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Gorra.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Samarreta tècnica del casal.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Polsera identificativa per les sortides.
+                </li>
+              </ul>
+              <p className="mt-4 text-sm font-semibold text-slate-800">
+                Per a inscrits a 4 o 6 setmanes del casal
+              </p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Gorra.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  2 samarretes tècniques del casal.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Polsera identificativa per les sortides.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Motxilla de cordes.
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div className="mt-8 grid gap-8 lg:grid-cols-3">
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
+              <div className="mt-2 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
+                  04
+                </div>
+                <h2 className="text-lg font-bold text-black sm:text-xl">
+                  Concepte, horari i preu
+                </h2>
+              </div>
+              <div className="mt-4 overflow-x-auto">
+                <table className="w-full min-w-[280px] text-sm text-slate-600">
+                  <thead>
+                    <tr className="border-b border-slate-200">
+                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Concepte</th>
+                      <th className="pb-2 pr-2 text-left font-semibold text-slate-800">Horari</th>
+                      <th className="pb-2 text-right font-semibold text-slate-800">Preu</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-slate-600">
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">79 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">120 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Matins</td><td className="py-1.5 pr-2">9 a 14 h</td><td className="py-1.5 text-right">360 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes amb Menjador</td><td className="py-1.5 pr-2">9 a 16.30 h</td><td className="py-1.5 text-right">560 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">1 Setmana Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">9 / 13 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">6 Setmanes Acollida</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">45 / 65 €</td></tr>
+                    <tr className="border-b border-slate-100"><td className="py-1.5 pr-2">Acollida Puntual</td><td className="py-1.5 pr-2">8.30 a 9 h / 8 a 9 h</td><td className="py-1.5 text-right">4 / 5 €</td></tr>
+                    <tr><td className="py-1.5 pr-2">Menjador Puntual + Casal Tarda</td><td className="py-1.5 pr-2">–</td><td className="py-1.5 text-right">9 €</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
+              <div className="mt-2 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
+                  05
+                </div>
+                <h2 className="text-lg font-bold text-black sm:text-xl">
+                  Què entra amb el preu
+                </h2>
+              </div>
+              <ul className="mt-4 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Monitors/es contractats amb alta a la S.S..
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Garantia del compliment de la nova normativa de la Generalitat de Catalunya (Decret 267/2016, de 5 de juliol).
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Mútua d&apos;accidents.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  10% de descompte a aplicar al segon germà/na.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Gestió d&apos;inscripcions i cobraments (famílies i beques).
+                </li>
+              </ul>
+            </article>
+            <article className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 text-left shadow-lg sm:p-7">
+              <div className="mt-2 flex items-center gap-3">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xl font-bold text-black">
+                  06
+                </div>
+                <h2 className="text-lg font-bold text-black sm:text-xl">
+                  Activitats diàries
+                </h2>
+              </div>
+              <p className="mt-4 text-sm text-slate-600 leading-relaxed">
+                El dia es divideix en franjes horàries, prioritzant activitats relaxades en les hores de més calor.
+              </p>
+              <p className="mt-3 text-sm font-semibold text-slate-800">
+                Exemple d&apos;horari setmanal:
+              </p>
+              <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  <strong>08:00 – 09:00:</strong> Acollida.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  <strong>09:00:</strong> Recepció.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  Activitats destacades: Piscina (dimarts), Sortida/Excursió (dijous), Gimcana d&apos;aigua (dilluns, dimecres i divendres).
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  <strong>14:00 – 15:00:</strong> Dinar.
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-800" />
+                  <strong>15:00 – 16:30:</strong> Tallers de tarda (pel·lícula, manualitats, música, jocs de taula i relaxació).
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
       </div>
 
       <CasalsGallery />
