@@ -64,14 +64,13 @@ function processPost(
     ? `https://img.youtube.com/vi/${youtubeMatch[1]}/hqdefault.jpg`
     : undefined;
   const postThumbnail = post.post_thumbnail as { URL?: string } | undefined;
-  const rawImage =
-    post.featured_image && post.featured_image !== ""
-      ? post.featured_image
-      : postThumbnail?.URL ||
-        imgMatch?.[1] ||
-        attachmentImage ||
-        youtubeThumbnail ||
-        undefined;
+  const featured = typeof post.featured_image === "string" && post.featured_image !== "" ? post.featured_image : undefined;
+  const rawImage: string | undefined =
+    featured ??
+    postThumbnail?.URL ??
+    imgMatch?.[1] ??
+    attachmentImage ??
+    youtubeThumbnail;
   const image = getAllowedImageUrl(rawImage);
   const cleanExcerpt = ((post.excerpt as string) ?? "")
     .replace(/<[^>]+>/g, "")
