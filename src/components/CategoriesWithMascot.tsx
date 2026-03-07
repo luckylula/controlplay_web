@@ -26,7 +26,7 @@ type Props = {
 
 export function CategoriesWithMascot({ categories }: Props) {
   return (
-    <div className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:h-full lg:min-h-0 lg:max-h-full lg:items-stretch">
+    <div className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch">
       {categories.map((item) => {
         const logoOnVideo = "logoOnVideo" in item && item.logoOnVideo;
         const logoBelowVideo = "logoBelowVideo" in item && item.logoBelowVideo;
@@ -46,7 +46,7 @@ export function CategoriesWithMascot({ categories }: Props) {
               </div>
             )}
             <div
-              className={`relative min-h-[200px] w-full flex-1 overflow-hidden bg-slate-100 sm:min-h-0 ${logoOnVideo || logoBelowVideo || logoAlsoAtBottom ? "rounded-t-xl" : ""}`}
+              className={`relative min-h-[200px] w-full flex-1 overflow-hidden bg-slate-100 sm:min-h-0 lg:min-h-[220px] lg:flex-none lg:shrink-0 ${logoOnVideo || logoBelowVideo || logoAlsoAtBottom ? "rounded-t-xl" : ""}`}
             >
               <CoverVideo
                 src={item.video}
@@ -79,10 +79,11 @@ export function CategoriesWithMascot({ categories }: Props) {
               </div>
             )}
             <div
-              className={`flex min-h-0 flex-1 flex-col border border-t-0 border-slate-200 bg-white p-3 shadow-sm sm:p-4 lg:p-5 ${logoAlsoAtBottom ? "" : "rounded-b-xl"}`}
+              className={`flex min-h-0 flex-1 flex-col border border-t-0 border-slate-200 bg-white shadow-sm pt-3 pr-3 pb-4 pl-3 sm:pt-4 sm:pr-4 sm:pb-5 sm:pl-4 lg:pt-5 lg:pr-5 lg:pb-6 lg:pl-5 ${logoAlsoAtBottom ? "" : "rounded-b-xl"}`}
             >
               <h3 className="shrink-0 font-semibold text-slate-900 sm:text-base lg:text-lg">{item.title}</h3>
-              <p className="mt-1 min-h-0 flex-1 overflow-hidden text-xs leading-relaxed text-slate-600 line-clamp-3 sm:line-clamp-4 lg:line-clamp-5 lg:text-sm">{item.description}</p>
+              <p className="mt-1 shrink-0 overflow-hidden text-xs leading-relaxed text-slate-600 line-clamp-3 sm:line-clamp-4 lg:line-clamp-5 lg:text-sm">{item.description}</p>
+              <div className="min-h-0 flex-1" aria-hidden />
             </div>
             {logoAlsoAtBottom && (
               <div className="flex min-h-[60px] items-center justify-center overflow-hidden rounded-b-xl border border-t-0 border-slate-200 bg-white py-4">

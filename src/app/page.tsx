@@ -63,7 +63,7 @@ export default function Home() {
 
       {/* Categories – 4 icons – d’costat a costat; arriben als vores de la pàgina */}
       <section className={`flex flex-col w-full overflow-visible ${CONTENT_SECTION_HEIGHT} lg:overflow-hidden`}>
-        <div className="mx-auto flex w-full flex-1 flex-col px-4 pt-6 pb-2 sm:px-6 sm:pt-8 lg:min-h-0 lg:pt-[2cm] lg:px-8">
+        <div className="mx-auto flex w-full flex-col px-4 pt-6 pb-2 sm:px-6 sm:pt-8 lg:pt-[2cm] lg:px-8">
           <CategoriesWithMascot categories={CATEGORIES} />
         </div>
       </section>
