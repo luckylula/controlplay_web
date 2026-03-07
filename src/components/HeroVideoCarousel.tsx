@@ -38,7 +38,7 @@ export function HeroVideoCarousel() {
             muted
             loop
             playsInline
-            className="h-full w-full object-cover"
+            className={`h-full w-full object-cover ${src.endsWith("videoportada3.mp4") ? "object-[center_20%]" : ""}`}
             src={src}
           />
         </div>
