@@ -3,11 +3,10 @@ import Link from "next/link";
 import { HeroVideoCarousel } from "@/components/HeroVideoCarousel";
 import { CategoriesWithMascot } from "@/components/CategoriesWithMascot";
 import { ContactForm } from "@/components/ContactForm";
-import { ExtraescolarsCards } from "@/components/ExtraescolarsCards";
 import { ExtraescolarsPortadaCarousel } from "@/components/ExtraescolarsPortadaCarousel";
+import { NoticiesWithWordPress } from "@/components/NoticiesWithWordPress";
 import { contact } from "@/lib/navigation";
 import { COVER_STRIP_HEIGHT, CONTENT_SECTION_HEIGHT } from "@/lib/layout";
-import { NOTICIES } from "@/lib/noticies";
 
 /** Vídeos de portada en public/images/portada/. Logo i text sota cada vídeo. */
 const CATEGORIES = [
@@ -111,9 +110,8 @@ export default function Home() {
       {/* Franja Extraescolars – carrusel de 3 vídeos */}
       <ExtraescolarsPortadaCarousel />
 
-      {/* Notícies – targetes desplaçables; la fletxa enllaça a Totes les notícies */}
-      <ExtraescolarsCards
-        activities={NOTICIES}
+      {/* Notícies – targetes desplaçables (estàtiques + WordPress); la fletxa enllaça a Totes les notícies */}
+      <NoticiesWithWordPress
         title="Descobreix les nostres notícies"
         description="Novetats i informació del nostre dia a dia."
         ctaHref="/noticies"

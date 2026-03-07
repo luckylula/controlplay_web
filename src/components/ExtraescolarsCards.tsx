@@ -10,6 +10,8 @@ export type ActivityCard = {
   href: string;
   /** Optional image path (e.g. /images/activitats/robotica.jpg). If missing, a placeholder is shown. */
   image?: string;
+  /** Optional background color (e.g. #F97316) when no image; otherwise uses gradient from CARD_COLORS. */
+  bgColor?: string;
 };
 
 type Props = {
@@ -181,7 +183,8 @@ export function ExtraescolarsCards({
                             />
                           ) : (
                             <div
-                              className={`h-full w-full bg-gradient-to-br ${CARD_COLORS[(originalIndex + 1) % CARD_COLORS.length]} flex items-center justify-center`}
+                              className={`h-full w-full flex items-center justify-center ${item.bgColor ? "" : `bg-gradient-to-br ${CARD_COLORS[(originalIndex + 1) % CARD_COLORS.length]}`}`}
+                              style={item.bgColor ? { backgroundColor: item.bgColor } : undefined}
                             >
                               <span className="text-5xl font-bold text-white/90">
                                 {item.label.charAt(0)}

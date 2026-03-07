@@ -32,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ca">
-      <body className={`${poppins.variable} font-sans antialiased min-h-screen flex flex-col bg-white text-slate-900`}>
+    <html lang="ca" suppressHydrationWarning>
+      <body className={`${poppins.variable} font-sans antialiased min-h-screen flex flex-col bg-white text-slate-900`} suppressHydrationWarning>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
