@@ -35,18 +35,18 @@ export function CategoriesWithMascot({ categories }: Props) {
         const content = (
           <>
             {showLogoOnTop && (
-              <div className="flex h-14 shrink-0 items-center justify-center overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white px-2 py-2 sm:h-16 sm:py-3 lg:h-20 lg:py-4">
+              <div className="flex h-16 shrink-0 items-center justify-center overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white px-2 py-2 sm:h-16 sm:py-3 lg:h-20 lg:py-4">
                 <Image
                   src={item.logo}
                   alt=""
                   width={240}
                   height={80}
-                  className="h-10 w-full max-w-full object-contain sm:h-12 lg:h-14"
+                  className="h-12 w-full max-w-full object-contain sm:h-12 lg:h-14"
                 />
               </div>
             )}
             <div
-              className={`relative min-h-0 w-full flex-1 overflow-hidden bg-slate-100 ${logoOnVideo || logoBelowVideo || logoAlsoAtBottom ? "rounded-t-xl" : ""}`}
+              className={`relative min-h-[200px] w-full flex-1 overflow-hidden bg-slate-100 sm:min-h-0 ${logoOnVideo || logoBelowVideo || logoAlsoAtBottom ? "rounded-t-xl" : ""}`}
             >
               <CoverVideo
                 src={item.video}
@@ -55,7 +55,7 @@ export function CategoriesWithMascot({ categories }: Props) {
                 scale={"videoScale" in item ? item.videoScale : undefined}
               />
               {logoOnVideo && (
-                <div className="absolute right-3 top-3 z-10 h-14 w-14 overflow-hidden rounded-full shadow-md sm:h-16 sm:w-16">
+                <div className="absolute right-3 top-3 z-10 h-16 w-16 overflow-hidden rounded-full shadow-md sm:h-16 lg:h-16">
                   <Image
                     src={item.logo}
                     alt=""
