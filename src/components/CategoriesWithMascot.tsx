@@ -26,7 +26,7 @@ type Props = {
 
 export function CategoriesWithMascot({ categories }: Props) {
   return (
-    <div className="grid h-full min-h-0 max-h-full gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch">
+    <div className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:h-full lg:min-h-0 lg:max-h-full lg:items-stretch">
       {categories.map((item) => {
         const logoOnVideo = "logoOnVideo" in item && item.logoOnVideo;
         const logoBelowVideo = "logoBelowVideo" in item && item.logoBelowVideo;

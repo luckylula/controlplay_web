@@ -6,7 +6,7 @@ import { ContactForm } from "@/components/ContactForm";
 import { ExtraescolarsCards } from "@/components/ExtraescolarsCards";
 import { ExtraescolarsPortadaCarousel } from "@/components/ExtraescolarsPortadaCarousel";
 import { contact } from "@/lib/navigation";
-import { COVER_STRIP_HEIGHT } from "@/lib/layout";
+import { COVER_STRIP_HEIGHT, CONTENT_SECTION_HEIGHT } from "@/lib/layout";
 import { NOTICIES } from "@/lib/noticies";
 
 /** Vídeos de portada en public/images/portada/. Logo i text sota cada vídeo. */
@@ -62,20 +62,20 @@ export default function Home() {
       <HeroVideoCarousel />
 
       {/* Categories – 4 icons – d’costat a costat; arriben als vores de la pàgina */}
-      <section className={`flex flex-col ${COVER_STRIP_HEIGHT} overflow-hidden`}>
-        <div className="mx-auto flex min-h-0 w-full flex-1 flex-col pt-[2cm] px-4 sm:px-6 lg:px-8">
+      <section className={`flex flex-col w-full overflow-visible ${CONTENT_SECTION_HEIGHT} lg:overflow-hidden`}>
+        <div className="mx-auto flex w-full flex-1 flex-col px-4 pt-6 pb-2 sm:px-6 sm:pt-8 lg:min-h-0 lg:pt-[2cm] lg:px-8">
           <CategoriesWithMascot categories={CATEGORIES} />
         </div>
       </section>
 
       {/* Equip Control Play – mateix alt que la resta de franjes; s’expandeix en pantalles grans */}
-      <section className={`flex flex-col ${COVER_STRIP_HEIGHT} overflow-hidden border-t border-slate-200 bg-white`}>
-        <div className="mx-auto flex min-h-0 w-full flex-1 flex-col justify-center overflow-hidden px-4 py-6 sm:px-6 sm:py-8 lg:px-8 lg:py-10">
+      <section className={`flex flex-col w-full overflow-visible border-t border-slate-200 bg-white ${CONTENT_SECTION_HEIGHT} lg:overflow-hidden`}>
+        <div className="mx-auto flex w-full flex-1 flex-col justify-center px-4 py-6 sm:px-6 sm:py-8 lg:min-h-0 lg:overflow-hidden lg:px-8 lg:py-10">
           <h2 className="shrink-0 text-2xl font-bold text-slate-900 sm:text-3xl lg:text-4xl">
             Equip Control Play
           </h2>
           <div className="mt-4 grid min-h-0 flex-1 grid-cols-1 items-stretch gap-4 sm:mt-6 sm:gap-6 lg:grid-cols-[minmax(0,1fr)_1.2fr] lg:gap-8">
-            <div className="relative min-h-0 min-w-0 flex-1 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
+            <div className="relative min-h-[200px] min-w-0 flex-1 overflow-hidden rounded-xl border border-slate-200 bg-slate-100 sm:min-h-[260px] lg:min-h-0">
               <Image
                 src="/images/portada/staff.png"
                 alt="Equip Control Play"
@@ -120,8 +120,8 @@ export default function Home() {
         ctaLabel="Totes les notícies"
       />
 
-      {/* Contacte – mateix alt que la resta de franjes */}
-      <section id="contacte" className={`flex ${COVER_STRIP_HEIGHT} items-center bg-slate-900 text-white`}>
+      {/* Contacte – en mòbil creix amb el contingut; en desktop franja fixa */}
+      <section id="contacte" className="flex min-h-0 w-full flex-col overflow-visible py-10 sm:py-12 lg:h-[640px] xl:h-[720px] lg:min-h-[640px] lg:items-center lg:overflow-hidden bg-slate-900 text-white">
         <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:grid-cols-3 lg:gap-6 lg:px-8">
           <div className="relative min-h-[140px] overflow-hidden rounded-lg lg:min-h-0 lg:h-full">
             <Image
