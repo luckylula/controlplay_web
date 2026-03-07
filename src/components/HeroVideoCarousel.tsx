@@ -25,13 +25,14 @@ export function HeroVideoCarousel() {
   }, []);
 
   return (
-    <section className={`relative ${COVER_STRIP_HEIGHT} w-full overflow-hidden bg-slate-900`}>
+    <section className={`relative ${COVER_STRIP_HEIGHT} w-full overflow-hidden bg-slate-900`} suppressHydrationWarning>
       {HERO_VIDEOS.map((src, i) => (
         <div
           key={src}
           className={`absolute inset-0 transition-opacity duration-700 ${
             i === index ? "z-10 opacity-100" : "z-0 opacity-0"
           }`}
+          suppressHydrationWarning
         >
           <video
             autoPlay
@@ -44,8 +45,8 @@ export function HeroVideoCarousel() {
         </div>
       ))}
       {/* Overlay oscuro (sin recorte: sin marco visible alrededor de la mascota) */}
-      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/30 px-4 pt-20 pb-20 sm:pt-0 sm:pb-0">
-        <div className="max-w-3xl text-center text-white">
+      <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/30 px-4 pt-20 pb-20 sm:pt-0 sm:pb-0" suppressHydrationWarning>
+        <div className="max-w-3xl text-center text-white" suppressHydrationWarning>
           <h1 className="text-4xl font-bold tracking-tight drop-shadow-lg sm:text-5xl lg:text-6xl">
             Control Play
           </h1>
@@ -54,7 +55,7 @@ export function HeroVideoCarousel() {
           </p>
         </div>
       </div>
-      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2 pb-[env(safe-area-inset-bottom)]">
+      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2 pb-[env(safe-area-inset-bottom)]" suppressHydrationWarning>
         {HERO_VIDEOS.map((_, i) => (
           <button
             key={i}

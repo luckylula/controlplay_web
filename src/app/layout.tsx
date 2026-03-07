@@ -35,7 +35,7 @@ export default function RootLayout({
     <html lang="ca" suppressHydrationWarning>
       <body className={`${poppins.variable} font-sans antialiased min-h-screen flex flex-col bg-white text-slate-900`} suppressHydrationWarning>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1" suppressHydrationWarning>{children}</main>
         <Footer />
       </body>
     </html>

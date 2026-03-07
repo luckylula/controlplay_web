@@ -46,6 +46,11 @@ const CARD_COLORS = [
 
 const DEFAULT_DESCRIPTION = "Activitats lúdiques, esportives i formatives per a tot l'any.";
 
+/** Alçada fixa de totes les targetes (mascota + WordPress) per a una graella uniforme */
+const CARD_HEIGHT = 480;
+/** Alçada de la zona d'imatge en les targetes de notícies (la resta és text) */
+const CARD_IMAGE_HEIGHT = 260;
+
 export function ExtraescolarsCards({
   activities,
   title = "Descobreix les nostres notícies",
@@ -130,17 +135,19 @@ export function ExtraescolarsCards({
           </Link>
         </div>
 
-        {/* Carrusel: primera targeta fixa (només vídeo) + la resta que es desplacen */}
+        {/* Carrusel: primera targeta fixa (només vídeo, mateixa alçada que la resta) + la resta que es desplacen */}
         <div ref={scrollContainerRef} className="mt-4 flex gap-3 sm:gap-4 overflow-hidden">
-          {/* Primera targeta fixa: només vídeo */}
+          {/* Primera targeta fixa: només vídeo mascota — mateixa alçada que la resta, imatge a tota la targeta */}
           {activities.length > 0 && (
-            <div className="shrink-0 w-[320px] sm:w-[400px]">
+            <div
+              className="shrink-0 w-[320px] sm:w-[400px]"
+              style={{ height: CARD_HEIGHT }}
+            >
               <Link
                 href={activities[0].href}
-                className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="group block h-full overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
-                {/* Vídeo ocupa tota l’alçada de la targeta (mateix total que imatge + text de la resta) */}
-                <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "400/462" }}>
+                <div className="relative h-full w-full overflow-hidden bg-slate-100">
                   <video
                     autoPlay
                     muted
@@ -169,12 +176,16 @@ export function ExtraescolarsCards({
                       key={`${item.href}-${index}`}
                       ref={index < restLength ? (el) => { cardRefs.current[originalIndex + 1] = el; } : undefined}
                       className="shrink-0 w-[320px] sm:w-[400px]"
+                      style={{ height: CARD_HEIGHT }}
                     >
                       <Link
                         href={item.href}
-                        className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                        className="group flex h-full flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                       >
-                        <div className="relative w-full overflow-hidden bg-slate-100" style={{ aspectRatio: "400/360" }}>
+                        <div
+                          className="relative w-full shrink-0 overflow-hidden bg-slate-100"
+                          style={{ height: CARD_IMAGE_HEIGHT }}
+                        >
                           {item.image ? (
                             <Image
                               src={item.image}
@@ -185,7 +196,7 @@ export function ExtraescolarsCards({
                             />
                           ) : (
                             <div
-                              className={`h-full w-full flex items-center justify-center ${item.bgColor ? "" : `bg-gradient-to-br ${CARD_COLORS[(originalIndex + 1) % CARD_COLORS.length]}`}`}
+                              className={`flex h-full w-full items-center justify-center ${item.bgColor ? "" : `bg-gradient-to-br ${CARD_COLORS[(originalIndex + 1) % CARD_COLORS.length]}`}`}
                               style={item.bgColor ? { backgroundColor: item.bgColor } : undefined}
                             >
                               <span className="text-5xl font-bold text-white/90">
@@ -194,16 +205,16 @@ export function ExtraescolarsCards({
                             </div>
                           )}
                         </div>
-                        <div className="p-4 sm:p-5">
+                        <div className="flex min-h-0 flex-1 flex-col overflow-hidden p-4 sm:p-5">
                           {item.subtitle ? (
-                            <p className="text-xs font-medium uppercase tracking-wide text-slate-500 sm:text-sm">
+                            <p className="shrink-0 text-xs font-medium uppercase tracking-wide text-slate-500 sm:text-sm">
                               {item.subtitle}
                             </p>
                           ) : null}
-                          <h3 className={`text-base font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-lg ${item.subtitle ? "mt-1" : ""}`}>
+                          <h3 className={`min-h-0 overflow-hidden text-base font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-lg ${item.subtitle ? "mt-1" : ""}`}>
                             {item.label}
                           </h3>
-                          <span className="mt-2 inline-block text-sm font-medium text-blue-600 sm:text-base">
+                          <span className="mt-auto shrink-0 pt-2 inline-block text-sm font-medium text-blue-600 sm:text-base">
                             Saber més →
                           </span>
                         </div>
