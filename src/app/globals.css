@@ -19,6 +19,17 @@
   }
 }
 
+/* Offset anchor scroll so sticky header does not cover content (mobile + desktop) */
+html {
+  scroll-padding-top: 11rem; /* ~176px: top bar + logo row */
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 10.5rem; /* ~168px: slightly smaller on md+ */
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

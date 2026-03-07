@@ -133,7 +133,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 pl-[1cm] pr-4 py-3 lg:pr-5 lg:py-4">
+          <div className="flex min-h-0 flex-col justify-center overflow-hidden rounded-lg bg-slate-800/50 px-4 py-3 lg:pl-[1cm] lg:pr-5 lg:py-4">
             <h2 className="text-center text-3xl font-bold sm:text-4xl lg:text-5xl">Contacte</h2>
             <p className="mt-0 text-[15px] font-semibold text-white sm:text-[17px]">
               Teniu preguntes? Estem aquí per ajudar-vos.

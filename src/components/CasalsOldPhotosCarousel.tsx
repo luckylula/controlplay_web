@@ -163,7 +163,7 @@ export function CasalsOldPhotosCarousel() {
 
       {openIndex !== null && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
           onClick={closeLightbox}
           role="dialog"
           aria-modal="true"

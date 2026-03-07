@@ -44,7 +44,7 @@ export function ExtraescolarsPortadaCarousel() {
         </div>
       ))}
       <div className="absolute inset-0 z-10 bg-black/40" aria-hidden />
-      <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 py-12 text-center sm:py-16">
+      <div className="relative z-20 flex h-full flex-col items-center justify-center px-4 pt-24 pb-24 text-center sm:py-16">
         <p className="text-sm font-semibold uppercase tracking-wider text-blue-400 sm:text-base">
           Durant tot l&apos;any !
         </p>
@@ -59,7 +59,7 @@ export function ExtraescolarsPortadaCarousel() {
           Descobreix les activitats
         </Link>
       </div>
-      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2">
+      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2 pb-[env(safe-area-inset-bottom)]">
         {EXTRA_VIDEOS.map((_, i) => (
           <button
             key={i}

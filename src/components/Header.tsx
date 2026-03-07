@@ -47,7 +47,7 @@ export function Header() {
   const [logoError, setLogoError] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white pt-[env(safe-area-inset-top)]">
       {/* Top bar: phone + email */}
       <div className="border-b border-slate-200/60 bg-white">
         <div className="mx-auto flex w-full flex-wrap items-center justify-end gap-x-6 gap-y-1 px-4 py-2 text-sm sm:py-2.5 sm:px-6 sm:text-base lg:px-8">
@@ -183,7 +183,7 @@ export function Header() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="border-t border-slate-200 bg-white md:hidden">
+        <div className="max-h-[min(60vh,400px)] overflow-y-auto border-t border-slate-200 bg-white md:hidden">
           <nav className="flex flex-col gap-0 px-4 py-3">
             {mainNav.map((item) => {
               if (item.external) {

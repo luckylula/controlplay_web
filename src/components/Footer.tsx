@@ -6,7 +6,7 @@ const legalLinks = footerNav.filter((link) => LEGAL_HREFS.includes(link.href));
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-slate-200 bg-slate-50">
+    <footer className="w-full border-t border-slate-200 bg-slate-50 pb-[env(safe-area-inset-bottom)]">
       {/* Informació legal – ample complet, text alineat a la dreta */}
       <div className="w-full px-4 py-8 text-right sm:px-6 lg:px-8 xl:px-10 2xl:px-12">
         <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">

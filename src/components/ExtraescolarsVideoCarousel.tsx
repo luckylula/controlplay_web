@@ -42,7 +42,7 @@ export function ExtraescolarsVideoCarousel() {
           />
         </div>
       ))}
-      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2">
+      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2 pb-[env(safe-area-inset-bottom)]">
         {EXTRAESCOLARS_VIDEOS.map((_, i) => (
           <button
             key={i}

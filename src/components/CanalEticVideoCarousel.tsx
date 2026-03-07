@@ -39,7 +39,7 @@ export function CanalEticVideoCarousel() {
           />
         </div>
       ))}
-      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2">
+      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2 pb-[env(safe-area-inset-bottom)]">
         {CANAL_ETIC_VIDEOS.map((_, i) => (
           <button
             key={i}
