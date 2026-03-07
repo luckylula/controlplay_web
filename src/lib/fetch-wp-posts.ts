@@ -63,10 +63,11 @@ function processPost(
   const youtubeThumbnail = youtubeMatch
     ? `https://img.youtube.com/vi/${youtubeMatch[1]}/hqdefault.jpg`
     : undefined;
+  const postThumbnail = post.post_thumbnail as { URL?: string } | undefined;
   const rawImage =
     post.featured_image && post.featured_image !== ""
       ? post.featured_image
-      : post.post_thumbnail?.URL ||
+      : postThumbnail?.URL ||
         imgMatch?.[1] ||
         attachmentImage ||
         youtubeThumbnail ||
