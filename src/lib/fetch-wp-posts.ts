@@ -109,7 +109,7 @@ async function fetchPostsFromSource(
     const posts = data?.posts ?? [];
     return posts
       .map((post: Record<string, unknown>) => processPost(post, source))
-      .filter((item): item is WPPostItem => item !== null);
+      .filter((item: WPPostItem | null): item is WPPostItem => item !== null);
   } catch {
     return [];
   }
