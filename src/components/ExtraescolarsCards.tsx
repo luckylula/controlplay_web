@@ -12,6 +12,8 @@ export type ActivityCard = {
   image?: string;
   /** Optional background color (e.g. #F97316) when no image; otherwise uses gradient from CARD_COLORS. */
   bgColor?: string;
+  /** Optional subtitle or label above the title (e.g. school name for WordPress news). */
+  subtitle?: string;
 };
 
 type Props = {
@@ -193,7 +195,12 @@ export function ExtraescolarsCards({
                           )}
                         </div>
                         <div className="p-4 sm:p-5">
-                          <h3 className="text-base font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-lg">
+                          {item.subtitle ? (
+                            <p className="text-xs font-medium uppercase tracking-wide text-slate-500 sm:text-sm">
+                              {item.subtitle}
+                            </p>
+                          ) : null}
+                          <h3 className={`text-base font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-lg ${item.subtitle ? "mt-1" : ""}`}>
                             {item.label}
                           </h3>
                           <span className="mt-2 inline-block text-sm font-medium text-blue-600 sm:text-base">

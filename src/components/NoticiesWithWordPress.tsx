@@ -38,6 +38,7 @@ export function NoticiesWithWordPress({
           href: `/noticies/${p.id}?source=${p.sourceId}`,
           image: p.image || undefined,
           bgColor: !p.image ? wpCardColors[i % 4] : undefined,
+          subtitle: p.sourceName,
         }));
         setActivities(wpCards);
       })
