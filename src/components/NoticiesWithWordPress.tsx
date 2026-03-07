@@ -33,12 +33,16 @@ export function NoticiesWithWordPress({
         console.log("Posts rebuts de WordPress:", data?.posts);
         if (cancelled || !data?.posts?.length) return;
         const wpCardColors = ["#F97316", "#EC4899", "#3B82F6", "#10B981"];
+        const singleSource =
+          data.posts.length > 0 &&
+          data.posts.every((p) => p.sourceId === data.posts[0].sourceId);
         const wpCards: ActivityCard[] = data.posts.map((p, i) => ({
           label: p.title,
           href: `/noticies/${p.id}?source=${p.sourceId}`,
           image: p.image || undefined,
           bgColor: !p.image ? wpCardColors[i % 4] : undefined,
-          subtitle: p.sourceName,
+          subtitle: singleSource ? undefined : p.sourceName,
+          excerpt: p.excerpt,
         }));
         setActivities(wpCards);
       })

@@ -14,6 +14,8 @@ export type ActivityCard = {
   bgColor?: string;
   /** Optional subtitle or label above the title (e.g. school name for WordPress news). */
   subtitle?: string;
+  /** Optional short excerpt below the title (e.g. WordPress post excerpt). */
+  excerpt?: string;
 };
 
 type Props = {
@@ -214,6 +216,11 @@ export function ExtraescolarsCards({
                           <h3 className={`min-h-0 overflow-hidden text-base font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-lg ${item.subtitle ? "mt-1" : ""}`}>
                             {item.label}
                           </h3>
+                          {item.excerpt ? (
+                            <p className="mt-1 min-h-0 overflow-hidden text-xs text-slate-500 line-clamp-4 sm:text-sm">
+                              {item.excerpt}
+                            </p>
+                          ) : null}
                           <span className="mt-auto shrink-0 pt-2 inline-block text-sm font-medium text-blue-600 sm:text-base">
                             Saber més →
                           </span>

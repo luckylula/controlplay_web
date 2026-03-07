@@ -39,70 +39,85 @@ export type WPPostItem = {
   sourceName: string;
   title: string;
   image?: string;
+  excerpt?: string;
 };
 
-export async function fetchWpPosts(limit = 50): Promise<WPPostItem[]> {
-  const results: WPPostItem[] = [];
+/** Processa un post de l'API WordPress i retorna WPPostItem */
+function processPost(
+  post: Record<string, unknown>,
+  source: (typeof WORDPRESS_SOURCES)[number]
+): WPPostItem | null {
+  const title = typeof post.title === "string" ? post.title.trim() : "";
+  const slug = typeof post.slug === "string" ? decodeURIComponent(post.slug) : String(post.ID ?? "");
+  const imgMatch =
+    typeof post.content === "string"
+      ? post.content.replace(/\n/g, " ").match(/<img[^>]+src=["']([^"']+)["']/)
+      : null;
+  const attachmentImage = post.attachments
+    ? Object.values(post.attachments as Record<string, { URL?: string }>)[0]?.URL
+    : undefined;
+  const youtubeMatch =
+    typeof post.content === "string"
+      ? post.content.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/)
+      : null;
+  const youtubeThumbnail = youtubeMatch
+    ? `https://img.youtube.com/vi/${youtubeMatch[1]}/hqdefault.jpg`
+    : undefined;
+  const rawImage =
+    post.featured_image && post.featured_image !== ""
+      ? post.featured_image
+      : post.post_thumbnail?.URL ||
+        imgMatch?.[1] ||
+        attachmentImage ||
+        youtubeThumbnail ||
+        undefined;
+  const image = getAllowedImageUrl(rawImage);
+  const cleanExcerpt = ((post.excerpt as string) ?? "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\[&hellip;\]/g, "")
+    .trim();
 
-  for (const source of WORDPRESS_SOURCES) {
-    try {
-      const hostname = getHostname(source.url);
-      const url = getWpComPostsListUrl(hostname, limit);
-      const res = await fetch(url, { next: { revalidate: 60 } });
-      if (!res.ok) continue;
-      const data = await res.json();
-      const posts = data?.posts ?? [];
-      for (const post of posts) {
-        const title = typeof post.title === "string" ? post.title.trim() : "";
-        const slug = typeof post.slug === "string" ? decodeURIComponent(post.slug) : String(post.ID ?? "");
-        const imgMatch =
-          typeof post.content === "string"
-            ? post.content.replace(/\n/g, " ").match(/<img[^>]+src=["']([^"']+)["']/)
-            : null;
-        const attachmentImage = post.attachments
-          ? Object.values(post.attachments as Record<string, { URL?: string }>)[0]?.URL
-          : undefined;
-        const youtubeMatch = post.content?.match(
-          /youtube\.com\/embed\/([a-zA-Z0-9_-]{11})/
-        );
-        const youtubeThumbnail = youtubeMatch
-          ? `https://img.youtube.com/vi/${youtubeMatch[1]}/hqdefault.jpg`
-          : undefined;
-        const rawImage =
-          post.featured_image && post.featured_image !== ""
-            ? post.featured_image
-            : post.post_thumbnail?.URL ||
-              imgMatch?.[1] ||
-              attachmentImage ||
-              youtubeThumbnail ||
-              undefined;
-        const image = getAllowedImageUrl(rawImage);
+  const dotIndex = cleanExcerpt.indexOf(".", 40);
+  const excerpt =
+    dotIndex !== -1 && dotIndex < 150
+      ? cleanExcerpt.slice(0, dotIndex + 1)
+      : cleanExcerpt.length > 150
+        ? cleanExcerpt.slice(0, 150).replace(/\s\S+$/, "").trim() + "…"
+        : cleanExcerpt;
+  return {
+    id: post.ID as number,
+    slug,
+    sourceId: source.id,
+    sourceName: source.name,
+    title,
+    image,
+    excerpt: excerpt || undefined,
+  };
+}
 
-        // TODO: eliminar quan deixi de fer falta depurar
-        console.log("[wp-posts]", {
-          sourceId: source.id,
-          postId: post.ID,
-          featured_image: post.featured_image ?? "(empty)",
-          imageInContent: !!imgMatch?.[1],
-          imgSrc: imgMatch?.[1] ?? "(none)",
-          attachmentImage: attachmentImage ?? "(none)",
-          youtubeThumbnail: youtubeThumbnail ?? "(none)",
-          finalImage: image ?? "(none)",
-        });
-
-        results.push({
-          id: post.ID,
-          slug,
-          sourceId: source.id,
-          sourceName: source.name,
-          title,
-          image,
-        });
-      }
-    } catch {
-      // skip failed source
-    }
+/** Obté posts d'una sola font (per cridar en paral·lel) */
+async function fetchPostsFromSource(
+  source: (typeof WORDPRESS_SOURCES)[number],
+  limit: number
+): Promise<WPPostItem[]> {
+  try {
+    const hostname = getHostname(source.url);
+    const url = getWpComPostsListUrl(hostname, limit);
+    const res = await fetch(url, { next: { revalidate: 60 } });
+    if (!res.ok) return [];
+    const data = await res.json();
+    const posts = data?.posts ?? [];
+    return posts
+      .map((post: Record<string, unknown>) => processPost(post, source))
+      .filter((item): item is WPPostItem => item !== null);
+  } catch {
+    return [];
   }
+}
 
-  return results;
+export async function fetchWpPosts(limit = 50): Promise<WPPostItem[]> {
+  const batches = await Promise.all(
+    WORDPRESS_SOURCES.map((source) => fetchPostsFromSource(source, limit))
+  );
+  return batches.flat();
 }

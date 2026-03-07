@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   description: "Notícies i novetats de Control Play: activitats extraescolars, menjadors, casals i més.",
 };
 
+/** Revalidar la pàgina com a màxim cada 60 s per mostrar notícies actualitzades (mateix que l’API) */
+export const revalidate = 60;
+
 const CARD_COLORS = ["#F97316", "#EC4899", "#3B82F6", "#10B981"];
 
 export default async function NoticiesPage() {
