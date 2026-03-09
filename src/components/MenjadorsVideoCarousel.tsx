@@ -34,7 +34,7 @@ export function MenjadorsVideoCarousel() {
             muted
             loop
             playsInline
-            className="h-full w-full object-cover object-bottom"
+            className={`h-full w-full object-cover ${i === 1 ? "object-[50%_28%]" : "object-bottom"}`}
             src={src}
           />
         </div>
