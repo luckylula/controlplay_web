@@ -424,7 +424,7 @@ function BasquetHandbolVoleyContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/basquet-handbol-voley/basquet1.png"
         imageRight="/images/extraescolars/basquet-handbol-voley/basquet2.png"
-        imageRightClassName="object-[center_38%]"
+        imageRightClassName="object-[center_22%]"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -1251,8 +1251,8 @@ function TallerEstudiContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/taller-estudi/tallerestudi1.png"
         imageRight="/images/extraescolars/taller-estudi/tallerestudi2.png"
-        imageLeftClassName="object-top"
-        imageRightClassName="object-[center_28%]"
+        imageLeftClassName="object-[50%_26%]"
+        imageRightClassName="object-[center_38%]"
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
@@ -1540,8 +1540,9 @@ function TeatreContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/teatre/teatre1.png"
         imageRight="/images/extraescolars/teatre/teatre2.png"
-        imageLeftClassName="object-[center_38%]"
-        imageRightClassName="object-top"
+        imageLeftClassName="object-[center_52%]"
+        imageRightClassName="object-[center_44%]"
+        unoptimized
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>

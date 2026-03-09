@@ -82,6 +82,7 @@ export default function Home() {
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1023px) 100vw, 40vw"
+                unoptimized
               />
             </div>
             <div className="min-h-0 min-w-0 space-y-3 overflow-y-auto text-slate-600 sm:space-y-4">

@@ -21,7 +21,7 @@ export function MenjadorsVideoCarousel() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-black aspect-[21/9] min-h-[260px] max-h-[420px] sm:min-h-[300px] lg:max-h-[520px]">
+    <section className="relative w-full overflow-hidden bg-black aspect-[16/9] min-h-[320px] max-h-[560px] sm:min-h-[380px] sm:max-h-[640px] lg:min-h-[420px] lg:max-h-[720px]">
       {MENJADOR_VIDEOS.map((src, i) => (
         <div
           key={src}

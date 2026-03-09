@@ -9,6 +9,8 @@ type Props = {
   /** Optional: e.g. object-top or object-[center_28%] to show more top of image */
   imageLeftClassName?: string;
   imageRightClassName?: string;
+  /** Set to true for images that are updated often so the browser shows the latest file */
+  unoptimized?: boolean;
   description: ReactNode;
   objectives: ReactNode;
 };
@@ -19,6 +21,7 @@ export function ActivityImagesLayout({
   imageRight,
   imageLeftClassName,
   imageRightClassName,
+  unoptimized,
   description,
   objectives,
 }: Props) {
@@ -36,6 +39,7 @@ export function ActivityImagesLayout({
             fill
             className={`object-cover ${imageRightClassName ?? ""}`.trim()}
             sizes="(max-width: 1024px) 100vw, 46vw"
+            unoptimized={unoptimized}
           />
         </div>
       </section>
@@ -49,6 +53,7 @@ export function ActivityImagesLayout({
             fill
             className={`object-cover ${imageLeftClassName ?? ""}`.trim()}
             sizes="(max-width: 1024px) 100vw, 46vw"
+            unoptimized={unoptimized}
           />
         </div>
         <div className="lg:pl-4">

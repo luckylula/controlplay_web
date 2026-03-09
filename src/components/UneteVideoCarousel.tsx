@@ -34,7 +34,7 @@ export function UneteVideoCarousel() {
             muted
             loop
             playsInline
-            className="h-full w-full object-cover object-center"
+            className={`h-full w-full object-cover ${i === 1 ? "object-[50%_26%]" : "object-center"}`}
             src={src}
           />
         </div>
