@@ -245,6 +245,8 @@ function MultiesportContent() {
       <ActivityImagesLayout
         imageLeft="/images/extraescolars/multiesport/multiesport1.png"
         imageRight="/images/extraescolars/multiesport/multiesport2.png"
+        imageRightClassName="object-[center_66%]"
+        unoptimized
         description={
           <>
             <h2 className="text-xl font-semibold text-slate-900 sm:text-2xl">Descripció</h2>
