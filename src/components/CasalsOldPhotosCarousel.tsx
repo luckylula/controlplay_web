@@ -84,7 +84,7 @@ export function CasalsOldPhotosCarousel() {
     <>
       <section className="mt-14 border-t border-slate-200 pt-12">
         <h2 className="mb-6 text-center text-xl font-semibold text-slate-900 sm:text-2xl">
-          Les nostres fotos de l&apos;any passat
+          Fotos dels nostres Casals
         </h2>
         <div className="relative w-full px-4 sm:px-6 lg:px-8">
           <button

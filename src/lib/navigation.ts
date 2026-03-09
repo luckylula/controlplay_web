@@ -95,7 +95,7 @@ export const contact = {
   /** Telèfon d’oficina (fix) – es mostra primer a la secció de contacte */
   officePhone: "+34 930 102 191",
   phone: "622 61 33 93",
-  email: "info@controlplaysports.com",
+  email: "info@controlplay.cat",
   address: "Carrer Sant Miquel 63, 08620 Sant Vicenç dels Horts, Barcelona.",
   officeHours: [
     "Dilluns - Dijous: 9:00 a 13:00 i 15:00 a 19:00",

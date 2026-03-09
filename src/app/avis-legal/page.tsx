@@ -18,7 +18,7 @@ export default function AvisLegalPage() {
         <li><strong>Domicili Social:</strong> C L SANT MIQUEL 63 – 08620 – SANT VICENÇ DELS HORTS – BARCELONA</li>
         <li><strong>NIF:</strong> G65565228</li>
         <li><strong>Telèfon:</strong> 930102191</li>
-        <li><strong>e-Mail:</strong> noelia@controlplaysports.com</li>
+        <li><strong>e-Mail:</strong> info@controlplay.cat</li>
         <li><strong>Pàgina Web:</strong> <a href="https://www.controlplaysports.com/" className="text-emerald-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.controlplaysports.com/</a></li>
       </ul>
 

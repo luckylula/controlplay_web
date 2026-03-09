@@ -15,7 +15,7 @@ export default function PoliticaPrivacitatPage() {
         <li><strong>CIF:</strong> G65565228</li>
         <li><strong>Domicili:</strong> CL SANT MIQUEL 63 – 08620 – SANT VICENÇ DELS HORTS – BARCELONA</li>
         <li><strong>Telèfon:</strong> 930102191</li>
-        <li><strong>Mail per comunicacions en matèria de Protecció de dades:</strong> <a href="mailto:noelia@controlplaysports.com" className="text-emerald-600 hover:underline">noelia@controlplaysports.com</a></li>
+        <li><strong>Mail per comunicacions en matèria de Protecció de dades:</strong> <a href="mailto:info@controlplay.cat" className="text-emerald-600 hover:underline">info@controlplay.cat</a></li>
       </ul>
 
       <h2 className="mt-12 text-xl font-bold text-slate-900">1.1. Normativa aplicable</h2>
@@ -87,7 +87,7 @@ export default function PoliticaPrivacitatPage() {
 
       <h3 className="mt-6 text-lg font-semibold text-slate-900">6.1. Com exercitar els meus drets?</h3>
       <p className="mt-3 text-slate-700 leading-relaxed">
-        Per exercir els seus drets, ha de dirigir-se al responsable, sol·licitant el corresponent formulari per a l&apos;exercici del dret elegit. Opcionalment, pot acudir a l&apos;Autoritat de Control competent per obtenir informació addicional sobre els seus drets. Les dades de contacte per a l&apos;exercici dels seus drets són el telèfon 930102191 i el correu electrònic: <a href="mailto:noelia@controlplaysports.com" className="text-emerald-600 hover:underline">noelia@controlplaysports.com</a>. Recordeu acompanyar una còpia d&apos;un document que ens permeti identificar-lo.
+        Per exercir els seus drets, ha de dirigir-se al responsable, sol·licitant el corresponent formulari per a l&apos;exercici del dret elegit. Opcionalment, pot acudir a l&apos;Autoritat de Control competent per obtenir informació addicional sobre els seus drets. Les dades de contacte per a l&apos;exercici dels seus drets són el telèfon 930102191 i el correu electrònic: <a href="mailto:info@controlplay.cat" className="text-emerald-600 hover:underline">info@controlplay.cat</a>. Recordeu acompanyar una còpia d&apos;un document que ens permeti identificar-lo.
       </p>
 
       <h2 className="mt-12 text-xl font-bold text-slate-900">7. CONSENTIMENT PER ENVIAR COMUNICACIONS ELECTRÒNIQUES</h2>
