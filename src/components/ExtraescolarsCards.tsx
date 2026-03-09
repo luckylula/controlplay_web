@@ -61,17 +61,36 @@ export function ExtraescolarsCards({
   ctaLabel = "Totes les activitats",
 }: Props) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const mobileContainerRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLLIElement | null)[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const restActivities = activities.length > 1 ? activities.slice(1) : [];
   const restLength = restActivities.length;
   const middleStart = restLength;
   const slideStep = 416;
+  const [mobileStepPx, setMobileStepPx] = useState(336);
+  const [mobileCardWidthPx, setMobileCardWidthPx] = useState(320);
 
   const [slideOffset, setSlideOffset] = useState(() =>
     restLength > 0 ? middleStart + 0 : 0
   );
   const [disableTransition, setDisableTransition] = useState(false);
+
+  useEffect(() => {
+    const el = mobileContainerRef.current;
+    if (!el) return;
+    const update = () => {
+      const w = el.offsetWidth;
+      if (w > 0) {
+        setMobileCardWidthPx(w);
+        setMobileStepPx(w + 12);
+      }
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   useEffect(() => {
     if (restLength === 0) return;
@@ -137,8 +156,52 @@ export function ExtraescolarsCards({
           </Link>
         </div>
 
-        {/* Carrusel: primera targeta fixa (només vídeo, mateixa alçada que la resta) + la resta que es desplacen */}
-        <div ref={scrollContainerRef} className="mt-4 flex gap-3 sm:gap-4 overflow-hidden">
+        {/* Mòbil: una targeta visible, totes (vídeo + notícies) es desplacen amb les fletxes */}
+        <div ref={mobileContainerRef} className="mt-4 overflow-hidden sm:hidden">
+          {activities.length > 0 && (
+            <div
+              className="flex gap-3 transition-transform duration-300 ease-out"
+              style={{ transform: `translateX(-${currentIndex * mobileStepPx}px)` }}
+            >
+              {activities.map((item, index) => (
+                <div
+                  key={index === 0 ? "video" : item.href}
+                  className="shrink-0"
+                  style={{ width: mobileCardWidthPx, height: CARD_HEIGHT }}
+                >
+                  {index === 0 ? (
+                    <Link href={activities[0].href} className="group block h-full overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                      <div className="relative h-full w-full overflow-hidden bg-slate-100">
+                        <video autoPlay muted loop playsInline className="h-full w-full object-cover transition group-hover:scale-105" src="/images/play/play%20multideportes.mp4" />
+                      </div>
+                    </Link>
+                  ) : (
+                    <Link href={item.href} className="group flex h-full flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                      <div className="relative w-full shrink-0 overflow-hidden bg-slate-100" style={{ height: CARD_IMAGE_HEIGHT }}>
+                        {item.image ? (
+                          <Image src={item.image} alt="" fill className="object-cover transition group-hover:scale-105" sizes="320px" />
+                        ) : (
+                          <div className={`flex h-full w-full items-center justify-center ${item.bgColor ? "" : `bg-gradient-to-br ${CARD_COLORS[index % CARD_COLORS.length]}`}`} style={item.bgColor ? { backgroundColor: item.bgColor } : undefined}>
+                            <span className="text-5xl font-bold text-white/90">{item.label.charAt(0)}</span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex min-h-0 flex-1 flex-col overflow-hidden p-4 sm:p-5">
+                        {item.subtitle ? <p className="shrink-0 text-xs font-medium uppercase tracking-wide text-slate-500 sm:text-sm">{item.subtitle}</p> : null}
+                        <h3 className={`min-h-0 overflow-hidden text-base font-semibold text-slate-900 line-clamp-2 group-hover:text-blue-700 sm:text-lg ${item.subtitle ? "mt-1" : ""}`}>{item.label}</h3>
+                        {item.excerpt ? <p className="mt-1 min-h-0 overflow-hidden text-xs text-slate-500 line-clamp-4 sm:text-sm">{item.excerpt}</p> : null}
+                        <span className="mt-auto shrink-0 pt-2 inline-block text-sm font-medium text-blue-600 sm:text-base">Saber més →</span>
+                      </div>
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Desktop (sm+): vídeo fix + la resta es desplacen */}
+        <div ref={scrollContainerRef} className="mt-4 hidden flex gap-3 sm:flex sm:gap-4 overflow-hidden">
           {/* Primera targeta fixa: només vídeo mascota — mateixa alçada que la resta, imatge a tota la targeta */}
           {activities.length > 0 && (
             <div
