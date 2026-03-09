@@ -26,9 +26,10 @@ const CATEGORIES = [
       "Dissenyem i organitzem un ampli ventall d'activitats extraescolars, tant esportives com formatives i lúdiques, fomentant el desenvolupament i els talents de cada infant perquè descobreixi, aprengui i gaudeixi al seu ritme.",
     href: "/activitats-extraescolars",
     video: "/images/portada/activitats%20extraescolars.mp4",
-    fallback: "/images/logos/CP%20EXTRAESCOLARS.png",
-    logo: "/images/logos/CP%20EXTRAESCOLARS.png",
+    fallback: "/images/logos/CP%20EXTRAESCOLARS%20transp.png",
+    logo: "/images/logos/CP%20EXTRAESCOLARS%20transp.png",
     playVideo: "/images/play/play%20video%20activitats%20extraescolars.mp4",
+    logoScale: 1.7,
   },
   {
     title: "Casals",

@@ -18,6 +18,8 @@ type CategoryItem = {
   readonly videoScale?: number;
   /** Vídeo de la mascota Play per a aquesta categoria (carpeta /images/play/) */
   readonly playVideo?: string;
+  /** Escala del logo (ex. 1.35 = 35% més gran) */
+  readonly logoScale?: number;
 };
 
 type Props = {
@@ -36,13 +38,18 @@ export function CategoriesWithMascot({ categories }: Props) {
           <>
             {showLogoOnTop && (
               <div className="flex h-16 shrink-0 items-center justify-center overflow-hidden rounded-t-xl border border-b-0 border-slate-200 bg-white px-2 py-2 sm:h-16 sm:py-3 lg:h-20 lg:py-4">
-                <Image
-                  src={item.logo}
-                  alt=""
-                  width={240}
-                  height={80}
-                  className="h-12 w-full max-w-full object-contain sm:h-12 lg:h-14"
-                />
+                <div
+                  className="flex h-12 w-full items-center justify-center sm:h-12 lg:h-14"
+                  style={"logoScale" in item && item.logoScale ? { transform: `scale(${item.logoScale})` } : undefined}
+                >
+                  <Image
+                    src={item.logo}
+                    alt=""
+                    width={240}
+                    height={80}
+                    className="h-12 w-full max-w-full object-contain sm:h-12 lg:h-14"
+                  />
+                </div>
               </div>
             )}
             <div
