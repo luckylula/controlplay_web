@@ -242,7 +242,7 @@ export default function MenjadorsEscolarsPage() {
               muted
               loop
               playsInline
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-[50%_25%]"
               src="/images/play/play%20video%20menjadors.mp4"
             />
           </div>
