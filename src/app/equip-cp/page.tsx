@@ -43,10 +43,10 @@ export default function EquipCPPage() {
           </div>
           <div className="space-y-6 text-slate-600">
             <p className="text-base leading-relaxed">
-              A Control Play Sports som un equip compromès amb l&apos;educació, l&apos;esport i el desenvolupament integral dels infants i joves. Treballem per donar resposta a les necessitats reals dels centres educatius, adaptant-nos als nous temps i a les noves inquietuds de les famílies i les escoles.
+              A Control Play som un equip compromès amb l&apos;educació, l&apos;esport i el desenvolupament integral dels infants i joves. Treballem per donar resposta a les necessitats reals dels centres educatius, adaptant-nos als nous temps i a les noves inquietuds de les famílies i les escoles.
             </p>
             <p className="text-base leading-relaxed">
-              Control Play està format per un equip de més de 200 professionals amb perfils multidisciplinaris dins els àmbits de l&apos;educació, l&apos;hostaleria, les Ciències de l&apos;Activitat Física i l&apos;Esport, el magisteri, la nutrició, la pedagogia, la psicologia i el lleure educatiu. Tots ells formen un equip sòlid, professional i vocacional, unit per la passió pel que fem.
+              Control Play està format per professionals amb perfils multidisciplinaris dins els àmbits de l&apos;educació, l&apos;hostaleria, les Ciències de l&apos;Activitat Física i l&apos;Esport, el magisteri, la nutrició, la pedagogia, la psicologia i el lleure educatiu. Tots ells formen un equip sòlid, professional i vocacional, unit per la passió pel que fem. Sempre proper i disposat a treballar conjuntament amb vosaltres.
             </p>
             <p className="text-base leading-relaxed">
               Ens esforcem cada dia per millorar, innovar i oferir els millors serveis en menjadors escolars, activitats extraescolars i casals d&apos;estiu, sempre amb responsabilitat, qualitat i un tracte proper que generi confiança i tranquil·litat.

@@ -87,16 +87,16 @@ export default function Home() {
             </div>
             <div className="min-h-0 min-w-0 space-y-3 overflow-y-auto text-slate-600 sm:space-y-4">
               <p className="text-sm leading-relaxed lg:text-base">
-                A Control Play Sports som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia amb l&apos;objectiu de donar resposta a les necessitats dels centres educatius, de les famílies i de les entitats, sempre amb proximitat, responsabilitat i una gran passió per la nostra feina.
+                Som un equip compromès amb el món educatiu, esportiu i lúdic. Treballem cada dia amb l&apos;objectiu de donar resposta a les necessitats dels centres educatius, de les famílies i de les entitats, sempre amb proximitat, responsabilitat i una gran passió per la nostra feina.
               </p>
               <p className="text-sm leading-relaxed lg:text-base">
-                La nostra tasca es desenvolupa en el dia a dia dels centres escolars, formant part activa de la seva comunitat educativa. Col·laborem estretament amb les AFAs i amb els equips directius dels centres, treballant conjuntament per construir projectes educatius i activitats que aportin valor real als infants i a les seves famílies. Aquesta relació de confiança i cooperació ens permet adaptar-nos a cada realitat i garantir un servei coherent amb els valors i objectius de cada escola.
+                La nostra tasca es desenvolupa en el dia a dia dels centres escolars, formant part activa de la seva comunitat educativa. Col·laborem estretament amb les AFA’s i amb els Equips Directius dels centres, treballant conjuntament per construir projectes educatius i activitats que aportin valor real als infants i a les seves famílies. Aquesta relació de confiança i cooperació ens permet adaptar-nos a cada realitat i garantir un servei coherent amb els valors i objectius de cada Escola.
               </p>
               <p className="text-sm leading-relaxed lg:text-base">
                 Comptem amb un equip multidisciplinari de professionals amb més de 20 anys d&apos;experiència, format per persones amb vocació educativa, coneixement pedagògic i una gran responsabilitat en la seva tasca. Creiem fermament que l&apos;educació, l&apos;esport i el joc són eines fonamentals per al desenvolupament integral dels infants, i per això treballem perquè cada activitat sigui una experiència enriquidora.
               </p>
               <p className="text-sm leading-relaxed lg:text-base">
-                A Control Play Sports posem especial ènfasi en la qualitat dels serveis, la seguretat i les garanties professionals. Tots els nostres projectes es desenvolupen amb rigor, complint amb la normativa vigent i assegurant entorns segurs i cuidats per als infants. La tranquil·litat de les famílies i dels centres és una prioritat per a nosaltres.
+                A Control Play posem especial ènfasi en la qualitat dels serveis, la seguretat i les garanties professionals. Tots els nostres projectes es desenvolupen amb rigor, complint amb la normativa vigent i assegurant entorns segurs i cuidats per als infants. La tranquil·litat de les famílies i dels centres és una prioritat per a nosaltres.
               </p>
               <p className="text-sm leading-relaxed lg:text-base">
                 Per sobre de tot, treballem amb una finalitat clara: contribuir a la felicitat, el benestar i el creixement dels nens i nenes. Volem que cada espai educatiu, esportiu o lúdic sigui un lloc on els infants se sentin segurs, valorats i motivats per aprendre, jugar i créixer.
