@@ -28,7 +28,7 @@ export default function CanalEticPage() {
           Canal Ètic
         </h1>
         <p className="mt-2 text-lg font-medium text-slate-700">
-          CONTROL PLAY SERVICES S.L.
+          CONTROL PLAY SPORTS S.L.
         </p>
         <p className="mt-1 text-base text-slate-600">
           Sistema Intern d&apos;Informació conforme a la Llei 2/2023

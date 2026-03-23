@@ -125,7 +125,7 @@ export default function ActivitatsExtraescolarsPage() {
             alt="Control Play Extraescolars"
             width={360}
             height={108}
-            className="mt-1 h-32 w-auto sm:h-36"
+            className="mt-0 h-32 w-auto sm:h-36"
           />
         </div>
         <p className="mt-4 text-lg text-slate-600">
