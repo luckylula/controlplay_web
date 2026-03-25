@@ -26,24 +26,34 @@ export function HeroVideoCarousel() {
 
   return (
     <section className={`relative ${COVER_STRIP_HEIGHT} w-full overflow-hidden bg-slate-900`} suppressHydrationWarning>
-      {HERO_VIDEOS.map((src, i) => (
-        <div
-          key={src}
-          className={`absolute inset-0 transition-opacity duration-700 ${
-            i === index ? "z-10 opacity-100" : "z-0 opacity-0"
-          }`}
-          suppressHydrationWarning
-        >
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className={`h-full w-full object-cover ${src.endsWith("videoportada3.mp4") ? "object-[center_20%]" : ""}`}
-            src={src}
-          />
-        </div>
-      ))}
+      {HERO_VIDEOS.map((src, i) => {
+        const isPortada1 = src.endsWith("videoportada1.mp4");
+        const isPortada3 = src.endsWith("videoportada3.mp4");
+        return (
+          <div
+            key={src}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              i === index ? "z-10 opacity-100" : "z-0 opacity-0"
+            }`}
+            suppressHydrationWarning
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className={[
+                "h-full w-full object-cover",
+                isPortada1 && "origin-right scale-[1.30] sm:scale-[1.26]",
+                isPortada3 && "object-[center_20%]",
+              ]
+                .filter(Boolean)
+                .join(" ")}
+              src={src}
+            />
+          </div>
+        );
+      })}
       {/* Overlay oscuro (sin recorte: sin marco visible alrededor de la mascota) */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black/30 px-4 pt-20 pb-20 sm:pt-0 sm:pb-0" suppressHydrationWarning>
         <div className="max-w-3xl text-center text-white" suppressHydrationWarning>
