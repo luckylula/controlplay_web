@@ -34,6 +34,7 @@ export function CategoriesWithMascot({ categories }: Props) {
         const logoBelowVideo = "logoBelowVideo" in item && item.logoBelowVideo;
         const logoAlsoAtBottom = "logoAlsoAtBottom" in item && item.logoAlsoAtBottom;
         const showLogoOnTop = !logoOnVideo && !logoBelowVideo && !logoAlsoAtBottom;
+        const isMenjadorsCover = item.video.includes("menjadors%20escolars.mp4");
         const content = (
           <>
             {showLogoOnTop && (
@@ -58,7 +59,7 @@ export function CategoriesWithMascot({ categories }: Props) {
               <CoverVideo
                 src={item.video}
                 fallbackSrc={item.fallback}
-                className="object-cover object-center transition group-hover:scale-105"
+                className={`object-cover transition group-hover:scale-105 ${isMenjadorsCover ? "object-[center_44%]" : "object-center"}`}
                 scale={"videoScale" in item ? item.videoScale : undefined}
               />
               {logoOnVideo && (
